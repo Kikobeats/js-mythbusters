@@ -27,6 +27,15 @@ Use `.test` if you want a faster boolean check. Use `.match` to retrieve all mat
 
 * [Perfomance test](http://jsperf.com/test-vs-match-regex)
 
+
+## Collections
+
+#### create a cache variable for the length of a collection for successive `.length` calls
+
+Prevent re-calculate the length of a collection all the time. Instead, store the value in a variable.
+
+* [Perfomance test](https://jsperf.com/array-length-vs-cached)
+
 # License
 
 MIT © [Kiko Beats](http://kikobeats.com)

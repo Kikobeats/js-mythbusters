@@ -30,9 +30,9 @@ var cityOne = 'Murcia';
 var cityTwo = 'Madrid';
 var routeName = cityOne + '-' +  cityTwo;
 
-if (!cache[routeName])
+if (!cache[routeName]) 
   cache[routeName] = getDistance(cityOne, cityTwo);
-
+  
 return cache[routeName];
 ```
 
@@ -92,7 +92,7 @@ Another important approach: If you need to deallocate a value by unsetting it, y
 
 ## Freeing memory by assigning 'null'.
 
-If you want to delete a property of a object uses
+If you want to delete a property of a object uses 
 
 ```
 var foo = { bar: 'hello world' };
@@ -130,13 +130,20 @@ Check [test#1](https://jsperf.com/concat-vs-plus-vs-join) and [test#2](https://j
 
 ## Use the correct RegExp method.
 
-Use `.test` if you want a faster boolean check. Use `.match` to retrieve all matches when using the g global flag.
+First, always save the regex expression in a variable as:
 
-Also keep in mind that you can match with regex, or string methods to find substring inside a string.
+```js
+var reContains = /(?:^| )foo(?: |$)/;
+```
 
-The perfomance depends again of your JavaScript Engine. Try to use optimal method of your case of use. There isn't exist another rule.
+Second, in general terms:
 
-Check [test#1](https://jsperf.com/regex-methods-x-1/2), [test#2](https://jsperf.com/search-vs-indexof11/4) and [test#3](https://jsperf.com/test-vs-indexof-fast) benchmarks.
+- Use `.test` if you want a faster boolean check
+- Use `.match` to retrieve all matches when using the g global flag.
+
+Is possible that you can gain an extra of perfomance using String method to match regex instead of RegExp to match String. It's depends of your case of use and of your JavaScript Engine.
+
+Check [test#1](https://jsperf.com/regexp-test-search-vs-indexof/12), [test#2](https://jsperf.com/regex-methods-x-1/2) & [test#3](https://jsperf.com/test-vs-indexof-fast/5) benchmarks.
 
 ## Avoid .bind, is slower.
 
@@ -147,15 +154,6 @@ var _this = this;
 ```
 
 *SOON MORE*
-
-
-## Collections
-
-#### create a cache variable for the length of a collection for successive `.length` calls
-
-Prevent re-calculate the length of a collection all the time. Instead, store the value in a variable.
-
-* [Perfomance test](https://jsperf.com/array-length-vs-cached)
 
 # License
 

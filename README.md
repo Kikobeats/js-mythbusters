@@ -74,6 +74,11 @@ for (var b = 0; b < 10; b++) {
 }
 ```
 
+Any name used as property name that is not a string is stringified via `.toString()`, even numbers, so 1 becomes "1".
+
+Also, `Arrays` in JavaScript are just `Objects` with magic length property.
+
+
 ## Monomorphic over Polymorphic types
 
 Operations are monomorphic if the hidden classes of inputs are always the same - otherwise they are polymorphic, meaning some of the arguments can change type across different calls to the operation. For example, the second add() call in this example causes polymorphism:
@@ -119,7 +124,7 @@ lookupTable[compare(4, myValue)];
 
 Also is totally more readable.
 
-## Make your code faster with 'use strict'.
+## More safe (and fast) code with 'use strict'.
 
 From [MDN use strict](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode) section:
 
@@ -132,13 +137,6 @@ In `node`, you can use the flag `--use_strict`, but is not recommended if you ha
 ## Memoizaton: Cache sucesive calls.
 
 Just calculate the value of something once, and reuse the value avoiding the cost of recalculate the same value.
-
-This is very typical with `array.length`: If you need the value more than once, cache in a variable:
-
-```js
-var array = [1, 2, 3, 4, 5]
-var arraySize = array.legnth;
-```
 
 If you need to control of a set of tiny values, you can use an object:
 

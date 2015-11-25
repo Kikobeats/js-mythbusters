@@ -12,11 +12,11 @@ function Point(x, y) {
   this.y = y;
 }
 
-var p1 = new Point(11, 22);
-var p2 = new Point(33, 44);
+var p1 = new Point(11, 22); // => hidden Point class created
+var p2 = new Point(33, 44); // => hidden Point class shared with p1
 // At this point, p1 and p2 have a shared hidden class
-p2.z = 55;
-// warning! p1 and p2 now have different hidden classes!
+
+p2.z = 55; // => another hidden class (Point') created, p1 !== p2
 ```
 
 This might lead you to question how JavaScript performance could ever get anywhere close to C++. However, V8 has hidden types created internally for objects at runtime; objects with the same hidden class can then use the same optimized generated code.
@@ -178,14 +178,14 @@ The `Math` object contains properties and metods designed to make mathematical o
 
 Each of these values is precalculated, so there is no need for you to calculate them yourself. There are also method to handle mathematical calculations:
 
-| Method                  | Meaning                     |
-|-------------------------|-----------------------------|
-| `Math.abs(num)`         | The absolute value of num   |
-| `Math.exp(num)`         | Math.e**num                 |
-| `Math.log(num)`         | The logarithm of num        |
-| `Math.pow(num, power)`  | num**power                  |
-| `Math.sqrt(num)`        | The square root of num      |
-| `Math.acos(x)`          | The arc cosine of x         |
+| Method                  | Meaning                   |
+|-------------------------|---------------------------|
+| `Math.abs(num)`         | The absolute value of num |
+| `Math.exp(num)`         | Math.e**num               |
+| `Math.log(num)`         | The logarithm of num      |
+| `Math.pow(num, power)`  | num**power                |
+| `Math.sqrt(num)`        | The square root of num    |
+| `Math.acos(x)`          | The arc cosine of x       |
 
 
 ## Variable access over array/object access.
@@ -323,6 +323,10 @@ Second, in general terms:
 Is possible that you can gain an extra of perfomance using String method to match regex instead of RegExp to match String. It's depends of your case of use and of your JavaScript Engine.
 
 Check [test#1](https://jsperf.com/regexp-test-search-vs-indexof/12), [test#2](https://jsperf.com/regex-methods-x-1/2) & [test#3](https://jsperf.com/test-vs-indexof-fast/5) benchmarks.
+
+## Don't handle too much code in a try/catch
+
+Certain constructs like `try/catch` are considered not optimizable for the JavaScript engine, so avoid handle business logic inside. Just for pass an error as callback and this type of things.
 
 ## Avoid .bind, is slower.
 

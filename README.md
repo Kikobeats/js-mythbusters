@@ -326,13 +326,16 @@ Check [test#1](https://jsperf.com/regexp-test-search-vs-indexof/12), [test#2](ht
 
 ## Avoid .bind, is slower.
 
-Instead, save the context in a variable and them use it.
+In general terms, `.bind` the context with a `Function` generate need a considerable effort.
 
-```
-var _this = this;
-```
+Native method is, in general JavaScript Engines slow. Instead, you can use:
 
-*SOON MORE*
+- `.call` method (when you need to call the function once).
+- `var self = this` is simple and effective.
+
+Otherwise, exists a set of alternatives, such as libraries that try to implement a better way to do the same. In special, Lodash implementation is based in bitwise, that is very fast check in JavaScript.
+
+Check the [test](https://jsperf.com/bind-vs-jquery-proxy/104) bencharmk.
 
 # License
 

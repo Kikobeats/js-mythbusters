@@ -2,7 +2,41 @@
 
 > A list of JavaScript tips to avoid load performance from a high level point of view.
 
-## Hidden Class in Constructors
+- [JavaScript MythBusters](#javascript-mythbusters)
+  * [V8 Tips](#v8-tips)
+    + [Hidden Class in Constructors](#hidden-class-in-constructors)
+    + [Whole than Float Number](#whole-than-float-number)
+    + [Object/Arrays initialization inline](#object-arrays-initialization-inline)
+    + [Monomorphic over Polymorphic types](#monomorphic-over-polymorphic-types)
+    + [More safe (and fast) code with 'use strict'.](#more-safe--and-fast--code-with--use-strict-)
+    + [Freeing memory by assigning 'null'.](#freeing-memory-by-assigning--null-)
+  * [General Tips](#general-tips)
+    + [Workflow](#workflow)
+      - [Lookup table for result matching](#lookup-table-for-result-matching)
+      - [Memoizaton: Cache sucesive calls.](#memoizaton--cache-sucesive-calls)
+      - [Use Math native methods](#use-math-native-methods)
+      - [Variable access over array/object access.](#variable-access-over-array-object-access)
+      - [Setup the correct variables scope.](#setup-the-correct-variables-scope)
+      - [Control flow based in boolean condition](#control-flow-based-in-boolean-condition)
+    + [String](#string)
+      - [Instead of String.concat, use '+='.](#instead-of-stringconcat--use-----)
+    + [RegexEp](#regexep)
+      - [Use RegExp in cases with sense.](#use-regexp-in-cases-with-sense)
+      - [Focus RegExp on failing faster.](#focus-regexp-on-failing-faster)
+      - [Use the correct RegExp method.](#use-the-correct-regexp-method)
+    + [Error](#error)
+      - [Avoid try/catch](#avoid-try-catch)
+    + [Function](#function)
+      - [Avoid .bind, is slower.](#avoid-bind--is-slower)
+    + [Array](#array)
+      - [Array.pop() better than Array.shift()](#arraypop---better-than-arrayshift--)
+- [License](#license)
+
+---
+
+## V8 Tips
+
+### Hidden Class in Constructors
 
 JavaScript has limited compile-time type information: types can be changed at runtime, so it's natural to expect that it is expensive to reason about JS types at compile time.
 
@@ -26,7 +60,7 @@ Keep in mind:
 - Initialize all object members in constructor functions (so the instances don't change type later).
 - Always initialize object members in the same order.
 
-## Whole than Float Number
+### Whole than Float Number
 
 V8 uses tagging to represent values efficiently when types can change.
 
@@ -40,7 +74,7 @@ var j = 4.2; // this is a double-precision floating point number (float).
 If you actually don't need the extra of information, avoid it.
 
 
-## Object/Arrays initialization inline
+### Object/Arrays initialization inline
 
 ```js
 var a = new Array();
@@ -78,7 +112,7 @@ Any name used as property name that is not a string is stringified via `.toStrin
 Also, `Arrays` in JavaScript are just `Objects` with magic length property.
 
 
-## Monomorphic over Polymorphic types
+### Monomorphic over Polymorphic types
 
 Operations are monomorphic if the hidden classes of inputs are always the same - otherwise they are polymorphic, meaning some of the arguments can change type across different calls to the operation. For example, the second add() call in this example causes polymorphism:
 
@@ -93,7 +127,48 @@ add("a", "b");  // + in add becomes polymorphic
 
 Monomorphic types is more predictable the Compiler and more easy to generate good code.
 
-## Lookup table for result matching
+### More safe (and fast) code with 'use strict'.
+
+From [MDN use strict](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode) section:
+
+*Strict mode makes several changes to normal JavaScript semantics. First, strict mode eliminates some JavaScript silent errors by changing them to throw errors. Second, strict mode fixes mistakes that make it difficult for JavaScript engines to perform optimizations: strict mode code can sometimes be made to run faster than identical code that's not strict mode. Third, strict mode prohibits some syntax likely to be defined in future versions of ECMAScript.*
+
+See [all use strict rules](https://msdn.microsoft.com/library/br230269%28v=vs.94%29.aspx).
+
+In `node`, you can use the flag `--use_strict`, but is not recommended if you have dependencies untested to work with this flag.
+
+### Freeing memory by assigning 'null'.
+
+If you want to delete a property of a object uses
+
+```
+var foo = { bar: 'hello world' };
+foo.bar = null;
+```
+
+Instead of:
+
+```
+var foo = { bar: 'hello world' };
+delete foo.bar;
+```
+
+If you want do delete the object enterely, then simply `foo = null`.
+
+
+Garbage Collector is interested in objects that are not referenced by any other object.
+
+On the other hand, JavaScript engines can detect such "hot" objects and attempt to optimize them. This is easier if the object’s structure doesn’t heavily change over its lifetime and delete can trigger such changes.
+
+This also is applicable to `Arrays`
+
+[Writing Fast, Memory-Efficient JavaScript @ smashingmagazine](http://www.smashingmagazine.com/2012/11/writing-fast-memory-efficient-javascript/#de-referencing-misconceptions).
+
+## General Tips
+
+### Workflow
+
+#### Lookup table for result matching
 
 When we optimizing `if/else`, the goal is always to minimize the number of conditions to evaluate before taking the correct path. The easiest optimization is therefore to ensure that the most common conditions are first:
 
@@ -123,7 +198,9 @@ var myValue = 5;
 lookupTable[compare(4, myValue)];
 ```
 
-Be careful about where use and `Object` or `Array`:
+Keep in mind that using an `Object` you can use `undefined` or `''` as key.
+
+Also be careful about choose betweetn `Object` or `Array` for this purpose:
 
 - If you need a incremental index, use `Array`.
 - In other case use `Object`.
@@ -133,17 +210,7 @@ Althought is more readable, not in all scenarios use a lookup table is better: T
 - If you are going to be running short time (maybe just one execution, like building a CLI tool) use if/else.
 - In other case use lookup table solution.
 
-## More safe (and fast) code with 'use strict'.
-
-From [MDN use strict](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode) section:
-
-*Strict mode makes several changes to normal JavaScript semantics. First, strict mode eliminates some JavaScript silent errors by changing them to throw errors. Second, strict mode fixes mistakes that make it difficult for JavaScript engines to perform optimizations: strict mode code can sometimes be made to run faster than identical code that's not strict mode. Third, strict mode prohibits some syntax likely to be defined in future versions of ECMAScript.*
-
-See [all use strict rules](https://msdn.microsoft.com/library/br230269%28v=vs.94%29.aspx).
-
-In `node`, you can use the flag `--use_strict`, but is not recommended if you have dependencies untested to work with this flag.
-
-## Memoizaton: Cache sucesive calls.
+#### Memoizaton: Cache sucesive calls.
 
 Just calculate the value of something once, and reuse the value avoiding the cost of recalculate the same value.
 
@@ -164,7 +231,7 @@ return cache[routeName];
 
 If you actually don't know how your cache could grow in memory, be careful. You need a little more sophisticated way as [memory-cache](https://www.npmjs.com/package/memory-cache) or [lru-cache](https://www.npmjs.com/package/lru-cache) to control it.
 
-## Use Math native methods
+#### Use Math native methods
 
 No matter how optimize your JavaScript code is, it will never be faster tahn the native methods provided by the JavaScript Engine.
 
@@ -195,7 +262,7 @@ Each of these values is precalculated, so there is no need for you to calculate 
 | `Math.acos(x)`          | The arc cosine of x       |
 
 
-## Variable access over array/object access.
+#### Variable access over array/object access.
 
 If you need to check the result more than once.
 
@@ -207,197 +274,6 @@ So whenever you reference an object property or array item multiple times, you c
 var name = myObject.name;
 var value = array[3];
 ```
-
-## Setup the correct variables scope.
-
-If you declare a global variable but you only use it in a little part of your code, then you are keeping in memory the variable all time but.
-
-When a variable is referenced, Javascript hunts it down by looping through the different members of the scope chain. This scope chain is the set of variables available within the current scope, and across all major browsers it has at least two items: a set of local variables and a set of global variables.
-
-Simply put, the deeper the engine has to dig into this scope chain, the longer the operation will take. It first goes through the local variables starting with this, the function arguments, then any locally defined variables, and afterwards iterates through any global variables.
-
-**Continue reading: ES2015 tips**
-
-Notes that with ES2015, you can use `const` and `let` as well.
-
-`const` means that the variable can’t be reassigned. (Not to be confused with immutable values. Unlike true immutable datatypes such as those produced by Immutable.js and Mori, a `const` object can have properties mutated.):
-
-```js
-const objt = { foo: 'bar' };
-
-objt = {};
-console.log(objt); // => = { foo: 'bar' }
-
-objt.foo = 'WAT';
-console.log(objt); // => = { foo: 'WAT' }
-
-objt.wat = 'the hell';
-console.log(objt); // => = { foo: 'WAT', wat: 'the hell' }
-
-const objt = {}
-TypeError: Identifier 'objt' has already been declared
-```
-
-`let` means that the variable may be reassigned, such as a counter in a loop, or a value swap in an algorithm. It also signals that the variable will be used only in the block it’s defined in, which is not always the entire containing function.
-
-`var` is now the weakest signal available when you define a variable in JavaScript. The variable may or may not be reassigned, and the variable may or may not be used for an entire function, or just for the purpose of a block or loop.
-
-You need to be reassign? then `let`, else `const`.
-
-Another important approach: If you need to deallocate a value by unsetting it, you may consider `let` over `const`.
-
-
-## Freeing memory by assigning 'null'.
-
-If you want to delete a property of a object uses
-
-```
-var foo = { bar: 'hello world' };
-foo.bar = null;
-```
-
-Instead of:
-
-```
-var foo = { bar: 'hello world' };
-delete foo.bar;
-```
-
-If you want do delete the object enterely, then simply `foo = null`.
-
-
-Garbage Collector is interested in objects that are not referenced by any other object.
-
-On the other hand, JavaScript engines can detect such "hot" objects and attempt to optimize them. This is easier if the object’s structure doesn’t heavily change over its lifetime and delete can trigger such changes.
-
-This also is applicable to `Arrays`
-
-[Writing Fast, Memory-Efficient JavaScript @ smashingmagazine](http://www.smashingmagazine.com/2012/11/writing-fast-memory-efficient-javascript/#de-referencing-misconceptions).
-
-
-## Instead of String.concat, use '+='.
-
-It's no clear why this happens. We suppose that `String.concat` is part of a Class and need to wrap more things.
-
-In general terms, `+=` is more fastests, but depends of your JavaScript Engine and version.
-
-Check [test#1](https://jsperf.com/concat-vs-plus-vs-join) and [test#2](https://jsperf.com/string-concat-fast/17) benchmarks.
-
-## Use RegExp in cases with sense.
-
-When use with care, regexes are veru fast. However, They're suauly overkill when you are merely searching for literal strings:
-
-```js
-var endsWithSemiColon = /;$/.test(str);
-```
-
-Each time a semicolon is found, the regex advances to the next token (`$`), which checks wheter the match is at the end of the string. If not, the regex continues searching for a match until it finally makes its way throough the entire string.
-
-In this case, a better approach is to skip all the intermediate steps required by a regex and simply check whether the last character is a semicolon:
-
-```js
-var endsWithSemiColon = str.charAt(str.length - 1) == ";";
-```
-
-This is just a bit faster than the regex-based test with small target strings, but, more importantly, the string's length no longer affects the time needed to perfom the test.
-
-## Focus RegExp on failing faster.
-
-Slow regex processing is usually caused by slow failure rather than slow matching.
-
-Reduce the use of `|` using character classes and optional components, or by pushing the alternation further back into the regex (allowing some match attemps to fail before reaching the alternation):
-
-| Instead of | Use          |
-|------------|--------------|
-| `cat|bat`  | `[cb]at`     |
-| `red|read` | `rea?d`      |
-| `red|raw`  | `r(?:ed|aw)` |
-| `(.|\r|\n)`| `[\s\S]`     |
-
-## Use the correct RegExp method.
-
-First, always save the regex expression in a variable as:
-
-```js
-var reContains = /(?:^| )foo(?: |$)/;
-```
-
-Second, in general terms:
-
-- Use `.test` if you want a faster boolean check
-- Use `.match` to retrieve all matches when using the g global flag.
-
-> It's possible that you can gain an extra of perfomance using String method to match regex instead of RegExp to match String. It's depends of your case of use and of your JavaScript Engine. Check [test#1](https://jsperf.com/regexp-test-search-vs-indexof/12), [test#2](https://jsperf.com/regex-methods-x-1/2) & [test#3](https://jsperf.com/test-vs-indexof-fast/5) benchmarks.
-
-## Don't handle too much code in a try/catch
-
-Certain constructs like `try/catch` are considered not optimizable for the JavaScript engine, so avoid handle business logic inside. Just for pass an error as callback and this type of things.
-
-A good approach for support optimization with throweable code is return an `Error` an later check about the type.
-
-
-```js
-function mayBeError() {
-...
-}
-
-var result = maybError()
-
-if (_.isError(result)) {
-	/* do something under error */
-}
-
-/* in other case no error */
-```
-
-## Avoid .bind, is slower.
-
-In general terms, `.bind` the context with a `Function` generate need a considerable effort.
-
-Native method is, in general JavaScript Engines slow. Instead, you can use:
-
-- `.call` method (when you need to call the function once).
-- `var self = this` is simple and effective.
-
-> Otherwise, exists a set of alternatives, such as libraries that try to implement a better way to do the same. In special, Lodash implementation is based in bitwise, that is very fast check in JavaScript. Check the [test](https://jsperf.com/bind-vs-jquery-proxy/104) benchmark.
-
-I usually use `.bind` more oriented to bind arguments that doesn't change around Function:
-
-```
-function sayHello(day, name) {
-  console.log('Hello ' + name + ', have a good ' + day)
-}
-
-var day = 'Monday'
-var sayMonday = sayHello.bind(null, day)
-
-sayMonday('Kiko')
-// => 'Hello Kiko, have a good monday'
-```
-
-## Array.shift() better than Array.pop()
-
-The `.shift` method removes the first element from an array and returns it.
-
-If the array is empty, it returns `undefined`.
-
-`.shift` is usually much slower than `.pop`.
-
-## Use simple boolean comparison
-
-Always as possible, compare with a simple boolean (for example, in loops conditions): It's a more simple (and consecuentially faster):
-
-```js
-// slow
-// two boolean conditions = 0 and > 0
-array.indexOf(i) >= 0
-
-// fast
-// just one boolean condition
-array.indexOf(i) !== 0
-```
-
-## Use variables instead of dot path values:
 
 Consider this loop:
 
@@ -441,6 +317,176 @@ Now you are using one variable for the control and based in a boolean value. Exc
 By reversing loops and minimizing property lookups, you can see execution times that are up to 50%–60% faster than the original.
 
 > Decreasing the work done per iteration is most effective when the loop has a complexity of O(n). When the loop is more complex than O(n), it is advisable to focus your attention on decreasing the number of iterations.
+
+#### Setup the correct variables scope.
+
+If you declare a global variable but you only use it in a little part of your code, then you are keeping in memory the variable all time but.
+
+When a variable is referenced, Javascript hunts it down by looping through the different members of the scope chain. This scope chain is the set of variables available within the current scope, and across all major browsers it has at least two items: a set of local variables and a set of global variables.
+
+Simply put, the deeper the engine has to dig into this scope chain, the longer the operation will take. It first goes through the local variables starting with this, the function arguments, then any locally defined variables, and afterwards iterates through any global variables.
+
+**Continue reading: ES2015 tips**
+
+Notes that with ES2015, you can use `const` and `let` as well.
+
+`const` means that the variable can’t be reassigned. (Not to be confused with immutable values. Unlike true immutable datatypes such as those produced by Immutable.js and Mori, a `const` object can have properties mutated.):
+
+```js
+const objt = { foo: 'bar' };
+
+objt = {};
+console.log(objt); // => = { foo: 'bar' }
+
+objt.foo = 'WAT';
+console.log(objt); // => = { foo: 'WAT' }
+
+objt.wat = 'the hell';
+console.log(objt); // => = { foo: 'WAT', wat: 'the hell' }
+
+const objt = {}
+TypeError: Identifier 'objt' has already been declared
+```
+
+`let` means that the variable may be reassigned, such as a counter in a loop, or a value swap in an algorithm. It also signals that the variable will be used only in the block it’s defined in, which is not always the entire containing function.
+
+`var` is now the weakest signal available when you define a variable in JavaScript. The variable may or may not be reassigned, and the variable may or may not be used for an entire function, or just for the purpose of a block or loop.
+
+You need to be reassign? then `let`, else `const`.
+
+Another important approach: If you need to deallocate a value by unsetting it, you may consider `let` over `const`.
+
+#### Control flow based in boolean condition
+
+Always as possible, compare with a simple boolean (for example, in loops conditions): It's a more simple (and consecuentially faster):
+
+```js
+// slow
+// two boolean conditions = 0 and > 0
+array.indexOf(i) >= 0
+
+// fast
+// just one boolean condition
+array.indexOf(i) !== 0
+```
+
+### String
+
+#### Instead of String.concat, use '+='.
+
+It's no clear why this happens. We suppose that `String.concat` is part of a Class and need to wrap more things.
+
+In general terms, `+=` is faster, but depends of your JavaScript Engine and version.
+
+Check [test#1](https://jsperf.com/concat-vs-plus-vs-join) and [test#2](https://jsperf.com/string-concat-fast/17) benchmarks.
+
+### RegexEp
+
+#### Use RegExp in cases with sense.
+
+When use with care, regexes are veru fast. However, They're suauly overkill when you are merely searching for literal strings:
+
+```js
+var endsWithSemiColon = /;$/.test(str);
+```
+
+Each time a semicolon is found, the regex advances to the next token (`$`), which checks wheter the match is at the end of the string. If not, the regex continues searching for a match until it finally makes its way throough the entire string.
+
+In this case, a better approach is to skip all the intermediate steps required by a regex and simply check whether the last character is a semicolon:
+
+```js
+var endsWithSemiColon = str.charAt(str.length - 1) == ";";
+```
+
+This is just a bit faster than the regex-based test with small target strings, but, more importantly, the string's length no longer affects the time needed to perfom the test.
+
+#### Focus RegExp on failing faster.
+
+Slow regex processing is usually caused by slow failure rather than slow matching.
+
+Reduce the use of `|` using character classes and optional components, or by pushing the alternation further back into the regex (allowing some match attemps to fail before reaching the alternation):
+
+| Instead of | Use          |
+|------------|--------------|
+| `cat|bat`  | `[cb]at`     |
+| `red|read` | `rea?d`      |
+| `red|raw`  | `r(?:ed|aw)` |
+| `(.|\r|\n)`| `[\s\S]`     |
+
+#### Use the correct RegExp method.
+
+First, always save the regex expression in a variable as:
+
+```js
+var reContains = /(?:^| )foo(?: |$)/;
+```
+
+Second, in general terms:
+
+- Use `.test` if you want a faster boolean check
+- Use `.match` to retrieve all matches when using the g global flag.
+
+> It's possible that you can gain an extra of perfomance using String method to match regex instead of RegExp to match String. It's depends of your case of use and of your JavaScript Engine. Check [test#1](https://jsperf.com/regexp-test-search-vs-indexof/12), [test#2](https://jsperf.com/regex-methods-x-1/2) & [test#3](https://jsperf.com/test-vs-indexof-fast/5) benchmarks.
+
+### Error
+
+#### Avoid try/catch
+
+Certain constructs like `try/catch` are considered not optimizable for the JavaScript engine, so avoid handle business logic inside. Just for pass an error as callback and this type of things.
+
+A good approach for support optimization with throweable code is return an `Error` an later check about the type.
+
+
+```js
+function mayBeError() {
+...
+}
+
+var result = maybError()
+
+if (_.isError(result)) {
+	/* do something under error */
+}
+
+/* in other case no error */
+```
+
+### Function
+
+#### Avoid .bind, is slower.
+
+In general terms, `.bind` the context with a `Function` generate need a considerable effort.
+
+Native method is, in general JavaScript Engines slow. Instead, you can use:
+
+- `.call` method (when you need to call the function once).
+- `var self = this` is simple and effective.
+
+> Otherwise, exists a set of alternatives, such as libraries that try to implement a better way to do the same. In special, Lodash implementation is based in bitwise, that is very fast check in JavaScript. Check the [test](https://jsperf.com/bind-vs-jquery-proxy/104) benchmark.
+
+I usually use `.bind` more oriented to bind arguments that doesn't change around Function:
+
+```
+function sayHello(day, name) {
+  console.log('Hello ' + name + ', have a good ' + day)
+}
+
+var day = 'Monday'
+var sayMonday = sayHello.bind(null, day)
+
+sayMonday('Kiko')
+// => 'Hello Kiko, have a good monday'
+```
+
+### Array
+
+#### Array.pop() better than Array.shift()
+
+The `.shift` method removes the first element from an array and returns it.
+
+If the array is empty, it returns `undefined`.
+
+`.shift` is usually much slower than `.pop`.
 
 # License
 

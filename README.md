@@ -4,7 +4,7 @@
 
 ## Hidden Class in Constructors
 
-JavaScript has limited compile-time type information: types can be changed at runtime, so it's natural to expect that it is expensive to reason about JS types at compile time. 
+JavaScript has limited compile-time type information: types can be changed at runtime, so it's natural to expect that it is expensive to reason about JS types at compile time.
 
 ```js
 function Point(x, y) {
@@ -24,7 +24,6 @@ This might lead you to question how JavaScript performance could ever get anywhe
 Keep in mind:
 
 - Initialize all object members in constructor functions (so the instances don't change type later).
-
 - Always initialize object members in the same order.
 
 ## Whole than Float Number
@@ -96,7 +95,7 @@ Monomorphic types is more predictable the Compiler and more easy to generate goo
 
 ## Lookup table for result matching
 
-When optimizing `if/else`, the goal is always to minimize the number of conditions to evaluate before taking the correct path. The easiest optimization is therefore to ensure that the most common conditions are first:
+When we optimizing `if/else`, the goal is always to minimize the number of conditions to evaluate before taking the correct path. The easiest optimization is therefore to ensure that the most common conditions are first:
 
 ```js
 if (value < 5) {
@@ -108,7 +107,9 @@ if (value < 5) {
 }
 ```
 
-`switch` is more or less the same (maybe more semantic and more structured code). But the point is makes the reduce the path size. Use direct match!
+`switch` is more or less the same (maybe more semantic and more structured code). But the point is makes the reduce the path size.
+
+Better use a direct match approach based in object/array index:
 
 ```
 var lookupTable = {
@@ -122,7 +123,15 @@ var myValue = 5;
 lookupTable[compare(4, myValue)];
 ```
 
-Also is totally more readable.
+Be careful about where use and `Object` or `Array`:
+
+- If you need a incremental index, use `Array`.
+- In other case use `Object`.
+
+Althought is more readable, not in all scenarios use a lookup table is better: The cost of create the lookup table could be higher tan use a set of if/else statements. So, it depends about your code running time:
+
+- If you are going to be running short time (maybe just one execution, like building a CLI tool) use if/else.
+- In other case use lookup table solution.
 
 ## More safe (and fast) code with 'use strict'.
 
@@ -147,9 +156,9 @@ var cityOne = 'Murcia';
 var cityTwo = 'Madrid';
 var routeName = cityOne + '-' +  cityTwo;
 
-if (!cache[routeName]) 
+if (!cache[routeName])
   cache[routeName] = getDistance(cityOne, cityTwo);
-  
+
 return cache[routeName];
 ```
 
@@ -157,7 +166,7 @@ If you actually don't know how your cache could grow in memory, be careful. You 
 
 ## Use Math native methods
 
-No matter how optimizar your JavaScript code is, it will never be faster tahn the native methods provided by the JavaScript Engine.
+No matter how optimize your JavaScript code is, it will never be faster tahn the native methods provided by the JavaScript Engine.
 
 The reason for this is simple: the native parts of JavaScript are all writen in a lower-level language such as C++. That means these methods are compiled down to machine code as part of the browser and therefore don't have the same limitations as your code.
 
@@ -240,7 +249,7 @@ Another important approach: If you need to deallocate a value by unsetting it, y
 
 ## Freeing memory by assigning 'null'.
 
-If you want to delete a property of a object uses 
+If you want to delete a property of a object uses
 
 ```
 var foo = { bar: 'hello world' };
@@ -318,13 +327,28 @@ Second, in general terms:
 - Use `.test` if you want a faster boolean check
 - Use `.match` to retrieve all matches when using the g global flag.
 
-Is possible that you can gain an extra of perfomance using String method to match regex instead of RegExp to match String. It's depends of your case of use and of your JavaScript Engine.
-
-Check [test#1](https://jsperf.com/regexp-test-search-vs-indexof/12), [test#2](https://jsperf.com/regex-methods-x-1/2) & [test#3](https://jsperf.com/test-vs-indexof-fast/5) benchmarks.
+> It's possible that you can gain an extra of perfomance using String method to match regex instead of RegExp to match String. It's depends of your case of use and of your JavaScript Engine. Check [test#1](https://jsperf.com/regexp-test-search-vs-indexof/12), [test#2](https://jsperf.com/regex-methods-x-1/2) & [test#3](https://jsperf.com/test-vs-indexof-fast/5) benchmarks.
 
 ## Don't handle too much code in a try/catch
 
 Certain constructs like `try/catch` are considered not optimizable for the JavaScript engine, so avoid handle business logic inside. Just for pass an error as callback and this type of things.
+
+A good approach for support optimization with throweable code is return an `Error` an later check about the type.
+
+
+```js
+function mayBeError() {
+...
+}
+
+var result = maybError()
+
+if (_.isError(result)) {
+	/* do something under error */
+}
+
+/* in other case no error */
+```
 
 ## Avoid .bind, is slower.
 
@@ -335,9 +359,88 @@ Native method is, in general JavaScript Engines slow. Instead, you can use:
 - `.call` method (when you need to call the function once).
 - `var self = this` is simple and effective.
 
-Otherwise, exists a set of alternatives, such as libraries that try to implement a better way to do the same. In special, Lodash implementation is based in bitwise, that is very fast check in JavaScript.
+> Otherwise, exists a set of alternatives, such as libraries that try to implement a better way to do the same. In special, Lodash implementation is based in bitwise, that is very fast check in JavaScript. Check the [test](https://jsperf.com/bind-vs-jquery-proxy/104) benchmark.
 
-Check the [test](https://jsperf.com/bind-vs-jquery-proxy/104) bencharmk.
+I usually use `.bind` more oriented to bind arguments that doesn't change around Function:
+
+```
+function sayHello(day, name) {
+  console.log('Hello ' + name + ', have a good ' + day)
+}
+
+var day = 'Monday'
+var sayMonday = sayHello.bind(null, day)
+
+sayMonday('Kiko')
+// => 'Hello Kiko, have a good monday'
+```
+
+## Array.shift() better than Array.pop()
+
+The `.shift` method removes the first element from an array and returns it.
+
+If the array is empty, it returns `undefined`.
+
+`.shift` is usually much slower than `.pop`.
+
+## Use simple boolean comparison
+
+Always as possible, compare with a simple boolean (for example, in loops conditions): It's a more simple (and consecuentially faster):
+
+```js
+// slow
+// two boolean conditions = 0 and > 0
+array.indexOf(i) >= 0
+
+// fast
+// just one boolean condition
+array.indexOf(i) !== 0
+```
+
+## Use variables instead of dot path values:
+
+Consider this loop:
+
+```js
+// minimizing property lookups
+for (var i=0, len=items.length; i < len; i++)
+  process(items[i])
+```
+
+```js
+var j=0
+var count = items.length
+
+while (j < count)
+  process(items[j++]])
+```
+
+Maybe you can move out the first iteration of the loop if you know that `num > 0`:
+
+```js
+var k=0
+var num = items.length
+do
+  process(items[k++]);
+while (k < num)
+```
+
+Depending on the length of the array, you can save around 25% off the total loop execution time in most engines.
+
+Another good low level tip is decrement the value:
+
+```
+var j = items.length
+
+while (j--)
+  process(items[j]])
+```
+
+Now you are using one variable for the control and based in a boolean value. Excellent!
+
+By reversing loops and minimizing property lookups, you can see execution times that are up to 50%–60% faster than the original.
+
+> Decreasing the work done per iteration is most effective when the loop has a complexity of O(n). When the loop is more complex than O(n), it is advisable to focus your attention on decreasing the number of iterations.
 
 # License
 

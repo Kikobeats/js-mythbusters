@@ -205,6 +205,8 @@ Also be careful about choose betweetn `Object` or `Array` for this purpose:
 - If you need a incremental index, use `Array`.
 - In other case use `Object`.
 
+Under `ES2015`, consider use `Map` or `Set` combined with `Symbol`.
+
 Althought is more readable, not in all scenarios use a lookup table is better: The cost of create the lookup table could be higher tan use a set of if/else statements. So, it depends about your code running time:
 
 - If you are going to be running short time (maybe just one execution, like building a CLI tool) use if/else.
@@ -452,6 +454,30 @@ if (_.isError(result)) {
 ```
 
 ### Function
+
+#### Make Your Constructors new-Agnostic
+
+Even your function is called or not using `new` keyword, you can force to have the same behavior in both cases:
+
+```js
+function User(name, passwordHash) {
+  if (!(this instanceof User)) return new User(name, passwordHash) // magic line!
+
+  this.name = name
+  this.passwordHash = passwordHash
+}
+```
+
+Now, the behavior is the expected in both cases:
+
+```
+var x = User("baravelli", "d8b74df393528d51cd19980ae0aa028e")
+var y = new User("baravelli","d8b74df393528d51cd19980ae0aa028e")
+
+x instanceof User // true
+y instanceof User // true
+```
+
 
 #### Avoid .bind, is slower.
 

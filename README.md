@@ -510,9 +510,11 @@ sayMonday('Kiko')
 
 The `.shift` method removes the first element from an array and returns it.
 
-If the array is empty, it returns `undefined`.
+To remove the returned item without re-addressing the array and invalidating all references to it, `shift` requires moving the entire array around.
 
-`.shift` is usually much slower than `.pop`.
+On the other hand, `.pop` can simply subtract 1 from its length.
+
+Then `.shift` is usually much slower than `.pop`.
 
 # License
 

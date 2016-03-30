@@ -27,8 +27,10 @@
     + [Error](#error)
       - [Avoid try/catch](#avoid-try-catch)
     + [Function](#function)
+      - [Make Your Constructors new-Agnostic](#make-your-constructors-new-agnostic)
       - [Avoid .bind, is slower.](#avoid-bind--is-slower)
     + [Array](#array)
+      - [Reusing instances](#reusing-instances)
       - [Array.pop() better than Array.shift()](#arraypop---better-than-arrayshift--)
 - [License](#license)
 
@@ -506,6 +508,25 @@ sayMonday('Kiko')
 
 ### Array
 
+#### Reusing instances
+
+A good approach for performance is reuse instance in favour to avoid create a new instance and the costs that it represents.
+
+For do it, use `.length` to eliminate the content and reuse it safely:
+
+```js
+var arr = [1, 2, 3, 4, 5]
+
+/* do something */
+
+arr = [] //  bad
+arr.length = 0 // good!
+```
+
+It deletes everything in the array, which does hit other references.
+
+For `Object` or `Function` I recommend use a pool of instances like [reusify](https://github.com/mcollina/reusify#reusify).
+
 #### Array.pop() better than Array.shift()
 
 The `.shift` method removes the first element from an array and returns it.
@@ -515,6 +536,7 @@ To remove the returned item without re-addressing the array and invalidating all
 On the other hand, `.pop` can simply subtract 1 from its length.
 
 Then `.shift` is usually much slower than `.pop`.
+
 
 # License
 

@@ -211,7 +211,7 @@ Under `ES2015`, consider use `Map` or `Set` combined with `Symbol`.
 
 Althought is more readable, not in all scenarios use a lookup table is better: The cost of create the lookup table could be higher tan use a set of if/else statements. So, it depends about your code running time:
 
-- If you are going to be running short time (maybe just one execution, like building a CLI tool) use if/else.
+- If you have to handle a set of conditions (maybe less than 3 could be a metric) or the code running life is short, use if/else.
 - In other case use lookup table solution.
 
 #### Memoizaton: Cache sucesive calls.

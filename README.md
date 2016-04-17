@@ -32,6 +32,9 @@
     + [Array](#array)
       - [Reusing instances](#reusing-instances)
       - [Array.pop() better than Array.shift()](#arraypop---better-than-arrayshift--)
+      - [All you need to know about `arguments`](#all-you-need-to-know-about--arguments-)
+- [Libraries](#libraries)
+- [Bibliography](#bibliography)
 - [License](#license)
 
 ---
@@ -537,6 +540,31 @@ On the other hand, `.pop` can simply subtract 1 from its length.
 
 Then `.shift` is usually much slower than `.pop`.
 
+#### All you need to know about `arguments`
+
+There are numerous ways to use arguments in a way that causes the function to be unoptimizable. One must be extremely careful when using arguments.
+
+Only use:
+
+* `arguments.length`.
+* `arguments[i]` where `i` is always a valid integer index into the `arguments`, and can not be out of bound.
+* Never use `arguments` directly without `.length` or `[i]`.
+* STRICTLY `fn.apply(y, arguments)` is ok, nothing else is, e.g. `.slice`. `Function#apply` is special.
+* Be aware that adding properties to functions (e.g. `fn.$inject =...`) and bound functions (i.e. the result of `Function#bind`) generate hidden classes and, therefore, are not safe when using `.apply`.
+
+# Libraries
+
+* [reusify – Reuse objects and functions with style](https://github.com/mcollina/reusify).
+* [sliced – A faster Node.js alternative to Array.prototype.slice.call(arguments)](https://www.npmjs.com/package/sliced).
+* [steed – Horsepower for your modules](https://github.com/mcollina/steed).
+* [fastbench – the simplest benchmark you can run on node](https://www.npmjs.com/package/fastbench).
+* [0x – Visualize Stack Traces](https://www.npmjs.com/package/0x).
+
+# Bibliography
+
+* [High Perfomance JavaScript by Nicholas C. Zakas](https://www.google.com/search?q=high+perfomance+javscript&oq=high+perfomance+javscript&aqs=chrome..69i57j0l5.2601j0j1&sourceid=chrome&ie=UTF-8#q=high+performance+Javascript+by+Nicholas+C.+Zakas).
+* [Optimization killers](https://github.com/petkaantonov/bluebird/wiki/Optimization-killers).
+* [Performance Tips for JavaScript in V8](http://www.html5rocks.com/en/tutorials/speed/v8/).
 
 # License
 

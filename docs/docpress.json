@@ -1,0 +1,15 @@
+{
+  "github": "rstacruz/onmount",
+  "css": [
+    "assets/css/build.css"
+  ],
+  "js": [
+    "assets/js/main.js"
+  ],
+  "markdown": {
+    "typographer": true,
+    "plugins": {
+      "decorate": true
+    }
+  }
+}

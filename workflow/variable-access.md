@@ -42,8 +42,9 @@ Another good low level tip is decrement the value:
 ```js
 var j = items.length
 
-while (j--)
-  process(items[j]])
+while (j--) {
+  process(items[j])
+}
 ```
 
 Now you are using one variable for the control and based in a boolean value. Excellent!

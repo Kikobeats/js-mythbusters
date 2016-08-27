@@ -12,7 +12,7 @@ Native method is, in general JavaScript Engines slow. Instead, you can use:
 If you are using `.bind` oriented to memoize arguments values that doesn't change around the `Function` calls, like:
 
 ```js
-function sayHello(day, name) {
+function sayHello (day, name) {
   console.log('Hello ' + name + ', have a good ' + day)
 }
 
@@ -26,16 +26,14 @@ sayMonday('Kiko')
 The real thing that you need is a *partial function*. The implementation depends of the library that you use but normally it's more faster than `.bind`:
 
 ```js
-function greet(greeting, name) {
-  return greeting + ' ' + name;
+function greet (greeting, name) {
+  return greeting + ' ' + name
 }
 
-var sayHelloTo = _.partial(greet, 'hello');
-sayHelloTo('fred');
-// ➜ 'hello fred'
+var sayHelloTo = _.partial(greet, 'hello')
+sayHelloTo('fred') // ➜ 'hello fred'
 
 // Partially applied with placeholders.
-var greetFred = _.partial(greet, _, 'fred');
-greetFred('hi');
-// ➜ 'hi fred'
+var greetFred = _.partial(greet, _, 'fred')
+greetFred('hi') // ➜ 'hi fred'
 ```

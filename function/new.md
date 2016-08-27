@@ -14,8 +14,8 @@ function User (name, passwordHash) {
 Now, the behavior is the expected in both cases:
 
 ```js
-var x = User("baravelli", "d8b74df393528d51cd19980ae0aa028e")
-var y = new User("baravelli","d8b74df393528d51cd19980ae0aa028e")
+var x = User('baravelli', 'd8b74df393528d51cd19980ae0aa028e')
+var y = new User('baravelli', 'd8b74df393528d51cd19980ae0aa028e')
 
 x instanceof User // true
 y instanceof User // true

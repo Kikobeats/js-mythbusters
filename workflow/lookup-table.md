@@ -18,14 +18,14 @@ Better use a direct match approach based in object/array index:
 
 ```js
 var lookupTable = {
-  1: 'is greater',
- -1: 'is less',
-  0: 'is equal'
-};
+  '1': 'is greater',
+  '-1': 'is less',
+  '0': 'is equal'
+}
 
-var myValue = 5;
+var myValue = 5
 
-lookupTable[compare(4, myValue)];
+lookupTable[compare(4, myValue)]
 ```
 
 Keep in mind that using an `Object` you can use `undefined` or `''` as key.

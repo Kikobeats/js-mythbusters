@@ -14,4 +14,4 @@ if (!cache[routeName]) cache[routeName] = getDistance(cityOne, cityTwo)
 return cache[routeName]
 ```
 
-If you actually don't know how your cache could grow in memory, be careful. You need a little more sophisticated way as [memory-cache](https://www.npmjs.com/package/memory-cache) or [lru-cache](https://www.npmjs.com/package/lru-cache) to control it.
+If you actually don't know how your cache could grow in memory, be careful. You need a little more sophisticated way as [lru-cache](https://www.npmjs.com/package/lru-cache) to control it.

@@ -3,15 +3,15 @@
 If you want to delete a property of a `Object` uses:
 
 ```js
-var foo = { bar: 'hello world' };
-foo.bar = null;
+var foo = { bar: 'hello world' }
+foo.bar = null
 ```
 
 Instead of:
 
 ```js
-var foo = { bar: 'hello world' };
-delete foo.bar;
+var foo = { bar: 'hello world' }
+delete foo.bar
 ```
 
 If you want do delete the `Object` enterely, then simply `foo = null`.

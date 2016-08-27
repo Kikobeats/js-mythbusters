@@ -1,4 +1,4 @@
-#### Variable access over array/object access.
+# Variable access over array/object access.
 
 If you need to check the result more than once.
 
@@ -39,7 +39,7 @@ Depending on the length of the array, you can save around 25% off the total loop
 
 Another good low level tip is decrement the value:
 
-```
+```js
 var j = items.length
 
 while (j--)

@@ -1,4 +1,4 @@
-#### Memoizaton: Cache sucesive calls.
+# Memoization: Cache sucesive calls.
 
 Just calculate the value of something once, and reuse the value avoiding the cost of recalculate the same value.
 

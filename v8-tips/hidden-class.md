@@ -1,4 +1,4 @@
-### Hidden Class in Constructors
+# Hidden Class in Constructors
 
 JavaScript has limited compile-time type information: types can be changed at runtime, so it's natural to expect that it is expensive to reason about JS types at compile time.
 

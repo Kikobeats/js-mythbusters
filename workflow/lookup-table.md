@@ -1,6 +1,6 @@
-#### Lookup table for result matching
+# Lookup table for result matching
 
-When we optimizing `if/else`, the goal is always to minimize the number of conditions to evaluate before taking the correct path. The easiest optimization is therefore to ensure that the most common conditions are first:
+When we optimizing `if`/`else`, the goal is always to minimize the number of conditions to evaluate before taking the correct path. The easiest optimization is therefore to ensure that the most common conditions are first:
 
 ```js
 if (value < 5) {
@@ -16,7 +16,7 @@ if (value < 5) {
 
 Better use a direct match approach based in object/array index:
 
-```
+```js
 var lookupTable = {
   1: 'is greater',
  -1: 'is less',
@@ -37,7 +37,7 @@ Also be careful about choose betweetn `Object` or `Array` for this purpose:
 
 Under `ES2015`, consider use `Map` or `Set` combined with `Symbol`.
 
-Althought is more readable, not in all scenarios use a lookup table is better: The cost of create the lookup table could be higher tan use a set of if/else statements. So, it depends about your code running time:
+Althought is more readable, not in all scenarios use a lookup table is better: The cost of create the lookup table could be higher tan use a set of `if`/`else` statements. So, it depends about your code running time:
 
-- If you have to handle a set of conditions (maybe less than 3 could be a metric) or the code running life is short, use if/else.
+- If you have to handle a set of conditions (maybe less than 3 could be a metric) or the code running life is short, use `if`/`else`.
 - In other case use lookup table solution.

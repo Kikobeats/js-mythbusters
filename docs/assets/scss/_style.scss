@@ -70,6 +70,10 @@ html .markdown-body li > code {
   color: $gray-darkest;
 }
 
+.markdown-body .pl-pds, .markdown-body .pl-s, .markdown-body .pl-s .pl-pse .pl-s1, .markdown-body .pl-sr, .markdown-body .pl-sr .pl-cce, .markdown-body .pl-sr .pl-sra, .markdown-body .pl-sr .pl-sre {
+  color: $golden;
+}
+
 /*
  * Links and fonts
  */
@@ -386,4 +390,8 @@ table.no-head thead {
 
 .font-large {
   font-size: x-large;
+}
+
+a.link.title.link-send-tip {
+  color: $special-text-color !important;
 }

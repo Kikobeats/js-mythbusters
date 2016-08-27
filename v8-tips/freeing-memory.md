@@ -1,15 +1,15 @@
-### Freeing memory by assigning 'null'.
+# Freeing memory by assigning `null`
 
-If you want to delete a property of a object uses
+If you want to delete a property of a object uses:
 
-```
+```js
 var foo = { bar: 'hello world' };
 foo.bar = null;
 ```
 
 Instead of:
 
-```
+```js
 var foo = { bar: 'hello world' };
 delete foo.bar;
 ```

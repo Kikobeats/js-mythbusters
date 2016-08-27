@@ -1,4 +1,4 @@
-### More safe (and fast) code with 'use strict'.
+# Faster (and safe) using `use strict`
 
 From [MDN use strict](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode) section:
 

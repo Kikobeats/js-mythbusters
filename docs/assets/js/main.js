@@ -10,12 +10,9 @@ function ready (fn) {
   }
 }
 
-function addClass (el, className) {
-  if (el.classList) el.classList.add(className)
-  else el.className += ' ' + className
-}
-
 ready(function () {
-  addClass(document.body, 'hack')
-  addClass(document.body, 'dark')
+  var links = document.querySelectorAll('.markdown-body a')
+  links.forEach(function (link) {
+    link.setAttribute('target', '_blank')
+  })
 })

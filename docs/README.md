@@ -15,6 +15,7 @@
 
 * [V8]
 	* [Hidden Class](/v8-tips/hidden-class.md)
+	* [Sparse Arrays](/v8-tips/sparse-arrays.md)
 	* [Float Number](/v8-tips/float-number.md)
 	* [Inline initialization](/v8-tips/inline-initialization.md)
 	* [Monomorphic](/v8-tips/monomorphic.md)
@@ -22,7 +23,7 @@
 	* [Freeing memory](/v8-tips/freeing-memory.md)
 
 * [Array]
-	* [Reallocation](/array/reallocation.md)
+	* [Preallocation](/array/preallocation.md)
 	* [.pop over .shift](/array/pop-or-shift.md)
 	* [arguments is special](/array/arguments.md)
 

@@ -1,4 +1,4 @@
-# Reallocation
+# Preallocation
 
 Instead of declare a new `Array` and reserving memory for that, you can reallocate an `Array` previously declared.
 

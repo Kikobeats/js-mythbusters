@@ -11,9 +11,6 @@ plugins:
 
   postrelease:
 
-    'Compiling browser version':
-      plugin: 'bumped-terminal'
-      command: 'gulp'
 
     'Generating CHANGELOG file':
       plugin: 'bumped-changelog'
@@ -29,6 +26,10 @@ plugins:
     'Publishing tag at GitHub':
       plugin: 'bumped-terminal'
       command: 'git tag $newVersion && git push && git push --tags'
+
+    'Preparing GitHub Pages':
+      plugin: 'bumped-terminal'
+      command: 'cd docs && gulp build && cd .. && docpress build'
 
 		'Publishing at GitHub Pages':
 			plugin: 'bumped-gh-pages'

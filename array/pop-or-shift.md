@@ -1,4 +1,4 @@
-#### Array.pop() better than Array.shift()
+# pop over shift
 
 The `.shift` method removes the first element from an array and returns it.
 

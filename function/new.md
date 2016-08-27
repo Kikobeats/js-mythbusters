@@ -1,4 +1,4 @@
-#### Make Your Constructors new-Agnostic
+# `new` agnostic
 
 Even your function is called or not using `new` keyword, you can force to have the same behavior in both cases:
 
@@ -13,7 +13,7 @@ function User (name, passwordHash) {
 
 Now, the behavior is the expected in both cases:
 
-```
+```js
 var x = User("baravelli", "d8b74df393528d51cd19980ae0aa028e")
 var y = new User("baravelli","d8b74df393528d51cd19980ae0aa028e")
 

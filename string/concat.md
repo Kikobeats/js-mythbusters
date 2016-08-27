@@ -1,7 +1,7 @@
-#### Instead of String.concat, use '+='.
+# Use `+=` for concat
 
-It's no clear why this happens. We suppose that `String.concat` is part of a Class and need to wrap more things.
+Instead of [String.prototype.concat()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/concat).
 
-In general terms, `+=` is faster, but depends of your JavaScript Engine and version.
+The reason is that this way to concat is more primitive and need less wrapping around the `String` object.
 
 Check [test#1](https://jsperf.com/concat-vs-plus-vs-join) and [test#2](https://jsperf.com/string-concat-fast/17) benchmarks.

@@ -61,6 +61,11 @@ html .markdown-body pre code {
   background: transparent;
 }
 
+html .markdown-body p > code,
+html .markdown-body li > code {
+  color: $code-inline-color;
+}
+
 .markdown-body .pl-c {
   color: $gray-darkest;
 }
@@ -108,6 +113,10 @@ html .markdown-body h2 {
 html .markdown-body h3 + p,
 html .markdown-body h4 + p {
   margin-top: -.9em;
+}
+
+html .markdown-body li+li {
+  margin-top: .25em;
 }
 
 /*
@@ -231,6 +240,7 @@ html .toc-menu .hlink {
 html .toc-menu .link.-active,
 html .toc-menu .hlink.-active {
   box-shadow: inset -2px 0 $secondary-color;
+  color: $white !important;
 }
 
 /*

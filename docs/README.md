@@ -1,20 +1,24 @@
 # Table of contents
 
 * [JS MythBusters](/README.md)
+	* [Send your tip!]()
+	* [Bibliography](/bibliography.md)
+	* [Resources](/resources.md)
+
 * [Array]
 	* [Reallocation](/array/reallocation.md)
-	* [Array.pop() better than Array.shift()]
-	* [All you need to know about arguments]
+	* [.pop over .shift](/array/pop-or-shift.md)
+	* [arguments is special](/array/arguments.md)
 * [Date]
-	* [Create timestamps with Date.now()]
+	* [Creating timestamps](/date/timestamp.md)
 * [Error]
-	* [Avoid try/catch]
+	* [Avoid try/catch](/error/try-catch.md)
 * [Function]
-	* [Make Your Constructors new-Agnostic]
-	* [Avoid .bind, is slower]
+	* [new agnostic](/function/new.md)
+	* [.bind is slower](/function/bind.md)
 * [RegexEp]
-	* [Use RegExp in cases with sense]
-	* [Focus RegExp on failing faster]
-	* [Use the correct RegExp method]
+	* [Common sense](/regexp/common-sense.md)
+	* [Focus on failing faster](/regexp/fail-faster.md)
+	* [Correct method](/regexp/methods.md)
 * [String]
-	* [Instead of String.concat, use '+=']
+	* [+= for concat](/string/concat.md)

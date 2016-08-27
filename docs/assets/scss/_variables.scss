@@ -14,13 +14,14 @@ $gray-lightest   : #f8f8f8;
 $primary-font    : Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif;
 $secondary-font  : $primary-font;
 
-$primary-color        : #2EFFFE;
-$secondary-color      : #0CEDEC;
-$link-color           : #14B3B2;
+$primary-color        : lighten(#00bcd4, 5%);
+$secondary-color      : #00bcd4;
+$link-color           : darken(#00bcd4, 5%);
 
 $primary-text-color   : $gray-dark;
 $secondary-text-color : $gray-darkest;
 $code-color 					: $gray;
+$code-inline-color    : $link-color;
 
 
 $background-color: $black;

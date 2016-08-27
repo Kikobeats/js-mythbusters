@@ -1,14 +1,16 @@
-#### Use RegExp in cases with sense.
+# Use RegExp in cases with sense
 
-When use with care, regexes are veru fast. However, They're suauly overkill when you are merely searching for literal strings:
+When use with care, `RegexEp` are fast.
+
+However, They're usually overkill when you are merely searching for literal strings:
 
 ```js
 var endsWithSemiColon = /;$/.test(str)
 ```
 
-Each time a semicolon is found, the regex advances to the next token (`$`), which checks wheter the match is at the end of the string. If not, the regex continues searching for a match until it finally makes its way throough the entire string.
+Each time a semicolon is found, the `RegExp` advances to the next token (`$`), which checks wheter the match is at the end of the string. If not, the `RegExp` continues searching for a match until it finally makes its way throough the entire string.
 
-In this case, a better approach is to skip all the intermediate steps required by a regex and simply check whether the last character is a semicolon:
+In this case, a better approach is to skip all the intermediate steps required by a `RegExp` and simply check whether the last character is a semicolon:
 
 ```js
 var endsWithSemiColon = str.charAt(str.length - 1) === ';'

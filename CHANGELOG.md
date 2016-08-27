@@ -1,0 +1,32 @@
+<a name="0.0.1"></a>
+## 0.0.1 (2016-08-27)
+
+* 💅 ([0197a8f](https://github.com/kikobeats/javascript-mythbusters/commit/0197a8f))
+* Add Array reusing instances ([edffef8](https://github.com/kikobeats/javascript-mythbusters/commit/edffef8))
+* Add basic style ([b42341a](https://github.com/kikobeats/javascript-mythbusters/commit/b42341a))
+* Add build GitHub Pages step ([2cc80b8](https://github.com/kikobeats/javascript-mythbusters/commit/2cc80b8))
+* Add build task ([8ae8c09](https://github.com/kikobeats/javascript-mythbusters/commit/8ae8c09))
+* Add bumpedrc ([9adc934](https://github.com/kikobeats/javascript-mythbusters/commit/9adc934))
+* Add more myth ([c5051f1](https://github.com/kikobeats/javascript-mythbusters/commit/c5051f1))
+* Add sections ([0155d7d](https://github.com/kikobeats/javascript-mythbusters/commit/0155d7d))
+* Add TOC ([155db38](https://github.com/kikobeats/javascript-mythbusters/commit/155db38))
+* Add v8 tips ([b7dbbb3](https://github.com/kikobeats/javascript-mythbusters/commit/b7dbbb3))
+* added length cache ([9e79a59](https://github.com/kikobeats/javascript-mythbusters/commit/9e79a59))
+* added moar ([04c33f4](https://github.com/kikobeats/javascript-mythbusters/commit/04c33f4))
+* added try catch section ([b00c053](https://github.com/kikobeats/javascript-mythbusters/commit/b00c053))
+* first commit ([d7db10c](https://github.com/kikobeats/javascript-mythbusters/commit/d7db10c))
+* Ignore build ([a039ab5](https://github.com/kikobeats/javascript-mythbusters/commit/a039ab5))
+* new agnostic tip ([1dc50f0](https://github.com/kikobeats/javascript-mythbusters/commit/1dc50f0))
+* Refactor ([6560739](https://github.com/kikobeats/javascript-mythbusters/commit/6560739))
+* Refactor sections ([e22098b](https://github.com/kikobeats/javascript-mythbusters/commit/e22098b))
+* Split file in multiple little domain files ([4a7645b](https://github.com/kikobeats/javascript-mythbusters/commit/4a7645b))
+* Update ([47d559d](https://github.com/kikobeats/javascript-mythbusters/commit/47d559d))
+* Update shift tip ([165b141](https://github.com/kikobeats/javascript-mythbusters/commit/165b141))
+* updated ([4c83dc1](https://github.com/kikobeats/javascript-mythbusters/commit/4c83dc1))
+* updated ([42b9949](https://github.com/kikobeats/javascript-mythbusters/commit/42b9949))
+* updated bind section ([def1441](https://github.com/kikobeats/javascript-mythbusters/commit/def1441))
+* use standard format ([b44dcc4](https://github.com/kikobeats/javascript-mythbusters/commit/b44dcc4))
+* WIP ([9554d6d](https://github.com/kikobeats/javascript-mythbusters/commit/9554d6d))
+
+
+

@@ -45,6 +45,8 @@ gulp.task 'css', ->
   .pipe gulp.dest dist.css
   return
 
+gulp.task 'build', ['css']
+
 gulp.task 'default', ->
   gulp.start ['css']
   gulp.watch src.sass.files, ['css']

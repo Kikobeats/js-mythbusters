@@ -16,6 +16,10 @@ html,
 .footer-nav.-expanded {
   background: $background-color;
   color: $primary-text-color;
+
+  &:before {
+    display: none;
+  }
 }
 
 html .-menu-visible .menu-toggle {

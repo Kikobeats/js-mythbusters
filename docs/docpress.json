@@ -11,5 +11,9 @@
     "plugins": {
       "decorate": true
     }
+  },
+  "googleAnalytics": {
+    "id": "UA-83295706-1",
+    "domain": "mythbusters.js.org"
   }
 }

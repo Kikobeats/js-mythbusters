@@ -34,6 +34,11 @@ html .toc-menu {
   color: $primary-text-color;
 }
 
+.toc-menu:before {
+  /* TODO: Remove after docpress new release! */
+  display: none;
+}
+
 /*
  * Update look of 'code' elements
  */
@@ -368,11 +373,24 @@ html .markdown-body .file-heading:before {
 }
 
 /*
- * No headers on tables
+ * Table look and feel
  */
 
-table.no-head thead {
-  display: none;
+html .markdown-body table {
+  display: table;
+  width: 100%;
+  color: $code-color;
+  margin: 1.75rem 0;
+}
+
+html .markdown-body table tr,
+html .markdown-body table td {
+  background-color: $background-color;
+}
+
+html .markdown-body table td,
+html .markdown-body table th {
+  border-color: $gray-darkest;
 }
 
 /**

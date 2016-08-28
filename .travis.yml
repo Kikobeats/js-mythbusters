@@ -12,6 +12,7 @@ env:
 script:
 - cd docs && ../node_modules/.bin/gulp build
 - cd .. && ./node_modules/.bin/docpress build
+- cp -a .gh-pages/. _docpress/
 
 after_success:
 - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then npm install git-update-ghpages && ./node_modules/.bin/git-update-ghpages -e; fi

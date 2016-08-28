@@ -15,13 +15,9 @@ plugins:
     'Generating CHANGELOG file':
       plugin: 'bumped-changelog'
 
-    'Compiling build':
-      plugin: 'bumped-terminal'
-      command: 'cd docs && gulp build'
-
     'Commiting new version':
       plugin: 'bumped-terminal'
-      command: 'git add CHANGELOG.md package.json docs/assets/css/build.css && git commit -m "Release $newVersion"'
+      command: 'git add CHANGELOG.md package.json && git commit -m "Release $newVersion"'
 
     'Detecting problem before publish':
       plugin: 'bumped-terminal'
@@ -30,11 +26,3 @@ plugins:
     'Publishing tag at GitHub':
       plugin: 'bumped-terminal'
       command: 'git tag $newVersion && git push && git push --tags'
-
-    'Preparing GitHub Pages':
-      plugin: 'bumped-terminal'
-      command: 'docpress build'
-
-		'Publishing at GitHub Pages':
-			plugin: 'bumped-gh-pages'
-			folder: '_docpress'

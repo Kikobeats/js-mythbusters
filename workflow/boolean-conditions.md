@@ -1,6 +1,6 @@
 # Control flow based in boolean condition
 
-Avoid using `>=` and `<=` if possible. It's faster to use a simpler comparison.
+Avoid using `>=` and `<=` unless necessary. It's faster to use a simpler comparison.
 
 ```js
 // slow

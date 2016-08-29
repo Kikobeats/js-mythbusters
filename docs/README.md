@@ -37,7 +37,7 @@
 	* [new agnostic](/function/new.md)
 	* [.bind is slower](/function/bind.md)
 
-* [RegexEp]
+* [RegExp]
 	* [Common sense](/regexp/common-sense.md)
 	* [Focus on failing faster](/regexp/fail-faster.md)
 	* [Correct method](/regexp/methods.md)

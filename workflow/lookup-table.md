@@ -1,6 +1,6 @@
 # Lookup table for result matching
 
-When we optimizing `if`/`else`, the goal is always to minimize the number of conditions to evaluate before taking the correct path. The easiest optimization is therefore to ensure that the most common conditions are first:
+When optimizing `if`/`else`, minimize the number of conditions to evaluate. This applies to `switch` cases as well. The easiest optimization is to ensure that the most common conditions are first:
 
 ```js
 if (value < 5) {
@@ -12,9 +12,9 @@ if (value < 5) {
 }
 ```
 
-`switch` is more or less the same (maybe more semantic and more structured code). But the point is makes the reduce the path size.
+## Index lookups
 
-Better use a direct match approach based in object/array index:
+It's better to use a direct match approach using object/array index lookups:
 
 ```js
 var lookupTable = {
@@ -28,16 +28,20 @@ var myValue = 5
 lookupTable[compare(4, myValue)]
 ```
 
-Keep in mind that using an `Object` you can use `undefined` or `''` as key.
+In objects, you may also use `undefined` or `''` as keys.
 
-Also be careful about choose betweetn `Object` or `Array` for this purpose:
+## Array vs. Object
+
+Also be careful about choose between `Object` or `Array` for this purpose:
 
 - If you need a incremental index, use `Array`.
-- In other case use `Object`.
+- In other cases, use `Object`.
 
-Under `ES2015`, consider use `Map` or `Set` combined with `Symbol`.
+In ES2015, also consider using `Map` or `Set` combined with `Symbol`.
 
-Althought is more readable, not in all scenarios use a lookup table is better: The cost of create the lookup table could be higher tan use a set of `if`/`else` statements. So, it depends about your code running time:
+## Caveats
 
-- If you have to handle a set of conditions (maybe less than 3 could be a metric) or the code running life is short, use `if`/`else`.
-- In other case use lookup table solution.
+Although is more readable, using a lookup table isn't always better. The cost of creating the lookup table could be higher than the use set of `if`/`else` statements. So, it depends about your code running time:
+
+- If you have to handle a small set of conditions (maybe less than 3) or the code running life is short, use `if`/`else`.
+- In other cases, use the lookup table solution.

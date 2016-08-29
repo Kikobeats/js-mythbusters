@@ -22,8 +22,28 @@ html,
   }
 }
 
+html .toc-menu {
+  &::-webkit-scrollbar {
+    width: 3px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: lighten($sidebar-border-color, 5%);
+  }
+}
+
+html .menu.toc-menu,
 html .-menu-visible .menu-toggle {
-  background: $background-color;
+  background: $sidebar-color;
+}
+
+html .toc-menu ul,
+html .toc-menu li {
+  margin: .25rem 0;
+}
+
+html .toc-menu .link:hover,
+html .toc-menu .hlink:hover {
+  background-color: rgba($sidebar-border-color, .5)
 }
 
 html .menu-toggle {
@@ -44,6 +64,28 @@ html .toc-menu {
 }
 
 /*
+ * Update logo
+ */
+
+html .toc-menu .-level-1:first-child>.title {
+  color: $black;
+}
+
+html a.link.title.link-index {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  display: flex;
+  background-color: $title-background-color;
+  font-size: 13px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 1.5rem;
+  font-size: 16px;
+  justify-content: flex-end;
+  font-family: monospace;
+}
+
+/*
  * Update look of 'code' elements
  */
 
@@ -61,9 +103,9 @@ html .markdown-body code:after {
 html .markdown-body pre {
   padding: 24px;
   box-shadow: inset 1px 1px rgba(0, 0, 0, 0.04);
-  background: $background-color;
+  background: $sidebar-color;
   color: $code-color;
-  border: 1px solid $white;
+  border: 1px solid $pre-border-color;
 }
 
 html .markdown-body pre code {
@@ -149,7 +191,7 @@ html .markdown-body h1 {
   color: $primary-color;
   margin-bottom: .6em;
   padding-bottom: .6em;
-  border-bottom: solid 1px $gray-lighter;
+  border-bottom: solid 1px $h1-border-color;
 }
 
 html .markdown-body h4 {
@@ -236,13 +278,12 @@ html .menu-toggle:hover {
 }
 
 html .toc-menu {
-  box-shadow: inset -1px 0 rgba($code-color, 0.3)
+  box-shadow: inset -1px 0 $sidebar-border-color;
 }
 
 html .toc-menu .link,
-html .toc-menu
-html .link:visited {
-  color: $link-color !important;
+html .toc-menu .link:visited {
+  color: $link-color;
 }
 
 html .toc-menu .link,
@@ -389,7 +430,7 @@ html .markdown-body table {
 
 html .markdown-body table tr,
 html .markdown-body table td {
-  background-color: $background-color;
+  background-color: $sidebar-color;
 }
 
 html .markdown-body table td,

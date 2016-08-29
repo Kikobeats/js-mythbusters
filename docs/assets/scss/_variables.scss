@@ -1,7 +1,7 @@
 /* Basic colors */
 
 $white           : #fafbfb;
-$black           : black;
+$black           : #081020;
 $golden 				 : #e5b567;
 $pink 					 : #ff2e88;
 
@@ -26,6 +26,11 @@ $special-text-color   : $pink;
 $code-color 					: $gray;
 $code-inline-color    : $link-color;
 
-$background-color     : $black;
+$background-color       : #081020;
+$sidebar-color 			  	: #080820;
+$sidebar-border-color   : #07223e;
+$h1-border-color 			  : #062f47;
+$pre-border-color 		  : #062f47;
+$title-background-color : #3080A0;
 
-$mobile-breakpoint    : 960px;
+$mobile-breakpoint      : 960px;

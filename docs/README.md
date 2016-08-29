@@ -1,6 +1,6 @@
 # Table of contents
 
-* [JS MythBusters](/README.md)
+* [JS MythBusters_](/README.md)
 	* [Send your tip!](/send-tip.md)
 	* [Bibliography](/bibliography.md)
 	* [Resources](/resources.md)

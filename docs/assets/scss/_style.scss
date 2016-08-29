@@ -71,18 +71,16 @@ html .toc-menu .-level-1:first-child>.title {
   color: $black;
 }
 
-html a.link.title.link-index {
+html a.link.title.link-index,
+html a.link.title.-active.link-index {
+  font: 16px monospace !important;
   text-transform: uppercase;
   margin-bottom: 1rem;
   display: flex;
   background-color: $title-background-color;
-  font-size: 13px;
   margin-left: 1rem;
   margin-right: 1rem;
-  margin-top: 1.5rem;
-  font-size: 16px;
-  justify-content: flex-end;
-  font-family: monospace;
+  justify-content: flex-start;
 }
 
 /*

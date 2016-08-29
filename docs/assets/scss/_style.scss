@@ -282,6 +282,10 @@ html .toc-menu {
 html .toc-menu .link,
 html .toc-menu .link:visited {
   color: $link-color;
+
+  &:hover {
+    color: white;
+  }
 }
 
 html .toc-menu .link,

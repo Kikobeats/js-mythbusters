@@ -6,6 +6,13 @@
   text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  &::-webkit-scrollbar {
+    width: 3px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: lighten($sidebar-border-color, 5%);
+  }
 }
 
 /*
@@ -19,15 +26,6 @@ html,
 
   &:before {
     display: none;
-  }
-}
-
-html .toc-menu {
-  &::-webkit-scrollbar {
-    width: 3px;
-  }
-  &::-webkit-scrollbar-thumb {
-    background: lighten($sidebar-border-color, 5%);
   }
 }
 

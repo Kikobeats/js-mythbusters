@@ -1,6 +1,6 @@
 # Use RegExp in cases with sense
 
-When use with care, `RegexEp` are fast.
+When use with care, `RegExp` are fast.
 
 However, They're usually overkill when you are merely searching for literal strings:
 

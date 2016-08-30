@@ -14,7 +14,7 @@ var foo = { bar: 'hello world' }
 delete foo.bar
 ```
 
-If you want do delete the `Object` enterely, then simply `foo = null`.
+If you want do delete the `Object` entirely, then simply `foo = null`.
 
 Garbage Collector are interested in `Object`'s that are not referenced by any other `Object`.
 

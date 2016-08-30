@@ -19,7 +19,7 @@
   ],
   "devDependencies": {
     "coffee-script": "latest",
-    "docpress": "~0.6.13",
+    "docpress": "docpress/docpress#next",
     "gulp": "latest",
     "gulp-add-src": "latest",
     "gulp-autoprefixer": "latest",

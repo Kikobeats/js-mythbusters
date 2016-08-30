@@ -10,8 +10,8 @@ env:
     - GIT_SOURCE: _docpress
 
 script:
-- cd ./node_modules/.bin/gulp build
-- cd ./node_modules/.bin/docpress build
+- ./node_modules/.bin/gulp build
+- ./node_modules/.bin/docpress build
 - cp -a .gh-pages/. _docpress/
 
 after_success:

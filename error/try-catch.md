@@ -1,12 +1,12 @@
 # Avoid try/catch
 
-Certain constructs like `try/catch` are considered not optimizable for the JavaScript engine, so avoid handle business logic inside.
+Certain constructs like `try/catch` are considered not optimizable by the JavaScript engine, so avoid handling business logic inside.
 
-Just for pass an error as callback and this type of things.
+Just pass an error handler as a callback for this type of things.
 
-Or maybe the think that you need to avoid is synchronous code? :P
+Or maybe the thing that you need to avoid is synchronous code? :P
 
-A good approach for support optimization with throweable code is return an `Error` an later check about the type.
+A good approach for supporting optimization with throweable code is to return an `Error` and later and check the type.
 
 ```js
 function maybeError () {

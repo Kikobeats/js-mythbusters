@@ -3,16 +3,15 @@
  */
 
 * {
-  text-rendering: optimizelegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 
-  &::-webkit-scrollbar {
-    width: 3px;
+  @include font-smoothing(antialiased);
+
+  @include selection {
+    color: $white;
+    background: $special-text-color;
   }
-  &::-webkit-scrollbar-thumb {
-    background: lighten($sidebar-border-color, 5%);
-  }
+
+  @include scrollbar;
 }
 
 /*

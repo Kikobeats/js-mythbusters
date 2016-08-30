@@ -20,6 +20,6 @@
 
   "disqus": {
     "shortname": "mythbusters-js-org",
-    "exclude": "index|bibliography|resources|tip"
+    "exclude": "index|bibliography|resources|contributing"
   }
 }

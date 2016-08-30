@@ -458,3 +458,7 @@ html .markdown-body table th {
 a.link.title.link-send-tip {
   color: $special-text-color !important;
 }
+
+html .active .publisher-nav-color::after {
+  background: $primary-color !important;
+}

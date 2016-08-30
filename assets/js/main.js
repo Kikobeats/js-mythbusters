@@ -15,8 +15,4 @@ ready(function () {
   links.forEach(function (link) {
     link.setAttribute('target', '_blank')
   })
-
-  sendTipLink = document.querySelector('.link-send-tip')
-  sendTipLink.setAttribute('target', '_blank')
-  sendTipLink.setAttribute('href', 'https://github.com/Kikobeats/js-mythbusters/issues/new')
 })

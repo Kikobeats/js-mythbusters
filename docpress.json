@@ -1,10 +1,11 @@
 {
   "github": "Kikobeats/js-mythbusters",
+  "docs": "assets",
   "css": [
-    "assets/css/build.css"
+    "css/build.css"
   ],
   "js": [
-    "assets/js/main.js"
+    "js/main.js"
   ],
   "markdown": {
     "typographer": true,

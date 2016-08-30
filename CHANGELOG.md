@@ -1,3 +1,37 @@
+<a name="1.0.0"></a>
+# 1.0.0 (2016-08-30)
+
+* Add CNAME ([eadccc9](https://github.com/kikobeats/javascript-mythbusters/commit/eadccc9))
+* Add contributing section ([1fb3d66](https://github.com/kikobeats/javascript-mythbusters/commit/1fb3d66))
+* Add disqus integration ([58d6107](https://github.com/kikobeats/javascript-mythbusters/commit/58d6107))
+* Add Google Analytics ([190464e](https://github.com/kikobeats/javascript-mythbusters/commit/190464e))
+* Add minimal comments style ([812aa56](https://github.com/kikobeats/javascript-mythbusters/commit/812aa56))
+* Add missing dep and update command path ([54fa49e](https://github.com/kikobeats/javascript-mythbusters/commit/54fa49e))
+* Add mobile breakpoints ([2a720cd](https://github.com/kikobeats/javascript-mythbusters/commit/2a720cd))
+* Add selection style ([e682de0](https://github.com/kikobeats/javascript-mythbusters/commit/e682de0))
+* Add send tip URL ([a6892ea](https://github.com/kikobeats/javascript-mythbusters/commit/a6892ea))
+* Add send-tip URL ([c07809e](https://github.com/kikobeats/javascript-mythbusters/commit/c07809e))
+* Add table style ([8f121ff](https://github.com/kikobeats/javascript-mythbusters/commit/8f121ff))
+* Add travis integration ([20aef52](https://github.com/kikobeats/javascript-mythbusters/commit/20aef52))
+* Adjust style ([cd31557](https://github.com/kikobeats/javascript-mythbusters/commit/cd31557))
+* Boolean Conditions: reword for clarity ([86ba648](https://github.com/kikobeats/javascript-mythbusters/commit/86ba648))
+* Exclude comment in send-tip section ([f9229d4](https://github.com/kikobeats/javascript-mythbusters/commit/f9229d4))
+* Fix RegExp typo ([0716176](https://github.com/kikobeats/javascript-mythbusters/commit/0716176))
+* Fix typo ([a179571](https://github.com/kikobeats/javascript-mythbusters/commit/a179571))
+* Fix typo ([8bf487a](https://github.com/kikobeats/javascript-mythbusters/commit/8bf487a))
+* Fix typo ([6959e07](https://github.com/kikobeats/javascript-mythbusters/commit/6959e07))
+* Improve footer style ([76f9720](https://github.com/kikobeats/javascript-mythbusters/commit/76f9720))
+* Improve release workflow ([6eb3d5d](https://github.com/kikobeats/javascript-mythbusters/commit/6eb3d5d))
+* Improve scroll style ([9746f26](https://github.com/kikobeats/javascript-mythbusters/commit/9746f26))
+* Improve sidebar hover effect ([30eb138](https://github.com/kikobeats/javascript-mythbusters/commit/30eb138))
+* Improve table style ([b44a05d](https://github.com/kikobeats/javascript-mythbusters/commit/b44a05d))
+* Lookup table: reword for clarity ([1368ab8](https://github.com/kikobeats/javascript-mythbusters/commit/1368ab8))
+* Unify build ([ac4e5e2](https://github.com/kikobeats/javascript-mythbusters/commit/ac4e5e2))
+* Update boolean-conditions.md ([1e2ba61](https://github.com/kikobeats/javascript-mythbusters/commit/1e2ba61))
+* Update docpress dep reference ([324abff](https://github.com/kikobeats/javascript-mythbusters/commit/324abff))
+
+
+
 <a name="0.0.1"></a>
 ## 0.0.1 (2016-08-27)
 

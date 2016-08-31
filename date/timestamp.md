@@ -3,9 +3,9 @@
 Normally for create timestamps you have two ways:
 
 - `Date.now()`
-- `new.Date().getTime()`
+- `new Date().getTime()`
 
-Althought `Date.now()` and `new.Date()` have the same behavior, `Date.now()` is faster because you are not allocating and object and then calling the method of the object.
+Althought `Date.now()` and `new Date()` have the same behavior, `Date.now()` is faster because you are not allocating and object and then calling the method of the object.
 
 This is specially remarkable when you make sucesive calls (for example, when you append timestamps in logs).
 

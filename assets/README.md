@@ -6,7 +6,6 @@
 	* [Resources](/resources.md)
 
 * [Workflow]
-	* [Boolean condition](/workflow/boolean-conditions.md)
 	* [Lookup table](/workflow/lookup-table.md)
 	* [Math methods](/workflow/math.md)
 	* [Memoizaton](/workflow/memoization.md)

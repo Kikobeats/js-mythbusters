@@ -7,7 +7,7 @@
 
 **Video**
 
-* [Google I/O 2012 - Breaking the JavaScript Speed Limit with V8](https://www.youtube.com/watch?v=UJPdhx5zTaw)
+* [Google I/O 2012 - Breaking the JavaScript Speed Limit with V8](https://www.youtube.com/watch?v=UJPdhx5zTaw).
 * [Using jsPerf correctly](https://www.youtube.com/watch?v=RLbAKxCAdI8) ([slides](http://www.slideshare.net/mathiasbynens/using-jsperf-correctly)).
 
 

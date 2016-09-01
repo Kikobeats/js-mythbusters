@@ -2,7 +2,7 @@
 
 Native parts of JavaScript are all written in a lower-level language such as C++. That means these methods are compiled down to machine code as part of the browser and therefore don't have the same limitations as your code.
 
-The `Math` object contains properties and methods designed to make mathematical operations easier. There are several matematical constants available:
+The `Math` object contains properties and methods designed to make mathematical operations easier. There are several mathematical constants available:
 
 | Constant      | Meaning                                              |
 |---------------|------------------------------------------------------|
@@ -15,7 +15,7 @@ The `Math` object contains properties and methods designed to make mathematical 
 | `Math.SQRT1_2`| The square root of 1/2                               |
 | `Math.SQRT2`  | The square root of 2                                 |
 
-Each of these values is precalculated, so there is no need for you to calculate them yourself. There are also method to handle mathematical calculations:
+Each of these values is precalculated, so there is no need for you to calculate them yourself. There are also methods to handle mathematical calculations:
 
 | Method                  | Meaning                   |
 |-------------------------|---------------------------|

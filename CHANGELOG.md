@@ -1,3 +1,33 @@
+<a name="1.0.1"></a>
+## 1.0.1 (2016-09-03)
+
+* Adjust code comments style ([0f2722b](https://github.com/kikobeats/javascript-mythbusters/commit/0f2722b))
+* Contributing fixup ([91a1d36](https://github.com/kikobeats/javascript-mythbusters/commit/91a1d36))
+* Fix #19 ([8a32559](https://github.com/kikobeats/javascript-mythbusters/commit/8a32559)), closes [#19](https://github.com/kikobeats/javascript-mythbusters/issues/19)
+* Fix a minor typo: "enterely" -> "entirely" ([209c0ae](https://github.com/kikobeats/javascript-mythbusters/commit/209c0ae))
+* Fix code markup ([1e82e83](https://github.com/kikobeats/javascript-mythbusters/commit/1e82e83))
+* Fix typo ([1f3538f](https://github.com/kikobeats/javascript-mythbusters/commit/1f3538f))
+* Fix typo ([7260cb8](https://github.com/kikobeats/javascript-mythbusters/commit/7260cb8))
+* Fix typo ([d313eca](https://github.com/kikobeats/javascript-mythbusters/commit/d313eca))
+* Fix typo: sucesive -> successive ([64b22e4](https://github.com/kikobeats/javascript-mythbusters/commit/64b22e4))
+* Fixed capitalization in result for function/bind.md ([5b72740](https://github.com/kikobeats/javascript-mythbusters/commit/5b72740))
+* Make the boolean conditionals examples equivalent ([6681495](https://github.com/kikobeats/javascript-mythbusters/commit/6681495))
+* Refactor tip header ([00488ea](https://github.com/kikobeats/javascript-mythbusters/commit/00488ea))
+* Remove boolean condition tip ([91e832f](https://github.com/kikobeats/javascript-mythbusters/commit/91e832f))
+* Typo fix ([36b480b](https://github.com/kikobeats/javascript-mythbusters/commit/36b480b))
+* Update ([fbf27c4](https://github.com/kikobeats/javascript-mythbusters/commit/fbf27c4))
+* Update ([dc8bdf9](https://github.com/kikobeats/javascript-mythbusters/commit/dc8bdf9))
+* Update _markdown.scss ([95e3b74](https://github.com/kikobeats/javascript-mythbusters/commit/95e3b74))
+* Update bibliography.md ([8ff7c87](https://github.com/kikobeats/javascript-mythbusters/commit/8ff7c87))
+* Update bibliography.md ([5f98159](https://github.com/kikobeats/javascript-mythbusters/commit/5f98159))
+* Update freeing-memory.md ([98d3970](https://github.com/kikobeats/javascript-mythbusters/commit/98d3970))
+* Update resource description ([db24f32](https://github.com/kikobeats/javascript-mythbusters/commit/db24f32))
+* Update try-catch.md ([bbba23a](https://github.com/kikobeats/javascript-mythbusters/commit/bbba23a))
+* Use Map instead of Object ([f6df3e8](https://github.com/kikobeats/javascript-mythbusters/commit/f6df3e8))
+* workflow/math: Fixed typos. ([9f1bc73](https://github.com/kikobeats/javascript-mythbusters/commit/9f1bc73))
+
+
+
 <a name="1.0.0"></a>
 # 1.0.0 (2016-08-30)
 

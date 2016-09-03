@@ -7,7 +7,7 @@
 
 #### Cache
 
-* [lru-cache](https://github.com/isaacs/node-lru-cache) – A cache object that deletes the least-recently-used items.
+* [lru-cache](https://github.com/isaacs/node-lru-cache) – A `Map` cache that deletes the least-recently-used items.
 * [async-cache](https://github.com/isaacs/async-cache) – Cache your async lookups and don't fetch the same thing more than necessary.
 * [mem](https://github.com/sindresorhus/mem) - An optimization used to speed up consecutive function calls.
 

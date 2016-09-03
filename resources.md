@@ -17,7 +17,7 @@
 
 #### Debugging
 
-* [0x](https://www.npmjs.com/package/0x) – Visualize Stack Traces.
+* [0x](https://www.npmjs.com/package/0x) – Visualize stack traces.
 
 #### Array
 

@@ -16,7 +16,7 @@ if (value < 5) {
 
 ## Index lookups
 
-It's better to use a direct match approach using object/array index lookups:
+It's sometimes better to use a direct match approach using object/array index lookups:
 
 ```js
 var lookupTable = {
@@ -34,14 +34,14 @@ In objects, you may also use *falsy* values as keys.
 
 ## Array vs. Object
 
-Also be careful about choose between `Object` or `Array` for this purpose:
+Be careful about choosing between `Object` or `Array`:
 
 - If you need a incremental index, use `Array`.
 - In other cases, use `Object`.
 
 ## Caveats
 
-Although is more readable, using a lookup table isn't always better. The cost of creating the lookup table could be higher than the use set of `if`/`else` statements. So, it depends about your code running time:
+Although is more readable, using a lookup table isn't always better. The cost of creating the lookup table could be higher than using a set of `if`/`else` statements. So, it depends on your code:
 
-- If you have to handle a small set of conditions (maybe less than 3) or the code running life is short, use `if`/`else`.
-- In other cases, use the lookup table solution.
+- If you have to handle a small set of conditions (maybe less than 3) or the code runtime life is short, use `if`/`else`.
+- In other cases, use a lookup table.

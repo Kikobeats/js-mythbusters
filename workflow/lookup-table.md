@@ -1,6 +1,8 @@
 # Lookup table for result matching
 
-When optimizing `if`/`else`, minimize the number of conditions to evaluate. This applies to `switch` cases as well. The easiest optimization is to ensure that the most common conditions are first:
+When optimizing `if`/`else`, minimize the number of conditions to evaluate. This applies to `switch` cases as well.
+
+The easiest optimization is to ensure that the most common conditions are first:
 
 ```js
 if (value < 5) {
@@ -28,7 +30,7 @@ var myValue = 5
 lookupTable[compare(4, myValue)]
 ```
 
-In objects, you may also use `undefined` or `''` as keys.
+In objects, you may also use *falsy* values as keys.
 
 ## Array vs. Object
 
@@ -36,8 +38,6 @@ Also be careful about choose between `Object` or `Array` for this purpose:
 
 - If you need a incremental index, use `Array`.
 - In other cases, use `Object`.
-
-In ES2015, also consider using `Map` or `Set` combined with `Symbol`.
 
 ## Caveats
 

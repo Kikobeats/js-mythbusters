@@ -1,4 +1,4 @@
-# Use `+=` for concat
+# Interpolating variables
 
 Instead of [String.prototype.concat()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/concat).
 

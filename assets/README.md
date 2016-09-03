@@ -42,4 +42,4 @@
 	* [Correct method](/regexp/methods.md)
 
 * [String]
-	* [+= for concat](/string/concat.md)
+	* [Interpolating variables](/string/concat.md)

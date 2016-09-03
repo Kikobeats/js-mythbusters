@@ -1,7 +1,30 @@
 # Interpolating variables
 
-Instead of [String.prototype.concat()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/concat).
+Creating an `String` interpolating variables always was a pain.
 
-The reason is that this way to concat is more primitive and need less wrapping around the `String` object.
+The solution that have [more](https://jsperf.com/concat-vs-plus-vs-join) [perfomance](https://jsperf.com/string-concat-fast/17) is using `+=` operator:
 
-Check [test#1](https://jsperf.com/concat-vs-plus-vs-join) and [test#2](https://jsperf.com/string-concat-fast/17) benchmarks.
+```js
+
+function greetings(name) {
+  var message = ''
+  message += 'Hello '
+  message += name
+  message += ', how are you?'
+  return message
+}
+
+var sayHello = greetings('Kiko')
+console.log(sayHello) // => 'Hello Kiko, how are you?'
+```
+
+However, nowadays is totally recommended (less code and good perfomance) use template string for this purpose:
+
+```js
+function greetings(name) {
+  return `Hello ${name}, how are you?`
+}
+
+var sayHello = greetings('Kiko')
+console.log(sayHello) // => 'Hello Kiko, how are you?'
+```

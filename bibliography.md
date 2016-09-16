@@ -13,5 +13,6 @@
 
 * [Optimization killers](https://github.com/petkaantonov/bluebird/wiki/Optimization-killers).
 * [Performance Tips for JavaScript in V8](http://www.html5rocks.com/en/tutorials/speed/v8/).
+* [Let’s Write Fast JavaScript](https://medium.com/@mdibaiee/lets-write-fast-javascript-2b03c5575d9e).
 * [Writing Fast, Memory-Efficient JavaScript](http://www.smashingmagazine.com/2012/11/writing-fast-memory-efficient-javascript/#de-referencing-misconceptions).
 * [Unquoted property names / object keys in JavaScript](https://mathiasbynens.be/notes/javascript-properties).

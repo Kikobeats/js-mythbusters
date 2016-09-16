@@ -127,7 +127,7 @@ html .markdown-body {
   max-width: 740px;
 }
 
-html .markdown-body a {
+html .markdown-body a:not(.badge) {
   font-weight: bold;
   color: $secondary-color;
   border-bottom: 1px solid $secondary-color;
@@ -224,7 +224,7 @@ html .markdown-body h4 {
     padding-top: 0;
     margin-top: 0;
     margin-bottom: 0;
-    padding-bottom: 21vh;
+    padding-bottom: 10vh;
     font-size: 4em;
     color: $gray-light;
     padding-right: 10%;

@@ -37,9 +37,9 @@
 	* [.bind is slower](/function/bind.md)
 
 * [RegExp]
-	* [Common sense](/regexp/common-sense.md)
+	* [Declaring instances](/regexp/declaring-instances.md)
+	* [Correct method](/regexp/correct-methods.md)
 	* [Focus on failing faster](/regexp/fail-faster.md)
-	* [Correct method](/regexp/methods.md)
 
 * [String]
 	* [Interpolating variables](/string/concat.md)

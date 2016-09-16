@@ -1,12 +1,6 @@
 # Use the correct `RegExp` method
 
-First, always save the `RegExp` expression in a variable as:
-
-```js
-var reContains = /(?:^| )foo(?: |$)/
-```
-
-Second, in general terms:
+In general terms:
 
 - Use `.test` if you want a faster boolean check.
 - Use `.match` to retrieve all matches when using the g global flag.

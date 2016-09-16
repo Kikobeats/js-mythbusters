@@ -1,3 +1,17 @@
+<a name="1.1.0"></a>
+# 1.1.0 (2016-09-16)
+
+* Add changelog integration ([258ed79](https://github.com/kikobeats/javascript-mythbusters/commit/258ed79))
+* Add donate button ([5dc5e6f](https://github.com/kikobeats/javascript-mythbusters/commit/5dc5e6f))
+* Add how to declare regexp instances ([453df33](https://github.com/kikobeats/javascript-mythbusters/commit/453df33))
+* Cleaned up contributing.md wording ([1a5202e](https://github.com/kikobeats/javascript-mythbusters/commit/1a5202e))
+* Fixed wording and grammar in lookup-table.md ([285a99b](https://github.com/kikobeats/javascript-mythbusters/commit/285a99b))
+* Fixed wording and grammar in lookup-table.md ([71d9d36](https://github.com/kikobeats/javascript-mythbusters/commit/71d9d36))
+* Improve style ([d5b4569](https://github.com/kikobeats/javascript-mythbusters/commit/d5b4569))
+* Minor change in resources.md and some rewording in memoization.md ([246f2c6](https://github.com/kikobeats/javascript-mythbusters/commit/246f2c6))
+
+
+
 <a name="1.0.1"></a>
 ## 1.0.1 (2016-09-03)
 

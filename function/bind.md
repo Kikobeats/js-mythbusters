@@ -23,7 +23,7 @@ sayMonday('Kiko')
 // => 'Hello Kiko, have a good Monday'
 ```
 
-The real thing that you need is a *partial function*. The implementation depends of the library that you use but normally it's more faster than `.bind`:
+The real thing that you need is a **partial function**. The implementation depends of the library that you use but normally it's more faster than `.bind`:
 
 ```js
 function greet (greeting, name) {

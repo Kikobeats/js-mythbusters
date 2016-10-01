@@ -3,17 +3,16 @@
 # -- Dependencies --------------------------------------------------------------
 
 gulp        = require 'gulp'
-gutil       = require 'gulp-util'
+gulpif      = require 'gulp-if'
 sass        = require 'gulp-sass'
 concat      = require 'gulp-concat'
-cssmin      = require 'gulp-cssmin'
+cssnano     = require 'gulp-cssnano'
 addsrc      = require 'gulp-add-src'
 changed     = require 'gulp-changed'
-shorthand   = require 'gulp-shorthand'
 prefix      = require 'gulp-autoprefixer'
 strip       = require 'gulp-strip-css-comments'
 
-printError = (err) -> gutil.log err.toString()
+isProduction = process.env.NODE_ENV is 'production'
 
 # -- Files ---------------------------------------------------------------------
 
@@ -36,12 +35,11 @@ gulp.task 'css', ->
   gulp.src src.css.vendor
   .pipe changed dist.css
   .pipe addsrc src.sass.main
-  .pipe sass().on 'error', printError
+  .pipe sass().on('error', sass.logError)
   .pipe concat '' + dist.name + '.css'
-  .pipe prefix()
-  .pipe strip all: true
-  .pipe shorthand()
-  .pipe cssmin()
+  .pipe gulpif(isProduction, prefix())
+  .pipe gulpif(isProduction, strip all: true)
+  .pipe gulpif(isProduction, cssnano())
   .pipe gulp.dest dist.css
   return
 

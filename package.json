@@ -25,11 +25,10 @@
     "gulp-autoprefixer": "latest",
     "gulp-changed": "latest",
     "gulp-concat": "latest",
-    "gulp-cssmin": "latest",
+    "gulp-cssnano": "latest",
+    "gulp-if": "latest",
     "gulp-sass": "latest",
-    "gulp-shorthand": "latest",
     "gulp-strip-css-comments": "latest",
-    "gulp-util": "latest",
     "husky": "latest",
     "standard": "latest",
     "standard-markdown": "latest"

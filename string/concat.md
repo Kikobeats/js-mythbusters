@@ -6,7 +6,7 @@ The solution that have [more](https://jsperf.com/concat-vs-plus-vs-join) [perfom
 
 ```js
 
-function greetings(name) {
+function greetings (name) {
   var message = ''
   message += 'Hello '
   message += name
@@ -21,7 +21,7 @@ console.log(sayHello) // => 'Hello Kiko, how are you?'
 However, nowadays is totally recommended (less code and good perfomance) use template string for this purpose:
 
 ```js
-function greetings(name) {
+function greetings (name) {
   return `Hello ${name}, how are you?`
 }
 

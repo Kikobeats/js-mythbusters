@@ -10,7 +10,7 @@ env:
     - GIT_SOURCE: _docpress
 
 script:
-- ./node_modules/.bin/gulp build
+- NODE_ENV=production ./node_modules/.bin/gulp build
 - ./node_modules/.bin/docpress build
 - cp -a .gh-pages/. _docpress/
 

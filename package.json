@@ -29,7 +29,6 @@
     "gulp-if": "latest",
     "gulp-sass": "latest",
     "gulp-strip-css-comments": "latest",
-    "husky": "latest",
     "standard": "latest",
     "standard-markdown": "latest"
   },

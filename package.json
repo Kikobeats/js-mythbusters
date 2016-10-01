@@ -33,6 +33,9 @@
     "standard": "latest",
     "standard-markdown": "latest"
   },
+  "engines": {
+    "node": "4"
+  },
   "private": true,
   "license": "MIT"
 }

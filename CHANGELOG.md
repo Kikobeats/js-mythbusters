@@ -1,3 +1,18 @@
+<a name="1.1.2"></a>
+## 1.1.2 (2016-10-09)
+
+* Add lint script ([339f6ee](https://github.com/kikobeats/javascript-mythbusters/commit/339f6ee))
+* Fix bumpedrc ([266f8e4](https://github.com/kikobeats/javascript-mythbusters/commit/266f8e4))
+* Fix style ([62dd111](https://github.com/kikobeats/javascript-mythbusters/commit/62dd111))
+* Improve build process ([f5ce0be](https://github.com/kikobeats/javascript-mythbusters/commit/f5ce0be))
+* Lock node version ([11e0bad](https://github.com/kikobeats/javascript-mythbusters/commit/11e0bad))
+* Remove unused dep ([5fba2c0](https://github.com/kikobeats/javascript-mythbusters/commit/5fba2c0))
+* Update release commands ([4b56167](https://github.com/kikobeats/javascript-mythbusters/commit/4b56167))
+* Update travis build ([92df8e1](https://github.com/kikobeats/javascript-mythbusters/commit/92df8e1))
+* Update travis config ([76818a6](https://github.com/kikobeats/javascript-mythbusters/commit/76818a6))
+
+
+
 <a name="1.1.0"></a>
 # 1.1.0 (2016-09-16)
 

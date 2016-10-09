@@ -15,7 +15,7 @@ plugins:
       plugin: 'bumped-terminal'
       command: 'NODE_ENV=production gulp build'
 
-    'Generating docs:
+    'Generating docs':
       plugin: 'bumped-terminal'
       command: 'docpress build'
 

@@ -9,7 +9,7 @@ env:
     - GITHUB_REPO: Kikobeats/js-mythbusters
     - GIT_SOURCE: _docpress
 
-script:
+after_script:
 - NODE_ENV=production ./node_modules/.bin/gulp build
 - ./node_modules/.bin/docpress build
 - cp -a .gh-pages/. _docpress/

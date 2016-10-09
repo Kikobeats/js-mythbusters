@@ -35,6 +35,11 @@
   "engines": {
     "node": "4"
   },
+  "scripts": {
+    "lint": "standard-markdown **/*.md !v8-tips/freeing-memory.md !workflow/scope.md",
+    "pretest": "npm run lint",
+    "test": "echo 'no tests yet' && exit 0"
+  },
   "private": true,
   "license": "MIT"
 }

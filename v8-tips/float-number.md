@@ -1,4 +1,4 @@
-# Float Number are expensive
+# Floating-Point Numbers are expensive
 
 V8 uses tagging to represent values efficiently when types can change.
 
@@ -11,4 +11,4 @@ var i = 42  // this is a 31-bit signed integer (whole).
 var j = 4.2 // this is a double-precision floating point number (float).
 ```
 
-If you actually don't need the extra of information, avoid it.
+If you don't need the extra information, avoid it.

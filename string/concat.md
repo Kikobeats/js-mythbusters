@@ -1,8 +1,8 @@
 # Interpolating variables
 
-Creating an `String` interpolating variables always was a pain.
+Creating a `String` interpolating variables was always a pain.
 
-The solution that have [more](https://jsperf.com/concat-vs-plus-vs-join) [perfomance](https://jsperf.com/string-concat-fast/17) is using `+=` operator:
+The solution that has [more](https://jsperf.com/concat-vs-plus-vs-join) [perfomance](https://jsperf.com/string-concat-fast/17) is using the `+=` operator:
 
 ```js
 
@@ -18,7 +18,7 @@ var sayHello = greetings('Kiko')
 console.log(sayHello) // => 'Hello Kiko, how are you?'
 ```
 
-However, nowadays is totally recommended (less code and good perfomance) use template string for this purpose:
+However, nowadays it is recommended to use template strings due to implying less code and more perfomance:
 
 ```js
 function greetings (name) {

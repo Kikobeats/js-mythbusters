@@ -2,9 +2,7 @@
 
 If you need to check the result more than once.
 
-When it comes to Javascript data, there’s pretty much four ways to access it: literal values, variables, object properties, and array items. When thinking about optimization, literal values and variables perform about the same, and are significantly faster than object properties and array items.
-
-So whenever you reference an object property or array item multiple times, you can get a performance boost by defining a variable. (This applies to both reading and writing data).
+When it comes to Javascript data, there’s pretty much four ways to access it: literal values, variables, object properties, and array items. When thinking about optimization, literal values and variables perform about the same, and are significantly faster than object properties and array items. So whenever you reference an object property or array item multiple times, you can get a performance boost by defining a variable. (This applies to both reading and writing data).
 
 ```js
 var name = myObject.name
@@ -15,17 +13,16 @@ Consider this loop:
 
 ```js
 // minimizing property lookups
-for (var i = 0, len = items.length; i < len; i++) process(items[i])
+for (var i = 0, num = items.length; i < num; i++) process(items[i])
 ```
 
 ```js
 var j = 0
-var count = items.length
-while (j < count) process(items[j++])
+var num = items.length
+while (j < num) process(items[j++])
 ```
 
-
-Maybe you can move out the first iteration of the loop if you know that `num > 0`:
+You can remove the first iteration of the loop if you know that `num > 0`:
 
 ```js
 var k = 0
@@ -37,7 +34,7 @@ while (k < num)
 
 Depending on the length of the array, you can save around 25% off the total loop execution time in most engines.
 
-Another good low level tip is decrement the value:
+Another good low level tip is to decrement the counter value instead of incrementing it.
 
 ```js
 var j = items.length

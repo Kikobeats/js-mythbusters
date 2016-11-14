@@ -1,6 +1,6 @@
 # Declaring instances
 
-When declaring a `RegExp`, it oesn't matter if you use a **constructor**:
+When declaring a `RegExp`, it doesn't matter if you use a **constructor**:
 
 ```js
 const reUsername = /^[a-zA-Z0-9]+$/g

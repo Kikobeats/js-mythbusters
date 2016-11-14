@@ -1,6 +1,6 @@
 # `new` agnostic
 
-Even your function is called or not using `new` keyword, you can force to have the same behavior in both cases:
+You can force an `Object` constructor to return an instance of the `Object` even when the `new` keyword hasn't been used:
 
 ```js
 function User (name, passwordHash) {

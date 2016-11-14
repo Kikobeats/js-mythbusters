@@ -1,8 +1,8 @@
 # Preallocation
 
-Instead of declare a new `Array` and reserving memory for that, you can reallocate an `Array` previously declared.
+Instead of declaring a new `Array` and reserving memory for it, you can reallocate an `Array` previously declared.
 
-The thing that you need is remove the content of the array; You can do that using [`Array.prototype.length`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length):
+For that, you need to remove the previous contents of the array. You can do that setting [`Array.prototype.length`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length) to 0:
 
 ```js
 var array = [1, 2, 3, 4, 5]
@@ -11,7 +11,7 @@ array = [] //  bad
 array.length = 0 // good!
 ```
 
-Another good approach to use `.length` is when you know the size of your `Array`. In this case you can reserve the necessary memory space:
+Another good tip is to reserve the necessary memory space for your `Array` by setting its `.length` beforehand.
 
 ```js
 var array = []

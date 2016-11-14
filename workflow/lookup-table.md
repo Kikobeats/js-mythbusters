@@ -6,11 +6,11 @@ The easiest optimization is to ensure that the most common conditions are first:
 
 ```js
 if (value < 5) {
-  // most frequency case
+  // most frequent case
 } else if (value > 5 && value < 10) {
-  // second frequency case
+  // second most frequent case
 } else {
- // in other case
+ // other less frequent cases
 }
 ```
 
@@ -41,7 +41,7 @@ Be careful about choosing between `Object` or `Array`:
 
 ## Caveats
 
-Although is more readable, using a lookup table isn't always better. The cost of creating the lookup table could be higher than using a set of `if`/`else` statements. So, it depends on your code:
+Although it is more readable, using a lookup table isn't always better. The cost of creating the lookup table could be higher than using a set of `if`/`else` statements. So, it depends on your code:
 
 - If you have to handle a small set of conditions (maybe less than 3) or the code runtime life is short, use `if`/`else`.
 - In other cases, use a lookup table.

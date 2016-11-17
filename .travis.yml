@@ -1,18 +1,22 @@
 language: node_js
 node_js:
-- 4
-
+  - 4
+  - '4'
+  - '5'
+  - '6'
+  - '7'
 env:
   global:
     - GIT_NAME: Travis CI
     - GIT_EMAIL: nobody@nobody.org
     - GITHUB_REPO: Kikobeats/js-mythbusters
     - GIT_SOURCE: _docpress
-
 after_script:
-- NODE_ENV=production ./node_modules/.bin/gulp build
-- ./node_modules/.bin/docpress build
-- cp -a .gh-pages/. _docpress/
-
+  - NODE_ENV=production ./node_modules/.bin/gulp build
+  - ./node_modules/.bin/docpress build
+  - cp -a .gh-pages/. _docpress/
 after_success:
-- if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then npm install git-update-ghpages && ./node_modules/.bin/git-update-ghpages -e; fi
+  - >-
+    if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then
+    npm install git-update-ghpages && ./node_modules/.bin/git-update-ghpages -e;
+    fi

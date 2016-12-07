@@ -16,3 +16,5 @@ var time = new Date()
 time.getTime() // => 1472153262516
 time.getTime() // => 1472153262516
 ```
+
+In the browser side, consider using [performance.now()](https://developer.mozilla.org/en-US/docs/Web/API/Performance/now), which has better precision than Date.now() and always increases at a constant rate, independent of the system clock.

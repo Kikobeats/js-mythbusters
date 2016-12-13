@@ -46,4 +46,8 @@ for (var i = 0; i < 10; i++) array[0] |= i  // Much better! 2x faster.
 
 In the first piece of code you are accessing an element that doesn't exist in the array, and in this case the specs says that it wants to return `undefined` that later is converted into `0`, so you need to do this extra effort simply to compare with `0`.
 
-It could be better for you to use [`Array.prototype.fill()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/fill).
+Nowadays could be a good idea combine this with  [`Array.prototype.fill()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/fill). Following the example before:
+
+```js
+var array = Array(10).fill(0)
+```

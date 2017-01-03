@@ -1,4 +1,4 @@
-# Memoization: Cache successive calls
+# Memoization: Caching successive calls
 
 Just calculate the value of something once and reuse the value. This avoids the cost of recalculating the same value.
 

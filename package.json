@@ -31,7 +31,8 @@
     "gulp-sass": "latest",
     "gulp-strip-css-comments": "latest",
     "standard": "latest",
-    "standard-markdown": "latest"
+    "standard-markdown": "latest",
+    "travis-after-all": "latest"
   },
   "engines": {
     "node": "4"
@@ -40,6 +41,10 @@
     "lint": "standard-markdown **/*.md !v8-tips/freeing-memory.md !workflow/scope.md",
     "pretest": "npm run lint",
     "start": "concurrently --raw \"gulp\" \"docpress\"",
+    "prebuild": "npm install docpress git-update-ghpages",
+    "build": "NODE_ENV=production concurrently \"gulp build\" \"docpress build\"",
+    "postbuild": "cp -a .gh-pages/. _docpress",
+    "publish": "git-update-ghpages -e",
     "test": "echo 'no tests yet' && exit 0"
   },
   "private": true,

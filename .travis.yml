@@ -1,4 +1,5 @@
 language: node_js
+
 node_js:
 - 4
 
@@ -10,9 +11,13 @@ env:
     - GIT_SOURCE: _docpress
 
 after_script:
-- NODE_ENV=production ./node_modules/.bin/gulp build
-- ./node_modules/.bin/docpress build
-- cp -a .gh-pages/. _docpress/
-
-after_success:
-- if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then npm install git-update-ghpages && ./node_modules/.bin/git-update-ghpages -e; fi
+  - |
+      declare exitCode;
+      # -- [1] -------------------------------------------------------
+      $(npm bin)/travis-after-all
+      exitCode=$?
+      # -- [2] -------------------------------------------------------
+      if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" -a $exitCode -eq 0 ]; then
+        npm run build
+        npm run publish
+      fi

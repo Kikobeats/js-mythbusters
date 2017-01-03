@@ -20,3 +20,8 @@ var y = new User('baravelli', 'd8b74df393528d51cd19980ae0aa028e')
 x instanceof User // true
 y instanceof User // true
 ```
+
+This behavior is also supported by default by some native types in order to be backward compatibility with the [ECMAScript](https://tc39.github.io/ecma262) specification, like:
+
+- [RegExp constructor](https://tc39.github.io/ecma262/#sec-regexp-constructor).
+- [Error constructor](https://tc39.github.io/ecma262/#sec-error-constructor).

@@ -1,3 +1,32 @@
+<a name="1.1.3"></a>
+## 1.1.3 (2017-01-03)
+
+* Better way to setup dev ([3f15cd7](https://github.com/kikobeats/javascript-mythbusters/commit/3f15cd7))
+* Extend new agnostic section ([81d1b17](https://github.com/kikobeats/javascript-mythbusters/commit/81d1b17))
+* Extend section ([2933712](https://github.com/kikobeats/javascript-mythbusters/commit/2933712))
+* Grammar changes in float-number.md ([db96d36](https://github.com/kikobeats/javascript-mythbusters/commit/db96d36))
+* Grammar changes in sparse-arrays.md ([01cd8d9](https://github.com/kikobeats/javascript-mythbusters/commit/01cd8d9))
+* Grammar changes to inline-initialization.md ([0232daa](https://github.com/kikobeats/javascript-mythbusters/commit/0232daa))
+* Grammar changes to monomorphic.md ([34676a7](https://github.com/kikobeats/javascript-mythbusters/commit/34676a7))
+* Grammar changes to scope.md ([82fc5fa](https://github.com/kikobeats/javascript-mythbusters/commit/82fc5fa))
+* Grammar fixes to lookup-table.md ([a6c6637](https://github.com/kikobeats/javascript-mythbusters/commit/a6c6637))
+* Grammar fixes to variable-access.md ([565b811](https://github.com/kikobeats/javascript-mythbusters/commit/565b811))
+* Improve memoization section ([3073d22](https://github.com/kikobeats/javascript-mythbusters/commit/3073d22))
+* Typo (oops...) ([eb98f50](https://github.com/kikobeats/javascript-mythbusters/commit/eb98f50))
+* Update concat.md ([adb1be4](https://github.com/kikobeats/javascript-mythbusters/commit/adb1be4))
+* Update correct-methods.md ([b310d62](https://github.com/kikobeats/javascript-mythbusters/commit/b310d62))
+* Update declaring-instances.md ([3ccdc8d](https://github.com/kikobeats/javascript-mythbusters/commit/3ccdc8d))
+* Update freeing-memory.md ([d8c99eb](https://github.com/kikobeats/javascript-mythbusters/commit/d8c99eb))
+* Update inline-initialization.md ([3397a06](https://github.com/kikobeats/javascript-mythbusters/commit/3397a06))
+* Update new.md ([ecec184](https://github.com/kikobeats/javascript-mythbusters/commit/ecec184))
+* Update pop-or-shift.md ([50193e7](https://github.com/kikobeats/javascript-mythbusters/commit/50193e7))
+* Update preallocation.md ([464e558](https://github.com/kikobeats/javascript-mythbusters/commit/464e558))
+* Update timestamp.md ([962ca93](https://github.com/kikobeats/javascript-mythbusters/commit/962ca93))
+* Update timestamp.md ([18b09b9](https://github.com/kikobeats/javascript-mythbusters/commit/18b09b9))
+* Update try-catch.md ([1c0e3f7](https://github.com/kikobeats/javascript-mythbusters/commit/1c0e3f7))
+
+
+
 <a name="1.1.2"></a>
 ## 1.1.2 (2016-10-09)
 

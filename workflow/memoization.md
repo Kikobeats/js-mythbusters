@@ -7,7 +7,8 @@ var cache = Object.create(null)
 var cityOne = 'Murcia'
 var cityTwo = 'Madrid'
 var routeName = `${cityOne}${cityTwo}`
-if (!cache.has(routeName)) cache.set(routeName, getDistance(cityOne, cityTwo))
+
+if (!cache[routeName]) cache[routeName] = getDistance(cityOne, cityTwo)
 ```
 
 Notes that first line is `Object.create(null)`. This create a `Object` without `prototype`. because we want a pure object for be used as a Hash Table (with all the [prototypical method](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/prototype) missing).

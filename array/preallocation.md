@@ -21,3 +21,5 @@ arr[0] = 1
 arr[1] = 2
 arr[2] = 3
 ```
+
+That useful when you want to use an `Array` as temporal data buffer. [array-list](https://www.npmjs.com/package/array-list) is a good library for that.

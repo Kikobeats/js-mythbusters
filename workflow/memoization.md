@@ -4,6 +4,7 @@ Just calculate the value of something once and reuse the value. This avoids the 
 
 ```js
 var cache = Object.create(null)
+
 var cityOne = 'Murcia'
 var cityTwo = 'Madrid'
 var routeName = `${cityOne}${cityTwo}`

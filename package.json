@@ -19,6 +19,7 @@
   ],
   "devDependencies": {
     "coffee-script": "latest",
+    "concurrently": "latest",
     "docpress": "github:docpress/docpress#next",
     "gulp": "latest",
     "gulp-add-src": "latest",
@@ -36,6 +37,7 @@
     "node": "4"
   },
   "scripts": {
+    "start": "concurrently --raw \"gulp\" \"docpress\"",
     "lint": "standard-markdown **/*.md !v8-tips/freeing-memory.md !workflow/scope.md",
     "pretest": "npm run lint",
     "test": "echo 'no tests yet' && exit 0"

@@ -8,8 +8,9 @@
 #### Cache
 
 * [lru](https://github.com/chriso/lru) – A simple LRU cache supporting O(1) set, get and eviction of old keys.
-* [async-cache](https://github.com/isaacs/async-cache) – Cache your async lookups and don't fetch the same thing more than necessary.
+* [async-lur](https://github.com/feross/async-lru) – Like LRU but for async calls.
 * [mem](https://github.com/sindresorhus/mem) - An optimization used to speed up consecutive function calls.
+* [memo-async-lru](https://github.com/feross/memo-async-lru) – Memoize Node.js style callback-last functions, using an in-memory LRU store.
 
 #### Benchmark
 

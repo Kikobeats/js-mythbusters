@@ -1,4 +1,11 @@
-# JS MythBusters
+<h1 align="center">
+  <br>
+  <img src="https://i.imgur.com/NuawBPA.png" alt="bumped">
+  <br>
+  JS MythBusters
+  <br>
+  <br>
+</h1>
 
 <!-- {.massive-header.-with-tagline} -->
 > An optimization handbook from a high level point of view.

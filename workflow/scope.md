@@ -1,4 +1,4 @@
-# Setup the correct scope for variables.
+# Setup the correct scope for variables
 
 If you declare a global variable but you only use it in a small part of your code, then you are keeping the variable in memory all the time.
 

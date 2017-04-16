@@ -7,3 +7,11 @@ To remove the returned item without re-addressing the array and invalidating all
 On the other hand, `.pop` removes the last element of an `Array` by simply subtracting 1 from its length.
 
 Then `.shift` is usually much slower than `.pop`.
+
+For example, if you want clean an array, the best way known this is:
+
+```js
+while (arr.length > 0) {
+  arr.pop()
+}
+```

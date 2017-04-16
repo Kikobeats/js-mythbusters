@@ -15,7 +15,7 @@ All people known `RegExp` are difficult to write. A good approach for write the 
 
 [regexgen](https://github.com/devongovett/regexgen#regexgen) is a good library for that: It's generate a Trie structure based on the input and generate the most optimized `RegexEp`, removing redundancies.
 
-See it in action:
+See it in action from your CLI:
 
 ```js
 $ npm install regexgen-cli

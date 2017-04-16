@@ -27,7 +27,7 @@
 	* [arguments is special](/array/arguments.md)
 
 * [Date]
-	* [Creating timestamps](/date/timestamp.md)
+	* [Creating timestamp](/date/timestamp.md)
 
 * [Error]
 	* [Avoid try/catch](/error/try-catch.md)

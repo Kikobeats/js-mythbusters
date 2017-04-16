@@ -1,25 +1,22 @@
 # Preallocation
 
-Instead of declaring a new `Array` and reserving memory for it, you can reallocate an `Array` previously declared.
+It's typical use an `Array` such a temporal container of data (Remember, if you need to work with binary data, use a [Buffer](https://www.npmjs.com/package/buffer)).
 
-For that, you need to remove the previous contents of the array. You can do that setting [`Array.prototype.length`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length) to 0:
+Instead of allocate a new `Array` every time, a good approach in terms of perfomance is reuse the same array instance.
 
-```js
-var array = [1, 2, 3, 4, 5]
-
-array = [] //  bad
-array.length = 0 // good!
-```
-
-Another good tip is to reserve the necessary memory space for your `Array` by setting its `.length` beforehand.
+For clean the elements of the `Array`, you can follow different approach. Probably the most simple is use [`Array.prototype.length`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length) method and set it to `0`:
 
 ```js
-var array = []
-arr.length = 5
+const array = [1, 2, 3, 4, 5]
 
-arr[0] = 1
-arr[1] = 2
-arr[2] = 3
+array = [] // not reusing the same instance
+array.length = 0 // better!
 ```
 
-That useful when you want to use an `Array` as temporal data buffer. [array-list](https://www.npmjs.com/package/array-list) is a good library for that.
+Alternatively, you can create a conditional loop for `.pop` all the elements:
+
+```js
+while(arr.length) arr.pop() // best
+```
+
+Eventually the [loop approach works better than .length aproximation](https://jsperf.com/array-clear-methods/31).

@@ -4,13 +4,13 @@ It's typical use an `Array` such a temporal container of data (Remember, if you 
 
 Instead of allocate a new `Array` every time, a good approach in terms of perfomance is reuse the same array instance.
 
-For clean the elements of the `Array`, you can follow different approach. 
+For clean the elements of the `Array`, you can follow different approach.
 
 Probably the most evident is use `.pop` in a loop for clean all the elements:
 
 ```js
 const array = [1, 2, 3, 4, 5]
-while(arr.length) arr.pop() // best
+while (array.length) array.pop()
 console.log(array) // []
 ```
 

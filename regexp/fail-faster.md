@@ -17,7 +17,7 @@ All people known `RegExp` are difficult to write. A good approach for write the 
 
 See it in action from your CLI:
 
-```js
+```bash
 $ npm install regexgen-cli
 $ regexgen wave freewave freestylewave "freestyle wave"
 /(?:free(?:style ?)?)?wave/

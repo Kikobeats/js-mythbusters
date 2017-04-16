@@ -1,4 +1,4 @@
-# Variable access over array/object access.
+# Variable access over array/object access
 
 If you need to check the result more than once.
 

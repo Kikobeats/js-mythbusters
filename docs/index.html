@@ -32,11 +32,15 @@
 </script>
 <script>
   var HW_config = {
-    selector: '.sidebar>h1', // CSS selector where to inject the badge
-    account: "xGn9Ay" // your account ID
+    selector: '.sidebar>h1',
+    account: "xGn9Ay"
   };
+
+  if (typeof navigator.serviceWorker !== 'undefined') {
+    navigator.serviceWorker.register('sw.js')
+  }
 </script>
-<script async src="//cdn.headwayapp.co/widget.js"></script>
 <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+<script async src="//cdn.headwayapp.co/widget.js"></script>
 
 </html>

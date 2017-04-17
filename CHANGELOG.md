@@ -1,3 +1,37 @@
+<a name="2.0.0"></a>
+# 2.0.0 (2017-04-17)
+
+* Add offline support ([80eddb9](https://github.com/kikobeats/javascript-mythbusters/commit/80eddb9))
+* Create CNAME ([6c066ba](https://github.com/kikobeats/javascript-mythbusters/commit/6c066ba))
+* Fix escape markdown table ([c604388](https://github.com/kikobeats/javascript-mythbusters/commit/c604388))
+* Fix linter ([9ce763b](https://github.com/kikobeats/javascript-mythbusters/commit/9ce763b))
+* Fix typo ([a685b70](https://github.com/kikobeats/javascript-mythbusters/commit/a685b70))
+* Improve meta ([7a86236](https://github.com/kikobeats/javascript-mythbusters/commit/7a86236))
+* Migrate to Docsify ([1e78dac](https://github.com/kikobeats/javascript-mythbusters/commit/1e78dac))
+* Tweaks CSS ([5ce5b50](https://github.com/kikobeats/javascript-mythbusters/commit/5ce5b50))
+* Update arguments.md ([ff97263](https://github.com/kikobeats/javascript-mythbusters/commit/ff97263))
+* Update bumped tasks ([8343a84](https://github.com/kikobeats/javascript-mythbusters/commit/8343a84))
+* Update fail-faster.md ([9bd4a99](https://github.com/kikobeats/javascript-mythbusters/commit/9bd4a99))
+* Update fail-faster.md ([4d655d4](https://github.com/kikobeats/javascript-mythbusters/commit/4d655d4))
+* Update how to build the project ([903abab](https://github.com/kikobeats/javascript-mythbusters/commit/903abab))
+* Update logo ([4a1dbd2](https://github.com/kikobeats/javascript-mythbusters/commit/4a1dbd2))
+* Update memoization.md ([fb05848](https://github.com/kikobeats/javascript-mythbusters/commit/fb05848))
+* Update memoization.md ([dff0da6](https://github.com/kikobeats/javascript-mythbusters/commit/dff0da6))
+* Update memoization.md ([a470126](https://github.com/kikobeats/javascript-mythbusters/commit/a470126))
+* Update pop-or-shift.md ([dc9c934](https://github.com/kikobeats/javascript-mythbusters/commit/dc9c934))
+* Update preallocation.md ([c91d266](https://github.com/kikobeats/javascript-mythbusters/commit/c91d266))
+* Update preallocation.md ([a455bb8](https://github.com/kikobeats/javascript-mythbusters/commit/a455bb8))
+* Update README.md ([7d45d35](https://github.com/kikobeats/javascript-mythbusters/commit/7d45d35))
+* Update README.md ([e50fe5f](https://github.com/kikobeats/javascript-mythbusters/commit/e50fe5f))
+* Update resources.md ([8ac10c6](https://github.com/kikobeats/javascript-mythbusters/commit/8ac10c6))
+* Update resources.md ([6638520](https://github.com/kikobeats/javascript-mythbusters/commit/6638520))
+* Update scope.md ([615534c](https://github.com/kikobeats/javascript-mythbusters/commit/615534c))
+* Update scope.md ([f1e3244](https://github.com/kikobeats/javascript-mythbusters/commit/f1e3244))
+* Update travis builds ([8eb3b6a](https://github.com/kikobeats/javascript-mythbusters/commit/8eb3b6a))
+* Update variable-access.md ([6d340a2](https://github.com/kikobeats/javascript-mythbusters/commit/6d340a2))
+
+
+
 <a name="1.1.3"></a>
 ## 1.1.3 (2017-01-03)
 

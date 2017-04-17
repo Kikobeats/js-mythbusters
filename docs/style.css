@@ -36,7 +36,6 @@ div#app:empty:before {
 
 .progress {
   background-color: #00d3ee;
-  background-color: var(--theme-color, #00d3ee);
   height: 2px;
   left: 0;
   position: fixed;
@@ -50,7 +49,6 @@ div#app:empty:before {
 
 .search .search-keyword, .search a:hover {
   color: #00d3ee;
-  color: var(--theme-color, #00d3ee);
 }
 
 .search .search-keyword {
@@ -65,7 +63,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   color: #999;
-  font-family: Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif;
+  font-family: Menlo,
+                 Monaco,
+                 Lucida Console,
+                 Liberation Mono,
+                 DejaVu Sans Mono,
+                 Bitstream Vera Sans Mono,
+                 Courier New,
+                 monospace,
+                 serif;
   font-size: 15px;
   letter-spacing: 0;
   margin: 0;
@@ -123,12 +129,10 @@ kbd {
 
 .app-nav a.active, .app-nav a:hover {
   color: #00d3ee;
-  color: var(--theme-color, #00d3ee);
 }
 
 .app-nav a.active {
   border-bottom: 2px solid #00d3ee;
-  border-bottom: 2px solid var(--theme-color, #00d3ee);
 }
 
 .app-nav li {
@@ -197,7 +201,6 @@ kbd {
 .github-corner svg {
   color: #fff;
   fill: #00d3ee;
-  fill: var(--theme-color, #00d3ee);
   height: 80px;
   width: 80px;
 }
@@ -278,7 +281,7 @@ main {
 }
 
 .sidebar ul li a {
-  color: #00849B;
+  color: #00849b;
   font-size: 14px;
   font-weight: 400;
   overflow: hidden;
@@ -292,7 +295,8 @@ main {
 .sidebar ul li a:hover {
   text-decoration: underline;
   color: #ff2e88;
-  transition: all .3s;
+  -webkit-transition: all .3s;
+          transition: all .3s;
 }
 
 .sidebar ul li ul {
@@ -338,7 +342,6 @@ main {
 
 .sidebar-toggle span {
   background-color: #00d3ee;
-  background-color: var(--theme-color, #00d3ee);
   display: block;
   margin-bottom: 4px;
   width: 16px;
@@ -415,7 +418,6 @@ body.sticky .sidebar, body.sticky .sidebar-toggle {
   position: relative;
   background-color: #060618;
 }
-
 
 .markdown-section p.tip em {
   color: #00d3ee;
@@ -650,12 +652,10 @@ section.cover ul {
 }
 
 section.cover .cover-main>p:last-child a {
-  border-color: #00d3ee;
-  border: 1px solid var(--theme-color, #00d3ee);
+  border: 1px solid #00d3ee;
   border-radius: 2rem;
   box-sizing: border-box;
   color: #00d3ee;
-  color: var(--theme-color, #00d3ee);
   display: inline-block;
   font-size: 16.8px;
   font-size: 1.05rem;
@@ -672,7 +672,6 @@ section.cover .cover-main>p:last-child a {
 
 section.cover .cover-main>p:last-child a:last-child {
   background-color: #00d3ee;
-  background-color: var(--theme-color, #00d3ee);
   color: #081020;
   margin-right: 0;
 }
@@ -688,14 +687,12 @@ section.cover .cover-main>p:last-child a:hover {
 
 section.cover blockquote>p>a {
   border-bottom: 2px solid #00d3ee;
-  border-bottom: 2px solid var(--theme-color, #00d3ee);
   -webkit-transition: color .3s;
           transition: color .3s;
 }
 
 section.cover blockquote>p>a:hover {
   color: #00d3ee;
-  color: var(--theme-color, #00d3ee);
 }
 
 section.cover.show {
@@ -730,7 +727,7 @@ section.cover.has-mask .mask {
 
 .sidebar ul li.active>a {
   border-right: 2px solid;
-  color: var(--theme-color, #ff2e88);
+  color: #ff2e88;
   font-weight: bold;
 }
 
@@ -746,12 +743,11 @@ section.cover.has-mask .mask {
 }
 
 .markdown-section a {
-  color: var(--theme-color, #00d3ee);
+  color: #00d3ee;
   font-weight: bold;
 }
 
-.markdown-section p a,
-.markdown-section ul a {
+.markdown-section p a, .markdown-section ul a {
   text-decoration: none;
   border-bottom: 1px solid #00bcd4;
 }
@@ -760,14 +756,14 @@ section.cover.has-mask .mask {
   text-decoration: none;
 }
 
-.markdown-section p a:hover,
-.markdown-section ul a:hover {
+.markdown-section p a:hover, .markdown-section ul a:hover {
   border-bottom-color: #ff2e88;
 }
 
 .markdown-section a:hover {
   color: #ff2e88;
-  transition: all .3s;
+  -webkit-transition: all .3s;
+          transition: all .3s;
 }
 
 .markdown-section h1 {
@@ -824,7 +820,6 @@ section.cover.has-mask .mask {
 
 .markdown-section blockquote {
   border-left: 4px solid #00d3ee;
-  border-left: 4px solid var(--theme-color, #00d3ee);
   color: #858585;
   margin: 2em 0;
   padding-left: 20px;
@@ -897,7 +892,7 @@ section.cover.has-mask .mask {
 }
 
 .token.string {
-  color: var(--theme-color, #e5b567);
+  color: #e5b567;
 }
 
 .token.selector {
@@ -914,7 +909,6 @@ section.cover.has-mask .mask {
 
 .token.attr-value, .token.control, .token.directive, .token.unit {
   color: #00d3ee;
-  color: var(--theme-color, #00d3ee);
 }
 
 .token.keyword {

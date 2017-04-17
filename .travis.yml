@@ -1,23 +1,4 @@
 language: node_js
 
 node_js:
-- stable
-
-env:
-  global:
-    - GIT_NAME: Travis CI
-    - GIT_EMAIL: nobody@nobody.org
-    - GITHUB_REPO: Kikobeats/js-mythbusters
-    - GIT_SOURCE: _docpress
-
-after_script:
-  - |
-      declare exitCode;
-      # -- [1] -------------------------------------------------------
-      $(npm bin)/travis-after-all
-      exitCode=$?
-      # -- [2] -------------------------------------------------------
-      if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" -a $exitCode -eq 0 ]; then
-        npm run build
-        npm run publish
-      fi
+  - stable

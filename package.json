@@ -18,33 +18,14 @@
     "tips"
   ],
   "devDependencies": {
-    "coffee-script": "latest",
-    "concurrently": "latest",
-    "docpress": "github:docpress/docpress#next",
-    "gulp": "latest",
-    "gulp-add-src": "latest",
-    "gulp-autoprefixer": "latest",
-    "gulp-changed": "latest",
-    "gulp-concat": "latest",
-    "gulp-cssnano": "latest",
-    "gulp-if": "latest",
-    "gulp-sass": "latest",
-    "gulp-strip-css-comments": "latest",
-    "standard": "latest",
-    "standard-markdown": "latest",
-    "travis-after-all": "latest"
+    "standard-markdown": "latest"
   },
   "engines": {
     "node": "4"
   },
   "scripts": {
-    "lint": "standard-markdown **/*.md !v8-tips/freeing-memory.md !workflow/scope.md",
+    "lint": "standard-markdown docs/**/*.md !docs/v8-tips/freeing-memory.md !docs/workflow/scope.md",
     "pretest": "npm run lint",
-    "start": "concurrently --raw \"gulp\" \"docpress\"",
-    "prebuild": "npm install docpress git-update-ghpages",
-    "build": "NODE_ENV=production concurrently \"gulp build\" \"docpress build\"",
-    "postbuild": "cp -a .gh-pages/. _docpress",
-    "publish": "git-update-ghpages -e",
     "test": "echo 'no tests yet' && exit 0"
   },
   "private": true,

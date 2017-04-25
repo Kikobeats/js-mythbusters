@@ -27,9 +27,6 @@
 * Date
 	* [Creating timestamp](date/timestamp.md)
 
-* Error
-	* [Avoid try/catch](error/try-catch.md)
-
 * Function
 	* [new agnostic](function/new.md)
 	* [bind is slower](function/bind.md)

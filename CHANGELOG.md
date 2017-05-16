@@ -1,3 +1,11 @@
+<a name="2.0.1"></a>
+## 2.0.1 (2017-05-16)
+
+* Remove trycatch tip ([137d3bd](https://github.com/kikobeats/javascript-mythbusters/commit/137d3bd))
+* Update title ([cb82bf3](https://github.com/kikobeats/javascript-mythbusters/commit/cb82bf3))
+
+
+
 <a name="2.0.0"></a>
 # 2.0.0 (2017-04-17)
 

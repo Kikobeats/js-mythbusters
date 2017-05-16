@@ -1,6 +1,6 @@
 # JS MythBusters
 
-> An optimization handbook from a high level point of view.
+> A JavaScript optimization handbook from a high level point of view.
 
 # What is it
 

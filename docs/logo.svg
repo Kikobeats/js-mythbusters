@@ -2,14 +2,17 @@
   <style>
     /* <![CDATA[ */
     .pupil {
-      animation: blink 5s infinite alternate;
+      animation: blink 15s infinite alternate;
     }
     @keyframes blink {
-      0%, 97% {
+      0%, 47%, 61% {
         transform: translate(0, 0);
       }
-      100% {
-        transform: translate(10px, 0px);
+      50%, 53% {
+        transform: translate(10px, 10px);
+      }
+      55%, 58% {
+        transform: translate(-10px, 10px);
       }
     }
     /* ]]> */

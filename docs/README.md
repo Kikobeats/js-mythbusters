@@ -10,4 +10,4 @@ You can check [Six Speed](https://kpdecker.github.io/six-speed/) to see how much
 
 If you want to submit a tip, create a PR in our [GitHub repository](https://github.com/Kikobeats/js-mythbusters).
 
-<a class="badge" target="_blank" href="https://paypal.me/kikobeats"><img src="https://img.shields.io/badge/donate-paypal-blue.svg?style=flat-square" alt="Donate"></a>
+<a class="badge" style="border:0;" target="_blank" href="https://paypal.me/kikobeats"><img src="https://img.shields.io/badge/donate-paypal-blue.svg?style=flat-square" alt="Donate"></a>

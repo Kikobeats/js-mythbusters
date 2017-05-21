@@ -6,7 +6,8 @@
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-text-size-adjust: none;
   -webkit-touch-callout: none;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body:not(.ready) {
@@ -148,7 +149,8 @@ kbd {
   border: 1px solid #ddd;
   border-bottom-color: #ccc;
   border-radius: 4px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   display: none;
   max-height: calc(100vh - 61px);
   overflow-y: scroll;
@@ -371,7 +373,8 @@ body.sticky .sidebar, body.sticky .sidebar-toggle {
 }
 
 .markdown-section>* {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-size: inherit;
 }
 
@@ -654,7 +657,8 @@ section.cover ul {
 section.cover .cover-main>p:last-child a {
   border: 1px solid #00d3ee;
   border-radius: 2rem;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   color: #00d3ee;
   display: inline-block;
   font-size: 16.8px;

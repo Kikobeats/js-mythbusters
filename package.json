@@ -18,12 +18,14 @@
     "tips"
   ],
   "devDependencies": {
+    "docsify-cli": "latest",
     "standard-markdown": "latest"
   },
   "engines": {
     "node": "4"
   },
   "scripts": {
+    "dev": "docsify serve docs",
     "lint": "standard-markdown docs/**/*.md !docs/v8-tips/freeing-memory.md !docs/workflow/scope.md",
     "pretest": "npm run lint",
     "test": "echo 'no tests yet' && exit 0"

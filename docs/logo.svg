@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <style>
+    /* <![CDATA[ */
+    .pupil {
+      animation: blink 5s infinite alternate;
+    }
+    @keyframes blink {
+      0%, 97% {
+        transform: translate(0, 0);
+      }
+      100% {
+        transform: translate(10px, 0px);
+      }
+    }
+    /* ]]> */
+  </style>
+  <title>
+    js-mythbusters logo
+  </title>
+  <path d="M150 21.2a100 100 0 0 0-100 100v157.6l25-26 25 26 25-26 25 26 25-26 25 26 25-26 25 26V121.2a100 100 0 0 0-100-100z" fill="#edf4f7" stroke="#51565f" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+  <circle cx="197" cy="133.2" r="25" fill="#00d3ee" stroke="#51565f" stroke-miterlimit="10" stroke-width="4"/>
+  <circle cx="205.6" cy="133.7" r="5" fill="#51565f" class="pupil"/>
+  <circle cx="127.5" cy="133.2" r="25" fill="#00d3ee" stroke="#51565f" stroke-miterlimit="10" stroke-width="4"/>
+  <circle cx="136.1" cy="133.7" r="5" fill="#51565f" class="pupil"/>
+</svg>

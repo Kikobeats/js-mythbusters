@@ -1000,3 +1000,195 @@ pre:after {
 #HW_badge_cont {
   display: inline !important;
 }
+
+
+/* Interactive Logo  */
+/* Source: http://codepen.io/elrumordelaluz/pen/aWavEG */
+
+.logo-container {
+  position: relative;
+  width: 256px;
+  height: 256px;
+  display: block;
+  margin: 0 auto;
+}
+
+.ghost,
+.heats {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.heats {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.ghost {
+  z-index: 1;
+}
+
+.eye {
+  color: #00d3ee;
+  transition: .3s;
+  transform-origin: center center;
+}
+
+.eye--right {
+  transform: translateX(70px);
+}
+
+.eyelid {
+  animation: blink 5s infinite alternate;
+}
+.eye--left .eyelid {
+  transform-origin: top right;
+}
+.eye--right .eyelid {
+  transform-origin: top left;
+}
+
+.pupil,
+.eyelid {
+  transition: .3s;
+}
+
+.pupil {
+  transform-origin: center center;
+}
+
+.h {
+  z-index: 2;
+  /* debug */
+  /* outline: 1px solid red; */
+}
+
+.h:nth-of-type(1):hover ~ .ghost .pupil {
+  transform: translate(-10px, -10px);
+}
+
+.h:nth-of-type(2):hover ~ .ghost .pupil {
+  transform: translate(-5px, -10px);
+}
+
+.h:nth-of-type(3):hover ~ .ghost .pupil {
+  transform: translate(0px, -10px);
+}
+
+.h:nth-of-type(4):hover ~ .ghost .pupil {
+  transform: translate(5px, -10px);
+}
+
+.h:nth-of-type(5):hover ~ .ghost .pupil {
+  transform: translate(10px, -10px);
+}
+
+.h:nth-of-type(6):hover ~ .ghost .pupil {
+  transform: translate(-10px, -5px);
+}
+
+.h:nth-of-type(7):hover ~ .ghost .pupil {
+  transform: translate(-5px, -5px);
+}
+
+.h:nth-of-type(8):hover ~ .ghost .pupil {
+  transform: translate(0px, -5px);
+}
+
+.h:nth-of-type(9):hover ~ .ghost .pupil {
+  transform: translate(5px, -5px);
+}
+
+.h:nth-of-type(10):hover ~ .ghost .pupil {
+  transform: translate(10px, -5px);
+}
+
+.h:nth-of-type(11):hover ~ .ghost .pupil {
+  transform: translate(-10px, 0px);
+}
+
+.h:nth-of-type(12):hover ~ .ghost .pupil {
+  transform: translate(-5px, 0px);
+}
+
+.h:nth-of-type(13):hover ~ .ghost .pupil {
+  transform: translate(0px, 0px);
+}
+
+.h:nth-of-type(14):hover ~ .ghost .pupil {
+  transform: translate(5px, 0px);
+}
+
+.h:nth-of-type(15):hover ~ .ghost .pupil {
+  transform: translate(10px, 0px);
+}
+
+.h:nth-of-type(16):hover ~ .ghost .pupil {
+  transform: translate(-10px, 5px);
+}
+
+.h:nth-of-type(17):hover ~ .ghost .pupil {
+  transform: translate(-5px, 5px);
+}
+
+.h:nth-of-type(18):hover ~ .ghost .pupil {
+  transform: translate(0px, 5px);
+}
+
+.h:nth-of-type(19):hover ~ .ghost .pupil {
+  transform: translate(5px, 5px);
+}
+
+.h:nth-of-type(20):hover ~ .ghost .pupil {
+  transform: translate(10px, 5px);
+}
+
+.h:nth-of-type(21):hover ~ .ghost .pupil {
+  transform: translate(-10px, 10px);
+}
+
+.h:nth-of-type(22):hover ~ .ghost .pupil {
+  transform: translate(-5px, 10px);
+}
+
+.h:nth-of-type(23):hover ~ .ghost .pupil {
+  transform: translate(0px, 10px);
+}
+
+.h:nth-of-type(24):hover ~ .ghost .pupil {
+  transform: translate(5px, 10px);
+}
+
+.h:nth-of-type(25):hover ~ .ghost .pupil {
+  transform: translate(10px, 10px);
+}
+
+.h:nth-of-type(8):hover ~ .ghost .eye,
+.h:nth-of-type(13):hover ~ .ghost .eye {
+  color: #f00;
+}
+
+.h:nth-of-type(8):hover ~ .ghost .eye--left .pupil {
+  transform: translate(10px, -5px);
+}
+.h:nth-of-type(8):hover ~ .ghost .eye--right .pupil {
+  transform: translate(-20px, -10px);
+}
+
+.h:nth-of-type(13):hover ~ .ghost .eye--left .pupil {
+  transform: translate(10px, 7px);
+}
+.h:nth-of-type(13):hover ~ .ghost .eye--right .pupil {
+  transform: translate(-20px, 5px);
+}
+
+@keyframes blink {
+  0%,
+  97% {
+    transform: translateY(-18px);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}

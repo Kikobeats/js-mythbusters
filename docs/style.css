@@ -470,6 +470,14 @@ body.close .content {
 }
 
 @media screen and (max-width: 768px) {
+  section.cover blockquote {
+    margin: 2rem auto;
+  }
+  
+  section.cover p {
+    margin: 0 !important;
+  }
+  
   .github-corner, .sidebar, .sidebar-toggle {
     position: fixed;
   }
@@ -598,7 +606,7 @@ section.cover .cover-main {
   -webkit-box-flex: 1;
   -ms-flex: 1;
       flex: 1;
-  margin: -20px 16px 0;
+  margin: -80px 16px 0;
   text-align: center;
   z-index: 1;
 }
@@ -613,8 +621,8 @@ section.cover a, section.cover a:hover {
 
 section.cover p {
   line-height: 24px;
-  line-height: 1.5rem;
-  margin: 1em 0;
+  line-height: 1.75;
+  margin: 2rem 16rem 0 16rem;
 }
 
 section.cover h1 {
@@ -622,8 +630,6 @@ section.cover h1 {
   font-size: 40px;
   font-size: 2.5rem;
   font-weight: 300;
-  margin: 10px 0 40px;
-  margin: .625rem 0 2.5rem;
   position: relative;
   text-align: center;
 }
@@ -680,13 +686,10 @@ section.cover .cover-main>p:last-child a:last-child {
   margin-right: 0;
 }
 
-section.cover .cover-main>p:last-child a:last-child:hover {
-  color: inherit;
-  opacity: .8;
-}
-
+section.cover .cover-main>p:last-child a:last-child:hover,
 section.cover .cover-main>p:last-child a:hover {
-  color: inherit;
+  color: white;
+  opacity: .85;
 }
 
 section.cover blockquote>p>a {

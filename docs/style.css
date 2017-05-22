@@ -1169,7 +1169,7 @@ pre:after {
 
 .h:nth-of-type(8):hover ~ .ghost .eye,
 .h:nth-of-type(13):hover ~ .ghost .eye {
-  color: #f00;
+  color: #EF5350;
 }
 
 .h:nth-of-type(8):hover ~ .ghost .eye--left .pupil {

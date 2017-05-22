@@ -1010,8 +1010,8 @@ pre:after {
 
 .logo-container {
   position: relative;
-  width: 256px;
-  height: 256px;
+  height: 35vh;
+  max-height: 400px;
   display: block;
   margin: 0 auto;
 }
@@ -1043,7 +1043,7 @@ pre:after {
 }
 
 .eyelid {
-  animation: blink 5s infinite alternate;
+  animation: blink 1.5s infinite alternate;
 }
 .eye--left .eyelid {
   transform-origin: top right;
@@ -1188,7 +1188,7 @@ pre:after {
 
 @keyframes blink {
   0%,
-  97% {
+  95% {
     transform: translateY(-18px);
   }
   100% {

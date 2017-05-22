@@ -1,5 +1,5 @@
 <h1 align="center">
-  <a href="https://mythbusters.js.org"><img src="https://cdn.rawgit.com/elrumordelaluz/js-mythbusters/46efb87d/docs/logo.svg"></a>
+  <a href="https://mythbusters.js.org"><img src="https://cdn.rawgit.com/Kikobeats/js-mythbusters/d738e2f6/docs/logo.svg"></a>
   <br>
   JS MythBusters
   <br>

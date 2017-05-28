@@ -1,3 +1,30 @@
+<a name="2.0.2"></a>
+## 2.0.2 (2017-05-28)
+
+*  Add dev script ([ba76507](https://github.com/kikobeats/javascript-mythbusters/commit/ba76507))
+* Add development notes ([07b1eac](https://github.com/kikobeats/javascript-mythbusters/commit/07b1eac))
+* Add GA ([10c767e](https://github.com/kikobeats/javascript-mythbusters/commit/10c767e))
+* Add twitter share button ([92a3577](https://github.com/kikobeats/javascript-mythbusters/commit/92a3577))
+* Adjust animation and logo size ([7ed6759](https://github.com/kikobeats/javascript-mythbusters/commit/7ed6759))
+* Adjust red color ([6d28c7c](https://github.com/kikobeats/javascript-mythbusters/commit/6d28c7c))
+* Adjust reponsive ([bcacd0a](https://github.com/kikobeats/javascript-mythbusters/commit/bcacd0a))
+* Combine github-corner color  with background ([d2cfddb](https://github.com/kikobeats/javascript-mythbusters/commit/d2cfddb))
+* Improve meta ([069e73d](https://github.com/kikobeats/javascript-mythbusters/commit/069e73d))
+* Improve timestamp section ([499c3f1](https://github.com/kikobeats/javascript-mythbusters/commit/499c3f1))
+* Link `svg` logo from rawgit ([093c62a](https://github.com/kikobeats/javascript-mythbusters/commit/093c62a))
+* Prefix CSS ([a99e8ea](https://github.com/kikobeats/javascript-mythbusters/commit/a99e8ea))
+* Remove residual files ([80e9cb3](https://github.com/kikobeats/javascript-mythbusters/commit/80e9cb3))
+* Switch into interactive svg Logo ([46efb87](https://github.com/kikobeats/javascript-mythbusters/commit/46efb87))
+* Update _coverpage.md ([cee63e4](https://github.com/kikobeats/javascript-mythbusters/commit/cee63e4))
+* Update `.svg` animation ([0cf9535](https://github.com/kikobeats/javascript-mythbusters/commit/0cf9535))
+* Update link ([34220ee](https://github.com/kikobeats/javascript-mythbusters/commit/34220ee))
+* Update logo link ([ad687ca](https://github.com/kikobeats/javascript-mythbusters/commit/ad687ca))
+* Update README.md ([31c542e](https://github.com/kikobeats/javascript-mythbusters/commit/31c542e))
+* Update README.md ([070924e](https://github.com/kikobeats/javascript-mythbusters/commit/070924e))
+* Update timestamp.md ([f58801b](https://github.com/kikobeats/javascript-mythbusters/commit/f58801b))
+
+
+
 <a name="2.0.1"></a>
 ## 2.0.1 (2017-05-16)
 

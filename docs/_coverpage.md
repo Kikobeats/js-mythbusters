@@ -1,6 +1,5 @@
-
 <div class="logo-container">
-  <div class="heats"> 
+  <div class="heats">
     <div class="h"></div>
     <div class="h"></div>
     <div class="h"></div>
@@ -42,9 +41,16 @@
   </div>
 </div>
 
-# JS MythBusters 
+# JS MythBusters
 
-> A JavaScript optimization handbook from a high level point of view.
+> A JavaScript optimization handbook from a high level point of view. <a class="twitter-share-button"
+  href="https://twitter.com/share"
+  data-text="JS MythBusters, A JavaScript optimization handbook from a high level point of view"
+  data-hashtags="javascript,perfomance"
+  data-related="kikobeats"
+  data-url="https://mythbusters.js.org">
+Tweet
+</a>
 
 [GitHub](https://github.com/Kikobeats/js-mythbusters)
 [Get Started](#what-is-it)

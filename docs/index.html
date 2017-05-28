@@ -8,6 +8,22 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="canonical" href="https://mythbusters.js.org" />
   <link rel="stylesheet" href="style.css">
+  <script>window.twttr = (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0],
+      t = window.twttr || {};
+    if (d.getElementById(id)) return t;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://platform.twitter.com/widgets.js";
+    fjs.parentNode.insertBefore(js, fjs);
+
+    t._e = [];
+    t.ready = function(f) {
+      t._e.push(f);
+    };
+
+    return t;
+  }(document, "script", "twitter-wjs"));</script>
 </head>
 
 <body>
@@ -21,7 +37,6 @@
     ga: 'UA-83295706-1',
     name: 'JS MythBusters',
     subMaxLevel: 2,
-    repo: 'https://github.com/kikobeats/javascript-mythbusters',
     executeScript: true,
     loadSidebar: true,
     auto2top: true,

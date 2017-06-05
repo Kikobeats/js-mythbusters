@@ -1195,3 +1195,18 @@ pre:after {
     transform: translateY(20px);
   }
 }
+
+.meta-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: #364149;
+  font-size: 12px;
+}
+
+a.edit-button {
+  float: right;
+  text-decoration: none;
+  color: #364149;
+}

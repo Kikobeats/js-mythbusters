@@ -2,13 +2,25 @@
 	* [Bibliography](bibliography.md)
 	* [Resources](resources.md)
 	* [Changelog](changelog.md)
+	
+* Array
+	* [Preallocation](array/preallocation.md)
+	* [.pop over .shift](array/pop-or-shift.md)
+	* [arguments is special](array/arguments.md)
 
-* Workflow
-	* [Lookup table](workflow/lookup-table.md)
-	* [Math methods](workflow/math.md)
-	* [Memoization](workflow/memoization.md)
-	* [Scope](workflow/scope.md)
-	* [Variable access](workflow/variable-access.md)
+* Date
+	* [Creating timestamp](date/timestamp.md)
+	
+* Number
+	* [Parsing string](number/parse-string.md)
+
+* Function
+	* [new agnostic](function/new.md)
+	* [bind is slower](function/bind.md)
+
+* RegExp
+	* [Use the correct method](regexp/correct-methods.md)
+	* [Focus on failing faster](regexp/fail-faster.md)
 
 * V8
 	* [Hidden Class](v8-tips/hidden-class.md)
@@ -19,18 +31,9 @@
 	* [use strict](v8-tips/use-strict.md)
 	* [Freeing memory](v8-tips/freeing-memory.md)
 
-* Array
-	* [Preallocation](array/preallocation.md)
-	* [.pop over .shift](array/pop-or-shift.md)
-	* [arguments is special](array/arguments.md)
-
-* Date
-	* [Creating timestamp](date/timestamp.md)
-
-* Function
-	* [new agnostic](function/new.md)
-	* [bind is slower](function/bind.md)
-
-* RegExp
-	* [Use the correct method](regexp/correct-methods.md)
-	* [Focus on failing faster](regexp/fail-faster.md)
+* Workflow
+	* [Lookup table](workflow/lookup-table.md)
+	* [Math methods](workflow/math.md)
+	* [Memoization](workflow/memoization.md)
+	* [Scope](workflow/scope.md)
+	* [Variable access](workflow/variable-access.md)

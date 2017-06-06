@@ -101,7 +101,6 @@
         return d+(31==d||21==d||1==d?"st":22==d||2==d?"nd":23==d||3==d?"rd":"th")
       };
 
-      console.log(stringDate)
       var timestamp = new Date(stringDate)
       var day = days[timestamp.getDay()]
       var month = months[timestamp.getMonth()]

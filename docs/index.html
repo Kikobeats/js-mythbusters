@@ -49,6 +49,7 @@
 
     return t;
   }(document, "script", "twitter-wjs"));</script>
+  <script src="https://packd.now.sh/ms@2.0.0"></script>
 </head>
 
 <body>
@@ -69,7 +70,64 @@
     search: {
       placeholder: 'Type to search',
       paths: 'auto'
-    }
+    },
+    formatUpdated: function (stringDate) {
+      var days = [
+        'Sunday',
+        'Monday',
+        'Tuesday',
+        'Wednesday',
+        'Thursday',
+        'Friday',
+        'Saturday'
+      ];
+      
+      var months = [
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+        'July',
+        'August',
+        'September',
+        'October',
+        'November',
+        'December'
+      ];
+      
+      function dateOrdinal(d) {
+        return d+(31==d||21==d||1==d?"st":22==d||2==d?"nd":23==d||3==d?"rd":"th")
+      };
+
+      console.log(stringDate)
+      var timestamp = new Date(stringDate)
+      var day = days[timestamp.getDay()]
+      var month = months[timestamp.getMonth()]
+      var dayOrdinal = dateOrdinal(timestamp.getUTCDate())
+      var year = timestamp.getFullYear()
+      var diff = '(' + ms(Date.now() - timestamp) + ' ago)'
+      
+      return day + ', ' + month + ' ' + dayOrdinal + ' ' + year + ' ' + diff
+    },
+    plugins: [
+      function(hook, vm) {
+        hook.beforeEach(function (markdown) {
+          var url = 'https://github.com/Kikobeats/js-mythbusters/edit/master/docs' + vm.router.getFile()
+          
+          var editButton = '<a class="edit-button" href="' + url +'" target="_blank">edit this file</a>\n'
+          
+          console.log('')
+          
+          var date = '<span class="timestamp">{docsify-updated}</span>\n'
+          
+          var metaContainer = '<div class="meta-container">' + date + editButton + '</div>\n'
+          
+          return metaContainer + markdown
+        })
+      }
+    ]
   }
 </script>
 <script>
@@ -84,5 +142,6 @@
 </script>
 <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
 <script src="//unpkg.com/docsify/lib/plugins/ga.min.js"></script>
+<script src="//unpkg.com/docsify/lib/plugins/external-script.min.js"></script>
 <script async src="//cdn.headwayapp.co/widget.js"></script>
 </html>

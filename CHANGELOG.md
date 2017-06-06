@@ -1,3 +1,10 @@
+<a name="2.1.0"></a>
+# 2.1.0 (2017-06-06)
+
+* Add edit button ([cc2183e](https://github.com/kikobeats/javascript-mythbusters/commit/cc2183e))
+
+
+
 <a name="2.0.2"></a>
 ## 2.0.2 (2017-05-28)
 

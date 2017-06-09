@@ -1,3 +1,10 @@
+<a name="2.2.1"></a>
+## 2.2.1 (2017-06-09)
+
+* Fix mobile background ([702cef2](https://github.com/kikobeats/javascript-mythbusters/commit/702cef2))
+
+
+
 <a name="2.2.0"></a>
 # 2.2.0 (2017-06-09)
 

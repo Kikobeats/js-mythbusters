@@ -19,10 +19,17 @@
   ],
   "devDependencies": {
     "docsify-cli": "latest",
-    "standard-markdown": "latest"
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-concat": "latest",
+    "gulp-cssnano": "latest",
+    "gulp-strip-css-comments": "latest",
+    "gulp-uglify": "latest",
+    "standard-markdown": "latest",
+    "standard": "latest"
   },
   "engines": {
-    "node": "4"
+    "node": ">= 6"
   },
   "scripts": {
     "dev": "docsify serve docs",

@@ -1,13 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Mono|Source+Sans+Pro:300,400,600");
 
 * {
-  -webkit-font-smoothing: antialiased;
-  -webkit-overflow-scrolling: touch;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  -webkit-text-size-adjust: none;
-  -webkit-touch-callout: none;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body:not(.ready) {
@@ -42,7 +36,6 @@ div#app:empty:before {
   position: fixed;
   right: 0;
   top: 0;
-  -webkit-transition: width .2s, opacity .4s;
           transition: width .2s, opacity .4s;
   width: 0;
   z-index: 5;
@@ -61,8 +54,6 @@ body, html {
 }
 
 body {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
   color: #999;
   font-family: Menlo,
                  Monaco,
@@ -124,7 +115,6 @@ kbd {
   color: inherit;
   font-size: 16px;
   text-decoration: none;
-  -webkit-transition: color .3s;
           transition: color .3s;
 }
 
@@ -149,7 +139,6 @@ kbd {
   border: 1px solid #ddd;
   border-bottom-color: #ccc;
   border-radius: 4px;
-  -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: none;
   max-height: calc(100vh - 61px);
@@ -208,7 +197,6 @@ kbd {
 }
 
 .github-corner:hover .octo-arm {
-  -webkit-animation: a .56s ease-in-out;
           animation: a .56s ease-in-out;
 }
 
@@ -222,7 +210,6 @@ main {
 .anchor {
   display: inline-block;
   text-decoration: none;
-  -webkit-transition: all .3s;
           transition: all .3s;
 }
 
@@ -238,7 +225,6 @@ main {
   bottom: 0;
   left: 0;
   position: absolute;
-  -webkit-transition: -webkit-transform .25s ease-out;
           transition: -webkit-transform .25s ease-out;
           transition: transform .25s ease-out;
           transition: transform .25s ease-out, -webkit-transform .25s ease-out;
@@ -297,7 +283,6 @@ main {
 .sidebar ul li a:hover {
   text-decoration: underline;
   color: #ff2e88;
-  -webkit-transition: all .3s;
           transition: all .3s;
 }
 
@@ -331,7 +316,6 @@ main {
   left: 0;
   position: absolute;
   text-align: center;
-  -webkit-transition: opacity .3s;
           transition: opacity .3s;
   width: 30px;
   width: 284px;
@@ -361,7 +345,6 @@ body.sticky .sidebar, body.sticky .sidebar-toggle {
   bottom: 0;
   left: 300px;
   position: absolute;
-  -webkit-transition: left .25s ease;
           transition: left .25s ease;
 }
 
@@ -373,7 +356,6 @@ body.sticky .sidebar, body.sticky .sidebar-toggle {
 }
 
 .markdown-section>* {
-  -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: inherit;
 }
@@ -451,7 +433,6 @@ body.sticky .sidebar, body.sticky .sidebar-toggle {
 }
 
 body.close .sidebar {
-  -webkit-transform: translateX(-300px);
           transform: translateX(-300px);
 }
 
@@ -497,7 +478,6 @@ body.close .content {
 
   .sidebar {
     left: -300px;
-    -webkit-transition: -webkit-transform .25s ease-out;
             transition: -webkit-transform .25s ease-out;
             transition: transform .25s ease-out;
             transition: transform .25s ease-out, -webkit-transform .25s ease-out;
@@ -507,14 +487,12 @@ body.close .content {
     left: 0;
     max-width: 100vw;
     position: static;
-    -webkit-transition: -webkit-transform .25s ease;
             transition: -webkit-transform .25s ease;
             transition: transform .25s ease;
             transition: transform .25s ease, -webkit-transform .25s ease;
   }
 
   .app-nav, .github-corner {
-    -webkit-transition: -webkit-transform .25s ease-out;
             transition: -webkit-transform .25s ease-out;
             transition: transform .25s ease-out;
             transition: transform .25s ease-out, -webkit-transform .25s ease-out;
@@ -526,19 +504,16 @@ body.close .content {
   }
 
   body.close .sidebar {
-    -webkit-transform: translateX(300px);
             transform: translateX(300px);
   }
 
   body.close .sidebar-toggle {
     background-color: hsla(0, 0%, 100%, .8);
-    -webkit-transition: background-color 1s;
             transition: background-color 1s;
     width: 284px;
   }
 
   body.close .content {
-    -webkit-transform: translateX(300px);
             transform: translateX(300px);
   }
 
@@ -547,53 +522,43 @@ body.close .content {
   }
 
   .github-corner .octo-arm {
-    -webkit-animation: a .56s ease-in-out;
             animation: a .56s ease-in-out;
   }
 
   .github-corner:hover .octo-arm {
-    -webkit-animation: none;
             animation: none;
   }
 }
 
 @-webkit-keyframes a {
   0%, to {
-    -webkit-transform: rotate(0);
             transform: rotate(0);
   }
 
   20%, 60% {
-    -webkit-transform: rotate(-25deg);
             transform: rotate(-25deg);
   }
 
   40%, 80% {
-    -webkit-transform: rotate(10deg);
             transform: rotate(10deg);
   }
 }
 
 @keyframes a {
   0%, to {
-    -webkit-transform: rotate(0);
             transform: rotate(0);
   }
 
   20%, 60% {
-    -webkit-transform: rotate(-25deg);
             transform: rotate(-25deg);
   }
 
   40%, 80% {
-    -webkit-transform: rotate(10deg);
             transform: rotate(10deg);
   }
 }
 
 section.cover {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   background-position: 50%;
   background-repeat: no-repeat;
@@ -603,8 +568,6 @@ section.cover {
 }
 
 section.cover .cover-main {
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
       flex: 1;
   margin: -80px 16px 0;
   text-align: center;
@@ -663,7 +626,6 @@ section.cover ul {
 section.cover .cover-main>p:last-child a {
   border: 1px solid #00d3ee;
   border-radius: 2rem;
-  -webkit-box-sizing: border-box;
           box-sizing: border-box;
   color: #00d3ee;
   display: inline-block;
@@ -676,7 +638,6 @@ section.cover .cover-main>p:last-child a {
   padding: .75em 32px;
   padding: .75em 2rem;
   text-decoration: none;
-  -webkit-transition: all .15s ease;
           transition: all .15s ease;
 }
 
@@ -694,7 +655,6 @@ section.cover .cover-main>p:last-child a:hover {
 
 section.cover blockquote>p>a {
   border-bottom: 2px solid #00d3ee;
-  -webkit-transition: color .3s;
           transition: color .3s;
 }
 
@@ -703,8 +663,6 @@ section.cover blockquote>p>a:hover {
 }
 
 section.cover.show {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -769,7 +727,6 @@ section.cover.has-mask .mask {
 
 .markdown-section a:hover {
   color: #ff2e88;
-  -webkit-transition: all .3s;
           transition: all .3s;
 }
 
@@ -861,8 +818,6 @@ section.cover.has-mask .mask {
 }
 
 .markdown-section pre {
-  -moz-osx-font-smoothing: initial;
-  -webkit-font-smoothing: initial;
   line-height: 24px;
   line-height: 1.5rem;
   margin: 1.2em 0;
@@ -956,8 +911,6 @@ section.cover.has-mask .mask {
 }
 
 .markdown-section pre>code {
-  -moz-osx-font-smoothing: initial;
-  -webkit-font-smoothing: initial;
   background-color: #080820;
   border-radius: 2px;
   color: #ccc;
@@ -979,8 +932,6 @@ section.cover.has-mask .mask {
 }
 
 code .token {
-  -moz-osx-font-smoothing: initial;
-  -webkit-font-smoothing: initial;
   min-height: 24px;
   min-height: 1.5rem;
 }

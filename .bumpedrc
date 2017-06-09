@@ -12,6 +12,10 @@ plugins:
   postrelease:
     'Generating CHANGELOG file':
       plugin: 'bumped-changelog'
+      
+    'Generating assets build':
+      plugin: 'bumped-terminal'
+      command: 'gulp build'
 
     'Commiting new version':
       plugin: 'bumped-terminal'

@@ -1,3 +1,23 @@
+<a name="2.2.0"></a>
+# 2.2.0 (2017-06-09)
+
+* Add build process ([99cbc59](https://github.com/kikobeats/javascript-mythbusters/commit/99cbc59))
+* Add external resources into cache ([a6c0524](https://github.com/kikobeats/javascript-mythbusters/commit/a6c0524))
+* Add parsing string tip ([a88c668](https://github.com/kikobeats/javascript-mythbusters/commit/a88c668))
+* Create parse-string.md ([b9fa993](https://github.com/kikobeats/javascript-mythbusters/commit/b9fa993))
+* Fix header ([eae394c](https://github.com/kikobeats/javascript-mythbusters/commit/eae394c))
+* Fix linter ([2ed552a](https://github.com/kikobeats/javascript-mythbusters/commit/2ed552a))
+* Remove final bundle ([5f70f96](https://github.com/kikobeats/javascript-mythbusters/commit/5f70f96))
+* Remove log ([6f83ead](https://github.com/kikobeats/javascript-mythbusters/commit/6f83ead))
+* Remove timestamp ([80b2b05](https://github.com/kikobeats/javascript-mythbusters/commit/80b2b05))
+* Run dev tasks concurrently ([debe416](https://github.com/kikobeats/javascript-mythbusters/commit/debe416))
+* Update parse-string.md ([fbb510d](https://github.com/kikobeats/javascript-mythbusters/commit/fbb510d))
+* Update parse-string.md ([a31dea8](https://github.com/kikobeats/javascript-mythbusters/commit/a31dea8))
+* Update parse-string.md ([68e48e9](https://github.com/kikobeats/javascript-mythbusters/commit/68e48e9))
+* Update prod build process ([05707b8](https://github.com/kikobeats/javascript-mythbusters/commit/05707b8))
+
+
+
 <a name="2.1.0"></a>
 # 2.1.0 (2017-06-06)
 

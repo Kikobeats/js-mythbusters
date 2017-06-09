@@ -508,8 +508,8 @@ body.close .content {
   }
 
   body.close .sidebar-toggle {
-    background-color: hsla(0, 0%, 100%, .8);
-            transition: background-color 1s;
+    background-color: #081020;
+    transition: background-color .3s;
     width: 284px;
   }
 

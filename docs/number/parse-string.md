@@ -26,7 +26,7 @@ A solution could be wrap them into a named function:
 
 ```js
 const toNumber = num => ~~num
-console.log(toNumber('10.9')
+console.log(toNumber('10.9'))
 // => 10.9
 ```
 

@@ -1,4 +1,4 @@
-## Parsing String
+# Parsing String
 
 There is a lot of ways to convert a `String` into a `Number`:
 

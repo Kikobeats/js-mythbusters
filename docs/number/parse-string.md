@@ -25,7 +25,7 @@ If you want to use one of the tricky ways, keep in mind that the intention is no
 A solution could be wrap them into a named function:
 
 ```js
-const toNumber = num => ~~num
+const toNumber = num => +num
 console.log(toNumber('10.9'))
 // => 10.9
 ```

@@ -2,7 +2,7 @@
 	* [Bibliography](bibliography.md)
 	* [Resources](resources.md)
 	* [Changelog](changelog.md)
-	
+
 * Array
 	* [Preallocation](array/preallocation.md)
 	* [.pop over .shift](array/pop-or-shift.md)
@@ -10,7 +10,7 @@
 
 * Date
 	* [Creating timestamp](date/timestamp.md)
-	
+
 * Number
 	* [Parsing string](number/parse-string.md)
 
@@ -34,6 +34,6 @@
 * Workflow
 	* [Lookup table](workflow/lookup-table.md)
 	* [Math methods](workflow/math.md)
-	* [Memoization](workflow/memoization.md)
+	* [Memorization](workflow/memorization.md)
 	* [Scope](workflow/scope.md)
 	* [Variable access](workflow/variable-access.md)

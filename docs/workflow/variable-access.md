@@ -1,17 +1,17 @@
 # Variable access
 
-This tip is related with access with a deeply a frequently referenced path of an `Array` or `Object`.
-
-When it comes to Javascript data, there’s pretty much four ways to access it: 
+When it comes to Javascript data, there’s pretty much four ways to access it:
 
 - Literal values
 - Variables
 - Object properties
 - Array items
 
-When thinking about optimization, literal values and variables perform about the same, and are significantly faster than object properties and array items. 
+When thinking about optimization, literal values and variables perform about the
+same, and are significantly faster than object properties and array items.
 
-So whenever you reference an object property or array item multiple times, you can get a performance boost by defining a variable. (This applies to both reading and writing data).
+So whenever you reference an object property or array item multiple times, you
+can get a performance boost by defining a variable (this applies to both reading and writing data).
 
 ```js
 var name = myObject.name
@@ -21,7 +21,7 @@ var value = array[3]
 Consider this loop:
 
 ```js
-// minimizing property lookups
+// Minimizing property lookups
 for (var i = 0, num = items.length; i < num; i++) process(items[i])
 ```
 
@@ -41,7 +41,8 @@ do process(items[k++])
 while (k < num)
 ```
 
-Depending on the length of the array, you can save around 25% off the total loop execution time in most engines.
+Depending on the length of the array, you can save around 25% off the total loop
+execution time in most engines.
 
 !> Decreasing the work done per iteration is most effective when the loop has a complexity of O(n). When the loop is more complex than O(n), it is advisable to focus your attention on decreasing the number of iterations.
 
@@ -57,4 +58,5 @@ while (j--) {
 
 Now you are using one variable for the control and based in a boolean value. Excellent!
 
-By reversing loops and minimizing property lookups, you can see execution times that are up to 50%–60% faster than the original.
+By reversing loops and minimizing property lookups, you can see execution times
+that are up to 50%–60% faster than the original.

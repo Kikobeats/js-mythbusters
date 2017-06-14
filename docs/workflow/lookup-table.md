@@ -1,6 +1,7 @@
 # Lookup table
 
-When optimizing `if`/`else`, we want minimize the number of conditions to evaluate. This applies to `switch` cases as well.
+When optimizing `if`/`else`, we want to minimize the number of conditions to
+evaluate. This applies to `switch` cases as well.
 
 The easiest optimization is to ensure that the most common conditions are first:
 
@@ -16,7 +17,7 @@ if (value < 5) {
 
 ## Index lookups
 
-It's sometimes better to use a direct match approach using object/array index lookups:
+Sometimes it is better to use a direct match approach using object/array index lookups:
 
 ```js
 var lookupTable = {
@@ -30,18 +31,20 @@ var myValue = 5
 lookupTable[compare(4, myValue)]
 ```
 
-In objects, you may also use *falsy* values as keys.
+You may also use *falsy* values as keys in objects.
 
 ## Array vs. Object
 
-Be careful about choosing between `Object` or `Array`:
+Be careful when choosing between `Object` or `Array`:
 
-- If you need a incremental index, use `Array`.
+- If you need an incremental index, use `Array`.
 - In other cases, use `Object`.
 
 ## Caveats
 
-Although it is more readable, using a lookup table isn't always better. The cost of creating the lookup table could be higher than using a set of `if`/`else` statements. So, it depends on your code:
+Although it is more readable, using a lookup table isn't always better. The cost
+of creating the lookup table could be higher than using a set of `if`/`else`
+statements. It depends on your code:
 
 - If you have to handle a small set of conditions (maybe less than 3) or the code runtime life is short, use `if`/`else`.
-- In other cases, use a lookup table.
+- In other cases use a lookup table.

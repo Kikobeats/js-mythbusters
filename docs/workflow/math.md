@@ -1,8 +1,11 @@
 # Math methods
 
-Native parts of JavaScript are all written in a lower-level language such as C++. That means these methods are compiled down to machine code as part of the browser and therefore don't have the same limitations as your code.
+Native parts of JavaScript are all written in a lower-level language such as C++.
+That means these methods are compiled down to machine code as part of the browser
+and therefore don't have the same limitations as your code.
 
-The `Math` object contains properties and methods designed to make mathematical operations easier and most of the time they are implemented as native operations.
+The `Math` object contains properties and methods designed to make mathematical
+operations easier and most of the time they are implemented as native operations.
 
 There are several mathematical constants available:
 

@@ -1,6 +1,6 @@
 # Parsing String
 
-There is a lot of ways to convert a `String` into a `Number`:
+There are lots of ways to convert a `String` into a `Number`:
 
 |                     | `'1000'` | `'10.9'` | `'1,000.9'` | `'011'` | `'10c'` | `'$10'` |
 |---------------------|----------|----------|-------------|---------|---------|---------|
@@ -14,15 +14,15 @@ There is a lot of ways to convert a `String` into a `Number`:
 | `num - 0`           | 1000     | 10.9     | NaN         | 11      | NaN     | NaN     |
 | `+num`              | 1000     | 10.9     | NaN         | 11      | NaN     | NaN     |
 
-Despite the differences of the results, it does not matter too much the method used in terms of perfomance.
+Despite the differences of the results, it does not matter too much which method you use in terms of performance.
 
-`+num` is the shortest way and probably used in JavaScript minification tools.
+`+num` is the shortest way and is often used in JavaScript minification tools.
 
 Use `Number(num)` constructor should be enough evidence of your intention.
 
 If you want to use one of the tricky ways, keep in mind that the intention is not always obvious.
 
-A solution could be wrap them into a named function:
+A solution could be to wrap them into a named function:
 
 ```js
 const toNumber = num => +num

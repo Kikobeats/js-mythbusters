@@ -3,11 +3,11 @@
 If you want to delete a property of an `Object`, you can set the property to `null`:
 
 ```js
-// Inefficent way (Bad)
+// Inefficient way (bad)
 var foo = { bar: 'hello world' }
 delete foo.bar
 
-// Efficent way (Good)
+// Efficient way (good)
 var foo = { bar: 'hello world' }
 foo.bar = null
 ```

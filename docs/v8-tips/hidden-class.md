@@ -1,6 +1,7 @@
 # Hidden class
 
-JavaScript has limited compile-time type information: types can be changed at runtime, so it's natural to expect that it is expensive to reason about JS types at compile time.
+JavaScript has limited compile-time type information: types can be changed at
+runtime. This is why it is expensive to reason about JS types at compile time.
 
 ```js
 function Point (x, y) {

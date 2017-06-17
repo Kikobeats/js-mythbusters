@@ -1,3 +1,22 @@
+<a name="2.2.2"></a>
+## 2.2.2 (2017-06-17)
+
+* Add GA script ([1e3a4cd](https://github.com/kikobeats/javascript-mythbusters/commit/1e3a4cd))
+* Create DEVELOPMENT.md ([28e7a8a](https://github.com/kikobeats/javascript-mythbusters/commit/28e7a8a))
+* Fix #47 ([4e0ed75](https://github.com/kikobeats/javascript-mythbusters/commit/4e0ed75)), closes [#47](https://github.com/kikobeats/javascript-mythbusters/issues/47)
+* Fix mobile background ([3f97d16](https://github.com/kikobeats/javascript-mythbusters/commit/3f97d16))
+* Fixed wording in /array. ([8b6e10e](https://github.com/kikobeats/javascript-mythbusters/commit/8b6e10e))
+* Fixed wording in /date. ([bb8571b](https://github.com/kikobeats/javascript-mythbusters/commit/bb8571b))
+* Fixed wording in /function. ([2a2b42d](https://github.com/kikobeats/javascript-mythbusters/commit/2a2b42d))
+* Fixed wording in /number. ([99a79cd](https://github.com/kikobeats/javascript-mythbusters/commit/99a79cd))
+* Fixed wording in /regexp. ([5c48014](https://github.com/kikobeats/javascript-mythbusters/commit/5c48014))
+* Fixed wording in /v8-tips. ([2f1a461](https://github.com/kikobeats/javascript-mythbusters/commit/2f1a461))
+* Fixed wording in /workflow. ([a39ce74](https://github.com/kikobeats/javascript-mythbusters/commit/a39ce74))
+* Memorization → Memoization ([5e99d81](https://github.com/kikobeats/javascript-mythbusters/commit/5e99d81))
+* Release 2.2.1 ([0dad9bb](https://github.com/kikobeats/javascript-mythbusters/commit/0dad9bb))
+
+
+
 <a name="2.2.1"></a>
 ## 2.2.1 (2017-06-09)
 

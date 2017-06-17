@@ -1,12 +1,12 @@
-# Creating timestamp
+# Creating a timestamp
 
-We have different approach for measuring time, depending if you want to use the system clock as baseline or monotonic time for a better and more secure high resolution timing.
+We have different approaches for measuring time, depending if you want to use the system clock as baseline or monotonic time for a better and more secure high resolution timing.
 
 ## System Clock
 
 The familiar system clock which tells the time of day is referred to as a real-time clock or a wall-clock. The time on this clock will jump when changed. Relying on the wall-clock to find out how much time has passed since a previous event is a bug waiting to happen.
 
-!> Because you depend of the system clock, you need to setup [timezone environment variable](https://www.cyberciti.biz/faq/linux-unix-set-tz-environment-variable/) propertly, specially in **production** scenarios.
+!> Because you depend of the system clock, you need to setup [timezone environment variable](https://www.cyberciti.biz/faq/linux-unix-set-tz-environment-variable/) property, specially in **production** scenarios.
 
 ### Using Date
 
@@ -40,7 +40,7 @@ The limitation of use `Date` is that the minimum quantity of time you are measur
 
 To safely measure elapsed time in a program, you need a clock that ticks out time continuously, without any jumps when a user sets the system time. This kind of clock is called a monotonic clock.
 
-The [High Resolution Timer](High Resolution Timer) was added by the [WebPerf Working Group](http://www.w3.org/2010/webperf/) to allow measurement in the Web Platform that's more precision.
+The [High Resolution Timer](High Resolution Timer) was added by the [WebPerf Working Group](http://www.w3.org/2010/webperf/) to allow measurement in the Web Platform with more precision.
 
 !> Perhaps less often considered is that `Date`, based on system time, isn't ideal for real user monitoring either. Most systems run a daemon which regularly synchronizes the time. It is common for the clock to be tweaked a few milliseconds every 15-20 minutes. At that rate about 1% of 10 second intervals measured would be inaccurate.
 

@@ -1,6 +1,6 @@
 # new agnostic
 
-You can force an `Object` constructor to return an instance of the `Object` even when the `new` keyword hasn't been used:
+You can force an `Object` constructor to return an instance of the `Object` even if the `new` keyword hasn't been used:
 
 ```js
 function User (name, passwordHash) {

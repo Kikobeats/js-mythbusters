@@ -6,4 +6,4 @@ To remove the returned item without re-addressing the array and invalidating all
 
 On the other hand, `.pop` removes the last element of an `Array` by simply subtracting 1 from its length.
 
-Then `.shift` is usually much slower than `.pop`.
+Because of that `.shift` is usually much slower than `.pop`.

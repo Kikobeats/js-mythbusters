@@ -34,6 +34,6 @@
 * Workflow
 	* [Lookup table](workflow/lookup-table.md)
 	* [Math methods](workflow/math.md)
-	* [Memorization](workflow/memorization.md)
+	* [Memoization](workflow/Memoization.md)
 	* [Scope](workflow/scope.md)
 	* [Variable access](workflow/variable-access.md)

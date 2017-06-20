@@ -47,6 +47,7 @@
   href="https://twitter.com/share"
   data-text="JS MythBusters, A JavaScript optimization handbook from a high level point of view"
   data-hashtags="javascript,perfomance"
+  data-via="kikobeats"
   data-related="kikobeats"
   data-url="https://mythbusters.js.org">
 Tweet

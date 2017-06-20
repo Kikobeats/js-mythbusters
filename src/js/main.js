@@ -11,7 +11,7 @@ window.twttr = (function (d, s, id) {
   t.ready = function (f) {
     t._e.push(f)
   }
-  return t
+  return
 }(document, 'script', 'twitter-wjs'))
 
 window.$docsify = {

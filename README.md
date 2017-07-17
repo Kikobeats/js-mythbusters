@@ -13,3 +13,6 @@
 <h4 align="center">A JavaScript optimization handbook from a high level point of view.</h4>
 
 <br>
+
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/Kikobeats/js-mythbusters.svg)](https://greenkeeper.io/)

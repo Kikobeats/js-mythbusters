@@ -33,7 +33,7 @@ An immediate solution would be:
 
 ```js
 var array = []
-for (var i = 0; i < 10; i++) array[0] |= i  // Oh no!
+for (var i = 0; i < 10; i++) array[i] |= 0  // Oh no!
 ```
 
 but knowing how **hidden classes** act, a better solution in terms of performance would be:

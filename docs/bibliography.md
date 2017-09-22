@@ -16,3 +16,4 @@
 * [Let’s Write Fast JavaScript](https://medium.com/@mdibaiee/lets-write-fast-javascript-2b03c5575d9e).
 * [Writing Fast, Memory-Efficient JavaScript](http://www.smashingmagazine.com/2012/11/writing-fast-memory-efficient-javascript/#de-referencing-misconceptions).
 * [Unquoted property names / object keys in JavaScript](https://mathiasbynens.be/notes/javascript-properties).
+* [v8-perf, Exploring v8 performance characteristics in Node across v8 versions 5.1, 5.8, 5.9, 6.0 and 6.1](https://github.com/davidmarkclements/v8-perf).

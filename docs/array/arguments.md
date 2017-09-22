@@ -13,7 +13,7 @@ Only use:
 If you need to process the input of a function as an `array`, a good perfomance approach is manipulate a copy of `arguments`. You can do it using `spread operator`:
 
 ```js
-function spreadOp(...args) {
+function spreadOp (...args) {
   return other(args)
 }
 ```
@@ -21,9 +21,9 @@ function spreadOp(...args) {
 If you are in a scenario where is not possible to use `spread operator`, we recommend use the tiny [sliced](https://github.com/aheckmann/sliced) library for make an a copy of the `array`:
 
 ```js
-const sliced = require('sliced');
+const sliced = require('sliced')
 
-function myFunctionWithArgs() {
+function myFunctionWithArgs () {
   const args = sliced(arguments)
 }
 ```

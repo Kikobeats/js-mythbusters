@@ -10,7 +10,7 @@ Only use:
 * STRICTLY `fn.apply(y, arguments)` is ok, nothing else is (e.g. `.slice`). That's because `Function#apply` is special.
 * Be aware that adding properties to functions (e.g. `fn.$inject =...`) and bound functions (i.e. the result of `Function#bind`) generate hidden classes and, therefore, are not safe when using `.apply`.
 
-If you need to process the input of a function as an `array`, a good perfomance approach is manipulate a copy of `arguments`. You can do it using `spread operator`:
+If you need to process the input of a function as an `array`, a good performance approach is manipulate a copy of `arguments`. You can do it using `spread operator`:
 
 ```js
 function spreadOp (...args) {

@@ -30,24 +30,20 @@ Imagine that you want to have an `Array` of elements but you can't build it in o
 
 An immediate solution would be:
 
-
 ```js
 var array = []
 for (var i = 0; i < 10; i++) array[i] |= 0  // Oh no!
 ```
 
-but knowing how **hidden classes** act, a better solution in terms of performance would be:
+This piece of code is accessing an element that doesn't exist in the array, and in this case the specs says that it wants to return `undefined` that later is converted into `0`, so you need to do this extra effort simply to compare with `0`.
+
+
+The array is being re-converted all time, but knowing how **hidden classes** act, a better solution in terms of performance would be:
 
 ```js
 var array = []
 array[0] = 0
-for (var i = 0; i < 10; i++) array[0] |= i  // Much better! 2x faster.
+for (var i = 0; i < 10; i++) array[i] |= i  // Much better! 2x faster.
 ```
-
-In the first piece of code you are accessing an element that doesn't exist in the array, and in this case the specs says that it wants to return `undefined` that later is converted into `0`, so you need to do this extra effort simply to compare with `0`.
-
-Nowadays it may be a good idea to combine this with  [`Array.prototype.fill()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/fill). Following the example before:
-
-```js
-var array = Array(10).fill(0)
-```
+ 
+This second piece of code is simply better in terms of perfomance because we initialize a value out of the array with the same type as the element on the loops, so we avoid transforming the type of the array all the time.

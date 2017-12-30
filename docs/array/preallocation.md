@@ -6,14 +6,14 @@ If you want to preallocate an array with a initial value, you can use [`Array.pr
 
 ```js
 const n = 4
-const array = Array(0).fill(0) // [ 0, 0, 0, 0 ]
+const array = Array(n).fill(0) // [ 0, 0, 0, 0 ]
 ```
 
 Sometimes is useful initialize an array with a range of index. A tricky way to do that could be:
 
 ```js
 const n = 4
-const array = Array.from(Array(N).keys()) // [ 0, 1, 2, 3, 4 ]
+const array = Array.from(Array(n).keys()) // [ 0, 1, 2, 3, 4 ]
 ```
 
 ## Reusing instances

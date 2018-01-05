@@ -16,6 +16,8 @@ There are lots of ways to convert a `String` into a `Number`:
 
 Despite the differences of the results, it does not matter too much which method you use in terms of performance.
 
+Since `~~` is a binary operator, it will change the meaning of any number higher than 2147483647 (32-bit int). It is discouraged for use with parsing.
+
 `+num` is the shortest way and is often used in JavaScript minification tools.
 
 Use `Number(num)` constructor should be enough evidence of your intention.

@@ -1,5 +1,6 @@
 window.twttr = (function (d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0],
+  var js,
+    fjs = d.getElementsByTagName(s)[0],
     t = window.twttr || {}
   if (d.getElementById(id)) return t
   js = d.createElement(s)
@@ -12,13 +13,15 @@ window.twttr = (function (d, s, id) {
     t._e.push(f)
   }
   return
-}(document, 'script', 'twitter-wjs'))
+})(document, 'script', 'twitter-wjs')
 
 window.$docsify = {
   alias: {
-    '/changelog': 'https://raw.githubusercontent.com/Kikobeats/js-mythbusters/master/CHANGELOG.md'
+    '/changelog':
+      'https://raw.githubusercontent.com/Kikobeats/js-mythbusters/master/CHANGELOG.md'
   },
   name: 'JS MythBusters',
+  ga: 'UA-83295706-1',
   subMaxLevel: 2,
   executeScript: true,
   loadSidebar: true,
@@ -27,9 +30,15 @@ window.$docsify = {
   plugins: [
     function (hook, vm) {
       hook.beforeEach(function (markdown) {
-        var url = 'https://github.com/Kikobeats/js-mythbusters/edit/master/docs' + vm.router.getFile()
-        var editButton = '<a class="edit-button" href="' + url + '" target="_blank">edit this file</a>\n'
-        var metaContainer = '<div class="meta-container">' + editButton + '</div>\n'
+        var url =
+          'https://github.com/Kikobeats/js-mythbusters/edit/master/docs' +
+          vm.router.getFile()
+        var editButton =
+          '<a class="edit-button" href="' +
+          url +
+          '" target="_blank">edit this file</a>\n'
+        var metaContainer =
+          '<div class="meta-container">' + editButton + '</div>\n'
         return metaContainer + markdown
       })
     }

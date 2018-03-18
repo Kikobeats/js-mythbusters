@@ -6,7 +6,7 @@ If you want to preallocate an array with a initial value, you can use [`Array.fr
 
 ```js
 const n = 5
-Array.from({length: n}, (value, index) => index);
+Array.from({length: n}, (value, index) => index)
 // [ 0, 1, 2, 3, 4 ]
 ```
 

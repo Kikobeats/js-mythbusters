@@ -13,11 +13,17 @@ Reduce the use of `|` using character classes and optional components, or by pus
 
 Everyone knows `RegExp` are difficult to write. A good approach to write the right `RegExp` is to automate the process.
 
-[regexgen](https://github.com/devongovett/regexgen#regexgen) is a good library for that: it generates a tree structure based on the input and generates the most optimized `RegexEp`, removing redundancies.
-
-See it in action from your CLI:
+[regexgen](https://github.com/devongovett/regexgen#regexgen) is a good library for that: it generates a tree structure based on the input and generates the most optimized `RegexEp`, removing redundancies:
 
 ```bash  
 $ regexgen wave freewave freestylewave "freestyle wave"
 /(?:free(?:style ?)?)?wave/
+```
+
+You can combine it with [randexp](https://github.com/fent/randexp.js) to generates random strings that match a given RegExp:
+
+```js
+const RandExp = require('randexp');
+new RandExp(/hello+ (world|to you)/).gen();
+// => hellooooooooooooooooooo world
 ```

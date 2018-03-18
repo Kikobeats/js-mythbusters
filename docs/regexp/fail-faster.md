@@ -23,7 +23,7 @@ $ regexgen wave freewave freestylewave "freestyle wave"
 You can combine it with [randexp](https://github.com/fent/randexp.js) to generates random strings that match a given RegExp:
 
 ```js
-const RandExp = require('randexp');
-new RandExp(/hello+ (world|to you)/).gen();
+const RandExp = require('randexp')
+new RandExp(/hello+ (world|to you)/).gen()
 // => hellooooooooooooooooooo world
 ```

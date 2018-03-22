@@ -28,7 +28,7 @@
 	* [Float Number](v8-tips/float-number.md)
 	* [Inline initialization](v8-tips/inline-initialization.md)
 	* [Monomorphic](v8-tips/monomorphic.md)
-	* [use strict](v8-tips/use-strict.md)
+	* [Use strict](v8-tips/use-strict.md)
 	* [Freeing memory](v8-tips/freeing-memory.md)
 
 * Workflow

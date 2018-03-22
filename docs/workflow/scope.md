@@ -46,7 +46,7 @@ in the block it’s defined in, which is not always the entire containing functi
 The variable may or may not be reassigned, and the variable may or may not be used
 for an entire function, or just for the purpose of a block or loop.
 
-## A Simple rule
+## A simple rule
 
 So if you need to allow the variable to be reassigned, use `let`, otherwise use
 `const`. Also, if you need to deallocate a value by unsetting it, you may consider

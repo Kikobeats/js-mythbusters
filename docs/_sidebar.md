@@ -32,6 +32,7 @@
 	* [Freeing memory](v8-tips/freeing-memory.md)
 
 * Workflow
+	* [Deferring by a tick](workflow/defer.md)
 	* [Lookup table](workflow/lookup-table.md)
 	* [Math methods](workflow/math.md)
 	* [Memoization](workflow/memoization.md)

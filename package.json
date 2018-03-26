@@ -19,7 +19,7 @@
   ],
   "devDependencies": {
     "concurrently": "latest",
-    "docsify-cli": "latest",
+    "docsify-cli": "~4.2.1",
     "gulp": "latest",
     "gulp-autoprefixer": "latest",
     "gulp-concat": "latest",

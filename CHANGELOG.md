@@ -1,3 +1,38 @@
+<a name="2.3.0"></a>
+# 2.3.0 (2018-03-27)
+
+* Add deferring section ([15ee83a](https://github.com/kikobeats/javascript-mythbusters/commit/15ee83a)), closes [#69](https://github.com/kikobeats/javascript-mythbusters/issues/69)
+* Add twitter data-via ([69e1d0e](https://github.com/kikobeats/javascript-mythbusters/commit/69e1d0e))
+* Added a warning of using binary operator for parsing strings ([5ee0ba3](https://github.com/kikobeats/javascript-mythbusters/commit/5ee0ba3))
+* Extract GA script ([a9cff0d](https://github.com/kikobeats/javascript-mythbusters/commit/a9cff0d))
+* Fix block padding ([8ab907a](https://github.com/kikobeats/javascript-mythbusters/commit/8ab907a))
+* Fix example ([476e850](https://github.com/kikobeats/javascript-mythbusters/commit/476e850)), closes [#51](https://github.com/kikobeats/javascript-mythbusters/issues/51)
+* Fix linter ([8f4c3d1](https://github.com/kikobeats/javascript-mythbusters/commit/8f4c3d1))
+* fix memoizaton link ([1d3d6fe](https://github.com/kikobeats/javascript-mythbusters/commit/1d3d6fe))
+* Fix typo ([45b9f63](https://github.com/kikobeats/javascript-mythbusters/commit/45b9f63))
+* Improve tooling ([db65cdc](https://github.com/kikobeats/javascript-mythbusters/commit/db65cdc))
+* Performance instead of perfomance ([9a26ace](https://github.com/kikobeats/javascript-mythbusters/commit/9a26ace))
+* Update _sidebar.md ([6666a4a](https://github.com/kikobeats/javascript-mythbusters/commit/6666a4a))
+* Update arguments.md ([46b52cf](https://github.com/kikobeats/javascript-mythbusters/commit/46b52cf))
+* Update bibliography.md ([755b619](https://github.com/kikobeats/javascript-mythbusters/commit/755b619))
+* Update bibliography.md ([a3979b9](https://github.com/kikobeats/javascript-mythbusters/commit/a3979b9))
+* Update fail-faster.md ([667d4e6](https://github.com/kikobeats/javascript-mythbusters/commit/667d4e6))
+* Update fail-faster.md ([78dc435](https://github.com/kikobeats/javascript-mythbusters/commit/78dc435))
+* Update fail-faster.md ([be4a477](https://github.com/kikobeats/javascript-mythbusters/commit/be4a477))
+* Update freeing-memory.md ([3a9a610](https://github.com/kikobeats/javascript-mythbusters/commit/3a9a610))
+* Update inline-initialization.md ([38ce714](https://github.com/kikobeats/javascript-mythbusters/commit/38ce714))
+* Update preallocation.md ([16311f3](https://github.com/kikobeats/javascript-mythbusters/commit/16311f3))
+* Update preallocation.md ([3a471e9](https://github.com/kikobeats/javascript-mythbusters/commit/3a471e9))
+* Update preallocation.md ([7f4df40](https://github.com/kikobeats/javascript-mythbusters/commit/7f4df40))
+* Update preallocation.md ([9098153](https://github.com/kikobeats/javascript-mythbusters/commit/9098153))
+* Update README.md ([a80f323](https://github.com/kikobeats/javascript-mythbusters/commit/a80f323))
+* Update README.md ([fbf22ac](https://github.com/kikobeats/javascript-mythbusters/commit/fbf22ac))
+* Update scope.md ([5ccf7e1](https://github.com/kikobeats/javascript-mythbusters/commit/5ccf7e1))
+* docs(readme): add Greenkeeper badge ([a134e01](https://github.com/kikobeats/javascript-mythbusters/commit/a134e01))
+* docs(readme): add Greenkeeper badge ([6eaf8ea](https://github.com/kikobeats/javascript-mythbusters/commit/6eaf8ea))
+
+
+
 <a name="2.2.2"></a>
 ## 2.2.2 (2017-06-17)
 

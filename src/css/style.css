@@ -445,13 +445,10 @@ body.close .content {
   }
 }
 
+/* mobile responsive */
 @media screen and (max-width: 768px) {
   section.cover blockquote {
     margin: 2rem auto;
-  }
-
-  section.cover p {
-    margin: 0 !important;
   }
 
   .github-corner,
@@ -589,9 +586,9 @@ section.cover a:hover {
 }
 
 section.cover p {
-  line-height: 24px;
   line-height: 1.75;
-  margin: 2rem 16rem 0 16rem;
+  max-width: 24em;
+  margin: 0 auto;
 }
 
 section.cover h1 {
@@ -635,13 +632,9 @@ section.cover .cover-main > p:last-child a {
   box-sizing: border-box;
   color: #00d3ee;
   display: inline-block;
-  font-size: 16.8px;
-  font-size: 1.05rem;
-  letter-spacing: 1.6px;
+  font-size: 1rem;
   letter-spacing: 0.1rem;
-  margin-right: 16px;
-  margin-right: 1rem;
-  padding: 0.75em 32px;
+  margin-right: 0.5rem;
   padding: 0.75em 2rem;
   text-decoration: none;
   transition: all 0.15s ease;

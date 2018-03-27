@@ -18,8 +18,9 @@
     "tips"
   ],
   "devDependencies": {
+    "browser-sync": "latest",
     "concurrently": "latest",
-    "docsify-cli": "~4.2.1",
+    "docsify-cli": "latest",
     "gulp": "latest",
     "gulp-autoprefixer": "latest",
     "gulp-concat": "latest",
@@ -32,10 +33,14 @@
   "engines": {
     "node": ">= 6"
   },
+  "files": [
+    "f"
+  ],
   "scripts": {
-    "dev": "concurrently \"gulp\" \"docsify serve docs\"",
+    "dev": "concurrently \"gulp\" \"npm run server:dev\"",
     "lint": "standard-markdown docs/**/*.md !docs/v8-tips/freeing-memory.md !docs/workflow/scope.md",
     "pretest": "npm run lint",
+    "server:dev": "cd docs && browser-sync start --server --files \"index.html, **/*.md main.min.js, style.min.css\"",
     "test": "echo 'no tests yet' && exit 0"
   },
   "private": true,

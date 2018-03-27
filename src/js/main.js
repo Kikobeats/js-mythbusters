@@ -50,4 +50,4 @@ window.HW_config = {
   account: 'xGn9Ay'
 }
 
-navigator.serviceWorker && navigator.serviceWorker.register('sw.js')
+// navigator.serviceWorker && navigator.serviceWorker.register('sw.js')

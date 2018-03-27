@@ -1,4 +1,4 @@
-# Deferring by tick
+# Deferring by a tick
 
 [Timers](https://nodejs.org/en/docs/guides/timers-in-node/) are functions for executing code after a set period of time.
 

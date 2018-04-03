@@ -20,4 +20,5 @@
 
 ## Debugging
 
+* [flamebearer](https://github.com/mapbox/flamebearer) – Blazing fast flame graph tool for V8 and Node.
 * [0x](https://www.npmjs.com/package/0x) – Visualize stack traces.

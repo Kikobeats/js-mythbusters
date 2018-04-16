@@ -12,6 +12,7 @@
 * [mem](https://github.com/sindresorhus/mem) - An optimization used to speed up consecutive function calls.
 * [memo-async-lru](https://github.com/feross/memo-async-lru) – Memoize Node.js style callback-last functions, using an in-memory LRU store.
 * [lscache](https://github.com/pamelafox/lscache) – A localStorage-based memcache-inspired client-side caching library.
+* [money-clip](https://github.com/HenrikJoreteg/money-clip) – For managing your client side cache. Tiny wrapper over IndexedDB supporting versioning and max age.
 
 ## Benchmark
 

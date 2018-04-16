@@ -11,6 +11,7 @@
 * [lru](https://github.com/chriso/lru) – A simple LRU cache supporting O(1) set, get and eviction of old keys.
 * [mem](https://github.com/sindresorhus/mem) - An optimization used to speed up consecutive function calls.
 * [memo-async-lru](https://github.com/feross/memo-async-lru) – Memoize Node.js style callback-last functions, using an in-memory LRU store.
+* [lscache](https://github.com/pamelafox/lscache) – A localStorage-based memcache-inspired client-side caching library.
 
 ## Benchmark
 

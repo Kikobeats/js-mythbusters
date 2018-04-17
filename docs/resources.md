@@ -19,6 +19,7 @@
 * [bhdr](https://github.com/mcollina/bhdr) – Benchmark utility powered by hdr histograms.
 * [fastbench](https://www.npmjs.com/package/fastbench) – The simplest benchmark you can run on node.
 * [nanobench](https://github.com/mafintosh/nanobench) – Simple benchmarking tool with TAP-like output that is easy to parse.
+* [bench-lru](https://github.com/dominictarr/bench-lru) – benchmark the least-recently-used caches which are available on npm.
 
 ## Debugging
 

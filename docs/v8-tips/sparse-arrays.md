@@ -12,9 +12,4 @@ If you want V8 to represent your `Array` in the `Fast Elements` form, you need t
 - Don't delete elements, specially in numeric `Array`s.
 - Don't load uninitialized or deleted elements.
 
-Another consideration: any name used as property name that is not a string is stringified via `.toString()`, so:
-
-- `1` will be `'1'`.
-- `undefined` will be `'undefined'`.
-- `null` will be `'null'`.
-- `''` will be `''`.
+Another consideration: any name used as property name that is not a `String` will be serialized, read more at [Properties Names](v8-tips/properties-names).

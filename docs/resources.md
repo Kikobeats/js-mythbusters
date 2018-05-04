@@ -4,6 +4,7 @@
 
 * [tickedoff](https://github.com/jamiebuilds/tickedoff) – Use the faster timer function available for deferring something by a "tick".
 * [sliced](https://www.npmjs.com/package/sliced) – A faster Node.js alternative to `Array.prototype.slice.call(arguments)`.
+* [time-span](https://github.com/sindresorhus/time-span) – Simplified high resolution timing.
 
 ## Cache
 

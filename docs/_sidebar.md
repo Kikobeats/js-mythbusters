@@ -25,6 +25,7 @@
 * V8
 	* [Hidden Class](v8-tips/hidden-class.md)
 	* [Sparse Arrays](v8-tips/sparse-arrays.md)
+	* [Properties Names](v8-tips/properties-names.md)
 	* [Float Number](v8-tips/float-number.md)
 	* [Inline initialization](v8-tips/inline-initialization.md)
 	* [Monomorphic](v8-tips/monomorphic.md)

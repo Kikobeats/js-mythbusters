@@ -33,7 +33,7 @@ lookupTable[compare(4, myValue)]
 
 You may also use *falsy* values as keys in objects.
 
-## Array vs. Object
+## Array vs Object
 
 Be careful when choosing between `Object` or `Array`:
 

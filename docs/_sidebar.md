@@ -39,3 +39,4 @@
 	* [Memoization](workflow/memoization.md)
 	* [Scope](workflow/scope.md)
 	* [Variable access](workflow/variable-access.md)
+	* [How to clone](workflow/how-to-clone.md)

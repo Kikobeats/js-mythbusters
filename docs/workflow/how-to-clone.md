@@ -101,14 +101,13 @@ function cloneCollection (val) {
 
 ## Don't clone serializing
 
-Maybe you saw this over internet as technique for creating a clone of a value:
+Maybe you've seen this piece of code over internet as technique for creating a clone of a value:
 
 ```js
 const clone = value => JSON.parse(JSON.stringify(value))
 ```
 
-
-It's basically converting the input from JavaScript types into a `String` and then parsing the `String` into JavaScript types again.
+This will convert the input from JavaScript types into a `String` and then parsing the `String` into JavaScript types again.
 
 Althought it looks a simple and good idea, there is a series of ege cases to consider it harmful:
 

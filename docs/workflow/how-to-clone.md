@@ -109,7 +109,7 @@ const clone = value => JSON.parse(JSON.stringify(value))
 
 This will convert the input from JavaScript types into a `String` and then parsing the `String` into JavaScript types again.
 
-Althought it looks a simple and good idea, there is a series of ege cases to consider it harmful:
+Althought it looks a simple and good idea, there is a series of edge cases to consider it harmful:
 
 1. Will throw error in circular objects.
 2. The `JSON.stringify` conversion has to be lossless. Therefore, methods are not allowed as members of type function are ignored by the JSON stringifier. The `undefined` value is not allowed either. Object keys with `undefined` value are omitted, while `undefined` values in arrays are substituted by `null`.

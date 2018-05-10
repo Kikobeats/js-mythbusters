@@ -42,7 +42,9 @@
     "lint": "standard-markdown docs/**/*.md !docs/v8-tips/freeing-memory.md !docs/workflow/scope.md",
     "pretest": "npm run lint",
     "server:dev": "cd docs && browser-sync start --server --files \"index.html, **/*.md, main.min.js, style.min.css\"",
-    "test": "echo 'no tests yet' && exit 0"
+    "test": "echo 'no tests yet' && exit 0",
+    "build": "gulp build",
+    "start": "docsify start docs"
   },
   "private": true,
   "license": "MIT"

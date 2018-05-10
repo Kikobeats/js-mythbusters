@@ -5,10 +5,11 @@ const prefix = require('gulp-autoprefixer')
 const cssnano = require('gulp-cssnano')
 const uglify = require('gulp-uglify')
 const concat = require('gulp-concat')
+const sass = require('gulp-sass')
 const gulp = require('gulp')
 
 const src = {
-  css: ['src/css/style.css'],
+  css: ['src/sass/style.scss'],
   js: ['src/js/main.js']
 }
 
@@ -23,6 +24,7 @@ const dist = {
 gulp.task('css', () => {
   gulp
     .src(src.css)
+    .pipe(sass().on('error', sass.logError))
     .pipe(concat(`${dist.name.css}.min.css`))
     .pipe(prefix())
     .pipe(strip({all: true}))

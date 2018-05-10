@@ -25,6 +25,7 @@
     "gulp-autoprefixer": "latest",
     "gulp-concat": "latest",
     "gulp-cssnano": "latest",
+    "gulp-sass": "latest",
     "gulp-strip-css-comments": "latest",
     "gulp-uglify": "latest",
     "standard": "latest",

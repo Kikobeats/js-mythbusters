@@ -78,7 +78,7 @@ As you read, clone a primitive value is immediate, but clone a non-primitive val
 
 Because passing a value by reference is not creating a different memory space, this is the thing that will be to do to guarantee that both copies are independents.
 
-This a commented version of [`clone-deep`](https://github.com/jonschlinkert/clone-deep) code:
+This a an annotated version of the [clone-deep](https://github.com/jonschlinkert/clone-deep) dependency:
 
 ```js
 const clone = require('shallow-clone')
@@ -111,6 +111,6 @@ This will convert the input from JavaScript types into a `String` and then parsi
 
 Althought it looks a simple and good idea, there is a series of ege cases to consider it harmful:
 
-- Will throw error in circular objects.
-- The `JSON.stringify` conversion has to be lossless. Therefore, methods are not allowed as members of type function are ignored by the JSON stringifier. The `undefined` value is not allowed either. Object keys with `undefined` value are omitted, while `undefined` values in arrays are substituted by `null`.
-- Members of the `Date` object become ISO-8601 strings, not representing the timezone of the client. The value new `Date(2011,0,1)` becomes `"2010-12-31T23:00:00.000Z"` after executing the above deep copy method in case you live in Central Europe.
+1. Will throw error in circular objects.
+2. The `JSON.stringify` conversion has to be lossless. Therefore, methods are not allowed as members of type function are ignored by the JSON stringifier. The `undefined` value is not allowed either. Object keys with `undefined` value are omitted, while `undefined` values in arrays are substituted by `null`.
+3. Members of the `Date` object become ISO-8601 strings, not representing the timezone of the client. The value new `Date(2011,0,1)` becomes `"2010-12-31T23:00:00.000Z"` after executing the above deep copy method in case you live in Central Europe.

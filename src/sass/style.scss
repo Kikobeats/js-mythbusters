@@ -1,7 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Source+Sans+Pro:300,400,600');
+@import 'colors';
+
+$primary-color     : $cyan4;
+$link-color        : $cyan7;
+$secondary-color   : $cyan8;
+$accent-color      : $pink5;
+$background-color  : #081020;
+$code-bg-color     : #080820;
+$text-color        : #999;
+$text-bold-color   : $gray3;
+$edit-button-color : #364149;
 
 * {
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body:not(.ready) {
@@ -31,7 +44,7 @@ div#app:empty::before {
 }
 
 .progress {
-  background-color: #00d3ee;
+  background-color: $primary-color;
   height: 2px;
   left: 0;
   position: fixed;
@@ -44,7 +57,7 @@ div#app:empty::before {
 
 .search .search-keyword,
 .search a:hover {
-  color: #00d3ee;
+  color: $primary-color;
 }
 
 .search .search-keyword {
@@ -57,14 +70,14 @@ html {
 }
 
 body {
-  color: #999;
+  color: $text-color;
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, Courier New, monospace, serif;
   font-size: 15px;
   letter-spacing: 0;
   margin: 0;
   overflow-x: hidden;
-  line-height: 1.7;
+  line-height: 1.9;
 }
 
 img {
@@ -116,11 +129,11 @@ kbd {
 
 .app-nav a.active,
 .app-nav a:hover {
-  color: #00d3ee;
+  color: $primary-color;
 }
 
 .app-nav a.active {
-  border-bottom: 2px solid #00d3ee;
+  border-bottom: 2px solid $primary-color;
 }
 
 .app-nav li {
@@ -131,7 +144,7 @@ kbd {
 }
 
 .app-nav li ul {
-  background-color: #081020;
+  background-color: $background-color;
   border: 1px solid #ddd;
   border-bottom-color: #ccc;
   border-radius: 4px;
@@ -184,8 +197,8 @@ kbd {
 }
 
 .github-corner svg {
-  color: #081020;
-  fill: #00d3ee;
+  color: $background-color;
+  fill: $primary-color;
   height: 80px;
   width: 80px;
 }
@@ -251,7 +264,7 @@ main {
 .sidebar li > p {
   font-weight: bold;
   margin: 0;
-  color: #00d3ee;
+  color: $primary-color;
 }
 
 .sidebar ul,
@@ -260,7 +273,7 @@ main {
 }
 
 .sidebar ul li a {
-  color: #00849b;
+  color: $secondary-color;
   font-size: 14px;
   font-weight: 400;
   overflow: hidden;
@@ -273,7 +286,7 @@ main {
 
 .sidebar ul li a:hover {
   text-decoration: underline;
-  color: #ff2e88;
+  color: $accent-color;
   transition: all 0.3s;
 }
 
@@ -318,7 +331,7 @@ main {
 }
 
 .sidebar-toggle span {
-  background-color: #00d3ee;
+  background-color: $primary-color;
   display: block;
   margin-bottom: 4px;
   width: 16px;
@@ -386,9 +399,10 @@ body.sticky .sidebar-toggle {
   border-top: 1px solid #ccc;
 }
 
+.markdown-section blockquote ,
 .markdown-section p.tip {
   border-bottom-right-radius: 2px;
-  border-left: 4px solid #00d3ee;
+  border-left: 4px solid $primary-color;
   border-top-right-radius: 2px;
   margin: 2em 0;
   padding: 12px 24px 12px 30px;
@@ -397,13 +411,13 @@ body.sticky .sidebar-toggle {
 }
 
 .markdown-section p.tip em {
-  color: #00d3ee;
+  color: $primary-color;
 }
 
 .markdown-section p.tip:before {
-  background-color: #00d3ee;
+  background-color: $primary-color;
   border-radius: 100%;
-  color: #081020;
+  color: $background-color;
   content: 'i';
   font-family: Dosis, Source Sans Pro, Helvetica Neue, Arial, sans-serif;
   font-size: 14px;
@@ -503,7 +517,7 @@ body.close .content {
   }
 
   body.close .sidebar-toggle {
-    background-color: #081020;
+    background-color: $background-color;
     transition: background-color 0.3s;
     width: 284px;
   }
@@ -605,15 +619,12 @@ section.cover h1 a {
 }
 
 section.cover h1 small {
-  bottom: -7px;
   bottom: -0.4375rem;
-  font-size: 16px;
   font-size: 1rem;
   position: absolute;
 }
 
 section.cover blockquote {
-  font-size: 24px;
   font-size: 1.5rem;
   text-align: center;
 }
@@ -627,10 +638,10 @@ section.cover ul {
 }
 
 section.cover .cover-main > p:last-child a {
-  border: 1px solid #00d3ee;
+  border: 1px solid $primary-color;
   border-radius: 2rem;
   box-sizing: border-box;
-  color: #00d3ee;
+  color: $primary-color;
   display: inline-block;
   font-size: 1rem;
   letter-spacing: 0.1rem;
@@ -641,8 +652,8 @@ section.cover .cover-main > p:last-child a {
 }
 
 section.cover .cover-main > p:last-child a:last-child {
-  background-color: #00d3ee;
-  color: #081020;
+  background-color: $primary-color;
+  color: $background-color;
   margin-right: 0;
 }
 
@@ -653,12 +664,12 @@ section.cover .cover-main > p:last-child a:hover {
 }
 
 section.cover blockquote > p > a {
-  border-bottom: 2px solid #00d3ee;
+  border-bottom: 2px solid $primary-color;
   transition: color 0.3s;
 }
 
 section.cover blockquote > p > a:hover {
-  color: #00d3ee;
+  color: $primary-color;
 }
 
 section.cover.show {
@@ -666,7 +677,7 @@ section.cover.show {
 }
 
 section.cover.has-mask .mask {
-  background-color: #081020;
+  background-color: $background-color;
   opacity: 0.8;
   position: absolute;
   width: 100%;
@@ -675,7 +686,7 @@ section.cover.has-mask .mask {
 
 .sidebar,
 body {
-  background-color: #081020;
+  background-color: $background-color;
 }
 
 .sidebar {
@@ -691,8 +702,7 @@ body {
 }
 
 .sidebar ul li.active > a {
-  border-right: 2px solid;
-  color: #ff2e88;
+  color: $accent-color;
   font-weight: bold;
 }
 
@@ -706,19 +716,20 @@ body {
 .markdown-section h3,
 .markdown-section h4,
 .markdown-section strong {
-  color: #ff2e88;
+  color: $text-bold-color;
   font-weight: bold;
 }
 
 .markdown-section a {
-  color: #00d3ee;
+  color: $primary-color;
   font-weight: bold;
 }
 
 .markdown-section p a,
 .markdown-section ul a {
-  text-decoration: none;
-  border-bottom: 1px solid #00bcd4;
+  text-decoration: underline;
+  text-decoration-color: $link-color;
+  color: $link-color;
 }
 
 .markdown-section ul a code {
@@ -727,43 +738,41 @@ body {
 
 .markdown-section p a:hover,
 .markdown-section ul a:hover {
-  border-bottom-color: #ff2e88;
+  color: $accent-color;
+  text-decoration-color: $accent-color;
+}
+
+.markdown-section p a:hover code,
+.markdown-section ul a:hover code {
+  color: $accent-color;
 }
 
 .markdown-section a:hover {
-  color: #ff2e88;
+  color: $accent-color;
   transition: all 0.3s;
 }
 
 .markdown-section h1 {
-  font-size: 32px;
   font-size: 2rem;
-  margin: 0 0 16px;
   margin: 0 0 1rem;
 }
 
 .markdown-section h2 {
-  font-size: 28px;
   font-size: 1.75rem;
-  margin: 45px 0 12.8px;
   margin: 45px 0 0.8rem;
 }
 
 .markdown-section h3 {
-  font-size: 24px;
   font-size: 1.5rem;
-  margin: 40px 0 9.6px;
   margin: 40px 0 0.6rem;
 }
 
 .markdown-section h4 {
-  font-size: 20px;
   font-size: 1.25rem;
 }
 
 .markdown-section h5,
 .markdown-section h6 {
-  font-size: 16px;
   font-size: 1rem;
 }
 
@@ -775,34 +784,34 @@ body {
 .markdown-section ol,
 .markdown-section p,
 .markdown-section ul {
-  margin: 1.2em 0;
+  margin: 25px 0;
 }
 
 .markdown-section ol,
 .markdown-section p,
 .markdown-section ul {
-  line-height: 25.6px;
-  line-height: 1.6rem;
-  word-spacing: 0.8px;
+  line-height: 2;
   word-spacing: 0.05rem;
 }
 
 .markdown-section ol,
 .markdown-section ul {
-  padding-left: 24px;
-  padding-left: 1.5rem;
+  list-style: unset;
+  margin: 50px 0 50px 30px;
+  padding: 0;
 }
 
-.markdown-section blockquote {
-  border-left: 4px solid #00d3ee;
-  color: #858585;
-  margin: 2em 0;
-  padding-left: 20px;
+.markdown-section ul li + li {
+  margin: 5px 0;
+}
+
+.markdown-section ol li + li {
+  margin: 20px 0;
 }
 
 .markdown-section blockquote p {
   font-weight: bold;
-  margin-left: 0;
+  margin: 0;
 }
 
 .markdown-section iframe {
@@ -813,28 +822,32 @@ body {
   color: #7f8c8d;
 }
 
-.markdown-section code {
-  border-radius: 2px;
-  color: #00a5bb;
-  font-size: 0.8rem;
-  margin: 0 2px;
-  padding: 3px 5px;
-  white-space: nowrap;
-}
-
 .markdown-section code,
 .markdown-section pre {
   background-color: transparent;
   font-family: Roboto Mono, Monaco, courier, monospace;
 }
 
+.markdown-section code {
+  transition: all .3s;
+  color: #00a5bb;
+  margin: 0;
+  border: 1px solid #062f47;
+  font-size: 0.75rem;
+  padding: 3px 10px;
+  border-radius: 3px;
+  white-space: nowrap;
+  font-weight: 600;
+  font-family: inherit;
+  background-color: $background-color;
+}
+
 .markdown-section pre {
   line-height: 24px;
-  margin: 1.2em 0;
+  margin: 50px 0;
   overflow: auto;
   position: relative;
   word-wrap: normal;
-  border: 1px solid #062f47;
 }
 
 .token.cdata,
@@ -888,7 +901,7 @@ body {
 .token.control,
 .token.directive,
 .token.unit {
-  color: #00d3ee;
+  color: $primary-color;
 }
 
 .token.keyword {
@@ -933,7 +946,7 @@ body {
 }
 
 .markdown-section pre > code {
-  background-color: #080820;
+  background-color: $code-bg-color;
   border-radius: 2px;
   color: #ccc;
   display: block;
@@ -1002,7 +1015,7 @@ pre:after {
 }
 
 .eye {
-  color: #00d3ee;
+  color: $primary-color;
   transition: 0.3s;
   transform-origin: center center;
 }
@@ -1164,7 +1177,7 @@ pre:after {
   95% {
     transform: translateY(-18px);
   }
-  
+
   100% {
     transform: translateY(20px);
   }
@@ -1180,5 +1193,12 @@ pre:after {
 .meta-container > .edit-button {
   text-decoration: none;
   font-size: 12px;
-  color: #364149;
+  color: $edit-button-color;
+}
+
+.meta-container > .edit-button svg {
+  width: 14px;
+  margin-right: .5rem;
+  top: 2px;
+  position: relative;
 }

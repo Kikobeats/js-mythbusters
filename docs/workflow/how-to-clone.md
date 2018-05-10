@@ -14,7 +14,7 @@ In JavaScript, there are 7 primitive data types:
 - [`Number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
 - [`Boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
 - [`Symbol`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)
-- `BigInt`
+- [`BigInt`](https://developers.google.com/web/updates/2018/05/bigint)
 
 All primitives are **immutable**.
 

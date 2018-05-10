@@ -1,3 +1,22 @@
+<a name="2.4.0"></a>
+# 2.4.0 (2018-05-10)
+
+* Add how to clone (#77) ([e115807](https://github.com/kikobeats/javascript-mythbusters/commit/e115807)), closes [#67](https://github.com/kikobeats/javascript-mythbusters/issues/67)
+* Add Properties names section (#75) ([ad9d25c](https://github.com/kikobeats/javascript-mythbusters/commit/ad9d25c))
+* Tweaks ([0bca7bd](https://github.com/kikobeats/javascript-mythbusters/commit/0bca7bd))
+* Unify style ([1d0836b](https://github.com/kikobeats/javascript-mythbusters/commit/1d0836b))
+* Update build process ([b2bb842](https://github.com/kikobeats/javascript-mythbusters/commit/b2bb842))
+* Update defer.md ([ddbba66](https://github.com/kikobeats/javascript-mythbusters/commit/ddbba66))
+* Update lookup-table.md ([d56ec8b](https://github.com/kikobeats/javascript-mythbusters/commit/d56ec8b))
+* Update meta ([52819a8](https://github.com/kikobeats/javascript-mythbusters/commit/52819a8))
+* Update resources.md ([6bc0c8c](https://github.com/kikobeats/javascript-mythbusters/commit/6bc0c8c))
+* Update resources.md ([6fb3426](https://github.com/kikobeats/javascript-mythbusters/commit/6fb3426))
+* Update resources.md ([b6c1616](https://github.com/kikobeats/javascript-mythbusters/commit/b6c1616))
+* Update resources.md ([a1a1f42](https://github.com/kikobeats/javascript-mythbusters/commit/a1a1f42))
+* Update scripts ([5f859e0](https://github.com/kikobeats/javascript-mythbusters/commit/5f859e0))
+
+
+
 <a name="2.3.0"></a>
 # 2.3.0 (2018-03-27)
 

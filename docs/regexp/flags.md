@@ -1,6 +1,6 @@
-# Always use Flags
+# Always use flags
 
-## Unicode Flag
+## Unicode flag
 
 The unicode (`u`) flag is mandatory when working with Unicode strings, in particular when you might need to handle characters in astral planes, the ones that are not included in the first 1600 Unicode characters.
 
@@ -28,7 +28,7 @@ Keep in mind that Unicode, just normal characters, handle ranges:
 
 JavaScript checks the internal code representation, so `🐶 < 🐺 < 🦊` because `\u1F436 < \u1F43A < \u1F98A`. Check [emoji-regex](https://github.com/mathiasbynens/emoji-regex) for exploring more about that.
 
-## Dot all Flag
+## Dot all flag
 
 By default, `.` matches any character except for line terminators.
 

@@ -40,7 +40,7 @@
   "scripts": {
     "build": "gulp build",
     "dev": "concurrently \"gulp\" \"npm run server:dev\"",
-    "lint": "standard-markdown docs/**/*.md !docs/v8-tips/freeing-memory.md !docs/workflow/scope.md",
+    "lint": "standard-markdown docs/**/*.md !docs/v8-tips/freeing-memory.md !docs/workflow/scope.md !docs/regexp/flags.md",
     "pretest": "npm run lint",
     "server:dev": "cd docs && browser-sync start --server --files \"index.html, **/*.md, main.min.js, style.min.css\"",
     "start": "docsify start docs",

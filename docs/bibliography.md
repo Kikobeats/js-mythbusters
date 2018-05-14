@@ -8,6 +8,7 @@
 
 * [Google I/O 2012 - Breaking the JavaScript Speed Limit with V8](https://www.youtube.com/watch?v=UJPdhx5zTaw).
 * [Using jsPerf correctly](https://www.youtube.com/watch?v=RLbAKxCAdI8) ([slides](http://www.slideshare.net/mathiasbynens/using-jsperf-correctly)).
+* [Build the future of the web with modern JavaScript (Google I/O ’18)](https://www.youtube.com/watch?v=mIWCLOftfRw).
 
 ## Articles
 
@@ -17,3 +18,5 @@
 * [Writing Fast, Memory-Efficient JavaScript](http://www.smashingmagazine.com/2012/11/writing-fast-memory-efficient-javascript/#de-referencing-misconceptions).
 * [Unquoted property names / object keys in JavaScript](https://mathiasbynens.be/notes/javascript-properties).
 * [v8-perf, Exploring v8 performance characteristics across node versions](https://github.com/davidmarkclements/v8-perf).
+* [Unicode property escapes in JavaScript regular expressions](https://mathiasbynens.be/notes/es-unicode-property-escapes).
+* [ECMAScript regular expressions are getting better!](https://mathiasbynens.be/notes/es-regexp-proposals).

@@ -21,7 +21,7 @@
 * RegExp
 	* [Use the correct method](regexp/correct-methods.md)
 	* [Focus on failing faster](regexp/fail-faster.md)
-	* [Always use Flags](regexp/flags.md)
+	* [Always use flags](regexp/flags.md)
 
 * V8
 	* [Hidden Class](v8-tips/hidden-class.md)

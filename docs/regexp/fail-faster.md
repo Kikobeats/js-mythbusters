@@ -15,7 +15,7 @@ Everyone knows `RegExp` are difficult to write. A good approach to write the rig
 
 [regexgen](https://github.com/devongovett/regexgen#regexgen) is a good library for that: it generates a tree structure based on the input and generates the most optimized `RegexEp`, removing redundancies:
 
-```bash  
+```bash
 $ regexgen wave freewave freestylewave "freestyle wave"
 /(?:free(?:style ?)?)?wave/
 ```
@@ -27,3 +27,5 @@ const RandExp = require('randexp')
 new RandExp(/hello+ (world|to you)/).gen()
 // => hellooooooooooooooooooo world
 ```
+
+You can find good resources to learn how to create focused regular expressions at [A Guide to JavaScript Regular Expressions](https://flaviocopes.com/javascript-regular-expressions/) and [Learn Regex](https://github.com/zeeshanu/learn-regex).

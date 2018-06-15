@@ -1,3 +1,5 @@
+/* global codecopy */
+
 window.twttr = (function (d, s, id) {
   var js,
     fjs = d.getElementsByTagName(s)[0],
@@ -40,6 +42,11 @@ window.$docsify = {
         var metaContainer =
           '<div class="meta-container">' + editButton + '</div>\n'
         return metaContainer + markdown
+      })
+    },
+    function (hook, vm) {
+      hook.doneEach(function () {
+        codecopy('pre')
       })
     }
   ]

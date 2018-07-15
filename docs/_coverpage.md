@@ -41,20 +41,12 @@
   </div>
 </div>
 
-# JS MythBusters
+# MythBusters JS
 
-> A JavaScript optimization handbook from a high level point of view. <a class="twitter-share-button"
-  href="https://twitter.com/share"
-  data-text="JS MythBusters, A JavaScript optimization handbook from a high level point of view"
-  data-hashtags="javascript,perfomance"
-  data-via="kikobeats"
-  data-related="kikobeats"
-  data-url="https://mythbusters.js.org">
-Tweet
-</a>
+> A JavaScript Handbook exploring perfomance & readibility.
 
 [GitHub](https://github.com/Kikobeats/js-mythbusters)
-[Get Started](#what-is-it)
+[Get Started](#get-started)
 
 <!-- background color -->
 ![color](#081020)

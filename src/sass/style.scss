@@ -605,8 +605,8 @@ section.cover p {
 }
 
 section.cover h1 {
+  margin: 0;
   color: inherit;
-  font-size: 40px;
   font-size: 2.5rem;
   font-weight: 300;
   position: relative;
@@ -624,6 +624,7 @@ section.cover h1 small {
 }
 
 section.cover blockquote {
+  margin: 2.5rem 0;
   font-size: 1.5rem;
   text-align: center;
 }
@@ -647,7 +648,7 @@ section.cover .cover-main > p:last-child a {
   margin-right: 0.5rem;
   padding: 0.75em 2rem;
   text-decoration: none;
-  transition: all 0.15s ease;
+  transition: all 0.15s ease-in;
 }
 
 section.cover .cover-main > p:last-child a:last-child {
@@ -656,10 +657,14 @@ section.cover .cover-main > p:last-child a:last-child {
   margin-right: 0;
 }
 
+section.cover .cover-main > p:last-child a:last-child:hover {
+  color: black !important;
+}
+
 section.cover .cover-main > p:last-child a:last-child:hover,
 section.cover .cover-main > p:last-child a:hover {
   color: white;
-  opacity: 0.85;
+  opacity: 0.65;
 }
 
 section.cover blockquote > p > a {

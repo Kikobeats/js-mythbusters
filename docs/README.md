@@ -1,13 +1,21 @@
-# JS MythBusters
+# Get Started
 
-> A JavaScript optimization handbook from a high level point of view.
+**MythBusters JS** is a JavaScript optimization handbook from a high level point of view, exploring the best practice and performance patterns but always keeping in mind the readability of your code.
 
-# What is it
+The purpose of the book is write concise tips, easy to find and doing refresh your mindset about that for continuing working on your main coding problem.
 
-The purpose of this handbook is to learn how to use JS language features without losing performance.
+Tips are grouped by topics and they have been obtained from engineering posts blog, podcasts, conference videos, etc. We keep all references in a specific section.
 
-You can check [Six Speed](https://kpdecker.github.io/six-speed/) to see how much faster ES6 runs. Also, [Node Green](http://node.green/) displays the native support of each feature.
+</br>
 
-If you want to submit a tip, create a PR in our [GitHub repository](https://github.com/Kikobeats/js-mythbusters).
+Performance depends on how people use programming the language. Something with a bad performance today could be better tomorrow.
 
-<a class="badge" style="border:0;" target="_blank" href="https://paypal.me/kikobeats"><img src="https://img.shields.io/badge/donate-paypal-blue.svg?style=flat-square" alt="Donate"></a>
+In this sense, we updated tips reflecting new language features or rewritten tips based on internal V8 optimizations. We use [Six Speed](https://kpdecker.github.io/six-speed) and [Node Green](http://node.green) for tracking performance across Node.js versions.
+
+# Write your tip
+
+Every page on this handbook is editable, just click on the **edit this file** button at the top of each page.
+
+If you want to submit a tip, create a Pull request in our [GitHub repository](https://github.com/Kikobeats/js-mythbusters).
+
+Also check our [issues](https://github.com/Kikobeats/js-mythbusters/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc), we have interested topics for starting talk about.

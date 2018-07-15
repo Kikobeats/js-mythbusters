@@ -22,7 +22,7 @@ window.$docsify = {
     '/changelog':
       'https://raw.githubusercontent.com/Kikobeats/js-mythbusters/master/CHANGELOG.md'
   },
-  name: 'JS MythBusters',
+  name: 'MythBusters',
   ga: 'UA-83295706-1',
   subMaxLevel: 2,
   executeScript: true,

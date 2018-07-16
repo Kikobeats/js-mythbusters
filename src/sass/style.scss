@@ -321,7 +321,8 @@ main {
   position: absolute;
   text-align: center;
   transition: opacity 0.3s;
-  width: 36px;
+  width: 300px;
+  background-color: #081020;
   z-index: 4;
 }
 
@@ -332,9 +333,9 @@ main {
 .sidebar-toggle span {
   background-color: $primary-color;
   display: block;
-  margin-bottom: 4px;
-  width: 16px;
-  height: 2px;
+  margin-bottom: 5px;
+  width: 24px;
+  height: 3px;
 }
 
 body.sticky .sidebar,
@@ -483,6 +484,14 @@ body.close .content {
     overflow-x: hidden;
   }
 
+  body section.cover h1 {
+    font-size: 2rem;
+  }
+
+  body section.cover .cover-main {
+    margin-top: .5rem;
+  }
+
   .sidebar {
     left: -300px;
     transition: -webkit-transform 0.25s ease-out;
@@ -507,8 +516,9 @@ body.close .content {
   }
 
   .sidebar-toggle {
-    background-color: transparent;
-    width: auto;
+    width: 100%;
+    top: 0;
+    bottom: inherit;
   }
 
   body.close .sidebar {

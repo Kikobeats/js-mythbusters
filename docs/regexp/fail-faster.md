@@ -28,4 +28,6 @@ new RandExp(/hello+ (world|to you)/).gen()
 // => hellooooooooooooooooooo world
 ```
 
+Another useful library to consider is [regex-not](https://github.com/jonschlinkert/regex-not) for creating regular expression for matching everything except for the given string. 
+
 You can find good resources to learn how to create focused regular expressions at [A Guide to JavaScript Regular Expressions](https://flaviocopes.com/javascript-regular-expressions/) and [Learn Regex](https://github.com/zeeshanu/learn-regex).

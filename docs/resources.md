@@ -8,10 +8,8 @@
 
 ## Cache
 
-* [async-lru](https://github.com/feross/async-lru) – Like LRU but for async calls.
-* [lru](https://github.com/chriso/lru) – A simple LRU cache supporting O(1) set, get and eviction of old keys.
+* [memoize-token](https://github.com/microlinkhq/memoize-token) – A memoize library for refreshing and cache token values.
 * [mem](https://github.com/sindresorhus/mem) - An optimization used to speed up consecutive function calls.
-* [memo-async-lru](https://github.com/feross/memo-async-lru) – Memoize Node.js style callback-last functions, using an in-memory LRU store.
 * [memoize-one](https://github.com/alexreardon/memoize-one) – A memoization library which only remembers the latest invocation.
 * [lscache](https://github.com/pamelafox/lscache) – A localStorage-based memcache-inspired client-side caching library.
 * [money-clip](https://github.com/HenrikJoreteg/money-clip) – For managing your client side cache. Tiny wrapper over IndexedDB supporting versioning and max age.

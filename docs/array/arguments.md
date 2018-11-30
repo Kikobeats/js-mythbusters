@@ -18,7 +18,7 @@ function spreadOp (...args) {
 }
 ```
 
-If you are in a scenario where is not possible to use `spread operator`, we recommend use the tiny [sliced](https://github.com/aheckmann/sliced) library for making a copy of the `array`:
+If you are in a scenario where it is not possible to use `spread operator`, we recommend using the tiny [sliced](https://github.com/aheckmann/sliced) library for making a copy of the `array`:
 
 ```js
 const sliced = require('sliced')

@@ -35,6 +35,7 @@
 
 * Workflow
 	* [Deferring by a tick](workflow/defer.md)
+	* [Value vs. reference](workflow/passing-by-value.md)
 	* [Lookup table](workflow/lookup-table.md)
 	* [Math methods](workflow/math.md)
 	* [Memoization](workflow/memoization.md)

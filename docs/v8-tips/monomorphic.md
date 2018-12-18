@@ -9,8 +9,8 @@ function add (x, y) {
   return x + y
 }
 
-add(1, 2)      // + in add is monomorphic
-add('a', 'b')  // + in add becomes polymorphic
+add(1, 2) // + in add is monomorphic
+add('a', 'b') // + in add becomes polymorphic
 ```
 
 **Monomorphic** types are more predictable for the compiler and therefore easier for them to generate good code, so the compiler prefers these over polymorphic types.

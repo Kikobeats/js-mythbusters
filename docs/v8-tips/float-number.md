@@ -10,7 +10,7 @@ However, there is sometimes a cost to changing these type tags, so it's best to
 use number types consistently and in general it is most optimal to use **31-bit signed integers** where appropriate.
 
 ```js
-var i = 42  // this is a 31-bit signed integer (whole).
+var i = 42 // this is a 31-bit signed integer (whole).
 var j = 4.2 // this is a double-precision floating point number (float).
 ```
 

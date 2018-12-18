@@ -11,7 +11,7 @@ if (value < 5) {
 } else if (value > 5 && value < 10) {
   // second most frequent case
 } else {
- // other less frequent cases
+  // other less frequent cases
 }
 ```
 

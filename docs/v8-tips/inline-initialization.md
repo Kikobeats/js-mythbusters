@@ -6,9 +6,9 @@ The first approach is to declare the new `Object` and later attach the informati
 
 ```js
 var array = []
-array[0] = 77   // Allocates
-array[1] = 88   // Allocates
-array[2] = 0.5  // Allocates, converts
+array[0] = 77 // Allocates
+array[1] = 88 // Allocates
+array[2] = 0.5 // Allocates, converts
 array[3] = true // Allocates, converts
 ```
 
@@ -32,7 +32,7 @@ An immediate solution would be:
 
 ```js
 var array = []
-for (var i = 0; i < 10; i++) array[i] |= 0  // Oh no!
+for (var i = 0; i < 10; i++) array[i] |= 0 // Oh no!
 ```
 
 This piece of code is accessing an element that doesn't exist in the array, and in this case the specs says that it wants to return `undefined` that later is converted into `0`, so you need to do this extra effort simply to compare with `0`.
@@ -43,7 +43,7 @@ The array is being re-converted all time, but knowing how **hidden classes** act
 ```js
 var array = []
 array[0] = 0
-for (var i = 0; i < 10; i++) array[i] |= i  // Much better! 2x faster.
+for (var i = 0; i < 10; i++) array[i] |= i // Much better! 2x faster.
 ```
  
 This second piece of code is simply better in terms of perfomance because we initialize a value out of the array with the same type as the element on the loops, so we avoid transforming the type of the array all the time.

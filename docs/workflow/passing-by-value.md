@@ -9,8 +9,8 @@ Programming languages can adopt different [evaluation strategies](https://en.wik
 
 ```js
 const add = (n1, n2) => {
- n1 = n1 + n2
- return n1
+  n1 = n1 + n2
+  return n1
 }
 
 const n = 1
@@ -41,7 +41,7 @@ We can subtly change `add` implementation for creating a new object instead:
 
 ```js
 const add = (obj, n) => {
-  obj = { value: = obj.value + n }
+  obj = { value: obj.value + n }
   return obj
 }
 

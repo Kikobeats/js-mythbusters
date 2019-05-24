@@ -37,7 +37,7 @@ Line terminators are specially remarkable when you are working with [Templates S
 ```js
 const input = `
 Lorem ipsum dolor sit amet, consectetur adispiscing hello
-word elit. Nam sit amet elit id risus aliquam porta.
+world elit. Nam sit amet elit id risus aliquam porta.
 `
 
 /hello.world/u.test(input)
@@ -53,7 +53,7 @@ Sometimes you really do want to match any character, including new lines. This p
 ```js
 const input = `
 Lorem ipsum dolor sit amet, consectetur adispiscing hello
-word elit. Nam sit amet elit id risus aliquam porta.
+world elit. Nam sit amet elit id risus aliquam porta.
 `
 
 /hello[\s\S]world/u.test(input);
@@ -67,7 +67,7 @@ Another workaround is to use a negated empty character class:
 ```js
 const input = `
 Lorem ipsum dolor sit amet, consectetur adispiscing hello
-word elit. Nam sit amet elit id risus aliquam porta.
+world elit. Nam sit amet elit id risus aliquam porta.
 `
 
 /hello[^]world/u.test(input);
@@ -83,7 +83,7 @@ The new regular expression flag called dotAll mode (`s`) makes the dot truly mat
 ```js
 const input = `
 Lorem ipsum dolor sit amet, consectetur adispiscing hello
-word elit. Nam sit amet elit id risus aliquam porta.
+world elit. Nam sit amet elit id risus aliquam porta.
 `
 
 /hello.world/us.test(input)

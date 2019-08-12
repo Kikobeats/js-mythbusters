@@ -12,4 +12,4 @@ Although the problem is still there: everyone uses `null` and `undefined` incons
 
 We cannot remove `null` from JavaScript (e.g., JSON doesn't support `undefined`) but we can mitigate the impact.
 
-In order to apply a simple rule there, just [use `undefined` over `null`](https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines#null-and-undefined)..
+In order to apply a simple rule there, just [use `undefined` over `null`](https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines#null-and-undefined).

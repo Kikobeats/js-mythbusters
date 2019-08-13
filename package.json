@@ -36,6 +36,7 @@
     "husky": "latest",
     "lint-staged": "latest",
     "npm-check-updates": "latest",
+    "prettier-standard": "latest",
     "standard": "latest",
     "standard-markdown": "latest",
     "standard-version": "latest"

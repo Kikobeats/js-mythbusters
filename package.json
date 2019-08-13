@@ -1,15 +1,15 @@
 {
   "name": "javascript-mythbusters",
   "description": "A list of JavaScript tips to avoid load performance from a high level point of view.",
-  "homepage": "https://github.com/kikobeats/javascript-mythbusters#readme",
+  "homepage": "https://mythbusters.js.org",
   "version": "2.4.0",
   "main": "README.md",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kikobeats/javascript-mythbusters.git"
+    "url": "git+https://github.com/Kikobeats/js-mythbusters.git"
   },
   "bugs": {
-    "url": "https://github.com/kikobeats/javascript-mythbusters/issues"
+    "url": "https://github.com/Kikobeats/js-mythbusters/issues"
   },
   "keywords": [
     "javascript",
@@ -29,13 +29,24 @@
     "gulp-strip-css-comments": "latest",
     "gulp-uglify": "latest",
     "standard": "latest",
-    "standard-markdown": "latest"
+    "standard-markdown": "latest",
+    "@commitlint/cli": "latest",
+    "@commitlint/config-conventional": "latest",
+    "conventional-github-releaser": "latest",
+    "finepack": "latest",
+    "git-authors-cli": "latest",
+    "husky": "latest",
+    "lint-staged": "latest",
+    "npm-check-updates": "latest",
+    "standard-version": "latest"
   },
   "engines": {
-    "node": ">= 6"
+    "node": ">= 8"
   },
   "files": [
-    "f"
+    "docs",
+    "src",
+    "gulpfile.js"
   ],
   "scripts": {
     "build": "gulp build",
@@ -44,8 +55,29 @@
     "pretest": "npm run lint",
     "server:dev": "cd docs && browser-sync start --server --files \"index.html, **/*.md, main.min.js, style.min.css\"",
     "start": "docsify start docs",
-    "test": "echo 'no tests yet' && exit 0"
+    "test": "echo 'no tests yet' && exit 0",
+    "postrelease": "npm run release:tags && npm run release:github",
+    "prerelease": "npm run update:check",
+    "release:github": "conventional-github-releaser -p angular",
+    "release:tags": "git push --follow-tags origin HEAD:master",
+    "release": "standard-version -a",
+    "update:check": "ncu -- --error-level 2",
+    "update": "ncu -u"
   },
   "private": true,
-  "license": "MIT"
+  "license": "MIT",
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "linters": {}
+  }
 }

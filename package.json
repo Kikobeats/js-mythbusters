@@ -18,9 +18,14 @@
     "tips"
   ],
   "devDependencies": {
+    "@commitlint/cli": "latest",
+    "@commitlint/config-conventional": "latest",
     "browser-sync": "latest",
     "concurrently": "latest",
+    "conventional-github-releaser": "latest",
     "docsify-cli": "latest",
+    "finepack": "latest",
+    "git-authors-cli": "latest",
     "gulp": "latest",
     "gulp-autoprefixer": "latest",
     "gulp-concat": "latest",
@@ -28,16 +33,11 @@
     "gulp-sass": "latest",
     "gulp-strip-css-comments": "latest",
     "gulp-uglify": "latest",
-    "standard": "latest",
-    "standard-markdown": "latest",
-    "@commitlint/cli": "latest",
-    "@commitlint/config-conventional": "latest",
-    "conventional-github-releaser": "latest",
-    "finepack": "latest",
-    "git-authors-cli": "latest",
     "husky": "latest",
     "lint-staged": "latest",
     "npm-check-updates": "latest",
+    "standard": "latest",
+    "standard-markdown": "latest",
     "standard-version": "latest"
   },
   "engines": {
@@ -45,24 +45,24 @@
   },
   "files": [
     "docs",
-    "src",
-    "gulpfile.js"
+    "gulpfile.js",
+    "src"
   ],
   "scripts": {
     "build": "gulp build",
     "dev": "concurrently \"gulp\" \"npm run server:dev\"",
     "lint": "standard-markdown docs/**/*.md !docs/v8-tips/freeing-memory.md !docs/workflow/scope.md !docs/regexp/flags.md !docs/array/preallocation.md",
+    "postrelease": "npm run release:tags && npm run release:github",
+    "prerelease": "npm run update:check",
     "pretest": "npm run lint",
+    "release": "standard-version -a",
+    "release:github": "conventional-github-releaser -p angular",
+    "release:tags": "git push --follow-tags origin HEAD:master",
     "server:dev": "cd docs && browser-sync start --server --files \"index.html, **/*.md, main.min.js, style.min.css\"",
     "start": "docsify start docs",
     "test": "echo 'no tests yet' && exit 0",
-    "postrelease": "npm run release:tags && npm run release:github",
-    "prerelease": "npm run update:check",
-    "release:github": "conventional-github-releaser -p angular",
-    "release:tags": "git push --follow-tags origin HEAD:master",
-    "release": "standard-version -a",
-    "update:check": "ncu -- --error-level 2",
-    "update": "ncu -u"
+    "update": "ncu -u",
+    "update:check": "ncu -- --error-level 2"
   },
   "private": true,
   "license": "MIT",
@@ -78,6 +78,17 @@
     }
   },
   "lint-staged": {
-    "linters": {}
+    "package.json": [
+      "finepack",
+      "git add"
+    ],
+    "*.js": [
+      "prettier-standard",
+      "git add"
+    ],
+    "*.md": [
+      "standard-markdown",
+      "git add"
+    ]
   }
 }

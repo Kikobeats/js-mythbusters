@@ -19,7 +19,7 @@ In this example, the individual assignments are performed one after the other, a
 A more immediate solution is to attach all the information in one call:
 
 ```js
-var array = [ 77, 88, 0.5, true ]
+var array = [77, 88, 0.5, true]
 ```
 
 Now, the compiler knows the types of all of the elements in the literal, and the **hidden class** can be determined up front.

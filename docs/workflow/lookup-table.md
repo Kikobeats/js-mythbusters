@@ -15,18 +15,22 @@ if (value < 5) {
 }
 ```
 
+Using `switch` makes the code more readable when you have lot `if/else` statements.
+
 ## Index lookups
 
-Sometimes it is better to use a direct match approach using object/array index lookups:
+Sometimes you can write the code in a way you don't need to evaluate conditions to reach the right subroutine.
+
+You can use an `object` or `array` for doing direct match index lookups:
 
 ```js
-var lookupTable = {
-  '1': 'is greater',
+const lookupTable = {
+  1: 'is greater',
   '-1': 'is less',
-  '0': 'is equal'
+  0: 'is equal'
 }
 
-var myValue = 5
+const myValue = 5
 
 lookupTable[compare(4, myValue)]
 ```

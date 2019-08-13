@@ -44,7 +44,7 @@ This means that the original value and the value passed through the function hav
 const clonePrimitive = value => value
 
 let primitive = 123
-let anotherPrimitive = clonePrimitive(primitive)
+const anotherPrimitive = clonePrimitive(primitive)
 
 // let's modify the original value
 primitive = 456

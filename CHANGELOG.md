@@ -1,3 +1,43 @@
+# Changelog
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## 2.5.0 (2019-08-13)
+
+
+### Bug Fixes
+
+* lint-staged ([4e6b2c4](https://github.com/Kikobeats/js-mythbusters/commit/4e6b2c4))
+* linter ([5de7aca](https://github.com/Kikobeats/js-mythbusters/commit/5de7aca))
+
+## 2.4.0 (2018-05-10)
+
+## 2.3.0 (2018-03-27)
+
+### 2.2.2 (2017-06-17)
+
+## 2.2.0 (2017-06-09)
+
+## 2.1.0 (2017-06-06)
+
+### 2.0.2 (2017-05-28)
+
+### 2.0.1 (2017-05-16)
+
+## 2.0.0 (2017-04-17)
+
+### 1.1.3 (2017-01-03)
+
+### 1.1.2 (2016-10-09)
+
+## 1.1.0 (2016-09-16)
+
+### 1.0.1 (2016-09-03)
+
+## 1.0.0 (2016-08-30)
+
+### 0.0.1 (2016-08-27)
+
 <a name="2.4.0"></a>
 # 2.4.0 (2018-05-10)
 
@@ -325,6 +365,3 @@
 * updated bind section ([def1441](https://github.com/kikobeats/javascript-mythbusters/commit/def1441))
 * use standard format ([b44dcc4](https://github.com/kikobeats/javascript-mythbusters/commit/b44dcc4))
 * WIP ([9554d6d](https://github.com/kikobeats/javascript-mythbusters/commit/9554d6d))
-
-
-

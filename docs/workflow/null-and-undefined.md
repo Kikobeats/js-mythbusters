@@ -1,4 +1,4 @@
-# `undefined` over `null` 
+# null and undefined
 
 While `null` means "no object", `undefined` is "no value".
 

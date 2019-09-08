@@ -3,6 +3,7 @@
 ## General
 
 * [tickedoff](https://github.com/jamiebuilds/tickedoff) – Use the faster timer function available for deferring something by a "tick".
+* [queue-microtask](https://github.com/feross/queue-microtask) – Tiny `queueMicrotask` shim for modern engines.
 * [sliced](https://www.npmjs.com/package/sliced) – A faster Node.js alternative to `Array.prototype.slice.call(arguments)`.
 * [time-span](https://github.com/sindresorhus/time-span) – Simplified high resolution timing.
 

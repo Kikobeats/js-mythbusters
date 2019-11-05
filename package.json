@@ -2,7 +2,7 @@
   "name": "javascript-mythbusters",
   "description": "A list of JavaScript tips to avoid load performance from a high level point of view.",
   "homepage": "https://mythbusters.js.org",
-  "version": "2.5.3",
+  "version": "2.5.4",
   "main": "README.md",
   "repository": {
     "type": "git",

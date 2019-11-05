@@ -25,5 +25,6 @@
 
 ## Debugging
 
+* [clinic](https://clinicjs.org/) – Tools to help diagnose and pinpoint Node.js performance issues.
 * [flamebearer](https://github.com/mapbox/flamebearer) – Blazing fast flame graph tool for V8 and Node.
 * [0x](https://www.npmjs.com/package/0x) – Visualize stack traces.

@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.5.7](https://github.com/Kikobeats/js-mythbusters/compare/v2.5.6...v2.5.7) (2020-04-05)
+
 ### [2.5.6](https://github.com/Kikobeats/js-mythbusters/compare/v2.5.5...v2.5.6) (2020-03-14)
 
 ### [2.5.5](https://github.com/Kikobeats/js-mythbusters/compare/v2.5.4...v2.5.5) (2019-11-30)

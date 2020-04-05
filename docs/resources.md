@@ -22,6 +22,7 @@
 * [nanobench](https://github.com/mafintosh/nanobench) – Simple benchmarking tool with TAP-like output that is easy to parse.
 * [bench-lru](https://github.com/dominictarr/bench-lru) – Benchmark the least-recently-used caches which are available on npm.
 * [uuid-benchmark](https://github.com/watson/uuid-benchmark) – Benchmark of different UUID generation methods in Node.js.
+* [perf.link](https://perf.link) – Low friction JavaScript benchmarks that you can share via URL.
 
 ## Debugging
 

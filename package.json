@@ -33,10 +33,10 @@
     "gulp-sass": "latest",
     "gulp-strip-css-comments": "latest",
     "gulp-uglify": "latest",
-    "husky": "latest",
     "lint-staged": "latest",
     "npm-check-updates": "latest",
     "prettier-standard": "latest",
+    "simple-git-hooks": "latest",
     "standard": "latest",
     "standard-markdown": "latest",
     "standard-version": "latest"
@@ -72,24 +72,19 @@
       "@commitlint/config-conventional"
     ]
   },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "package.json": [
-      "finepack",
-      "git add"
+      "finepack"
     ],
-    "*.js": [
-      "prettier-standard",
-      "git add"
+    "*.js,!*.min.js,": [
+      "prettier-standard"
     ],
     "*.md": [
-      "standard-markdown",
-      "git add"
+      "standard-markdown"
     ]
+  },
+  "simple-git-hooks": {
+    "commit-msg": "npx commitlint --edit",
+    "pre-commit": "npx lint-staged"
   }
 }

@@ -4,6 +4,92 @@
   "homepage": "https://mythbusters.js.org",
   "version": "2.5.7",
   "main": "README.md",
+  "contributors": [
+    {
+      "name": "Kiko Beats",
+      "email": "josefrancisco.verdu@gmail.com"
+    },
+    {
+      "name": "María Inés Parnisari",
+      "email": "maineparnisari@gmail.com"
+    },
+    {
+      "name": "kerwitz",
+      "email": "marco@kerwitz.com"
+    },
+    {
+      "name": "William Huang",
+      "email": "william.w.huang@gmail.com"
+    },
+    {
+      "name": "Lionel T",
+      "email": "elrumordelaluz@hotmail.com"
+    },
+    {
+      "name": "Ross Olson",
+      "email": "Ross@rossolson.com"
+    },
+    {
+      "name": "Ilya Radchenko",
+      "email": "ilya@burstcreations.com"
+    },
+    {
+      "name": "Jack Hanford",
+      "email": "jackhanford@gmail.com"
+    },
+    {
+      "name": "Jeroen Visser",
+      "email": "jeroenvisser101@gmail.com"
+    },
+    {
+      "name": "Julian Nicholls",
+      "email": "juliannicholls29@gmail.com"
+    },
+    {
+      "name": "Luis Adame Rodríguez",
+      "email": "mrluissan@gmail.com"
+    },
+    {
+      "name": "Martin Muzatko",
+      "email": "martin@happy-css.com"
+    },
+    {
+      "name": "Philip Terzic",
+      "email": "pterzic@asu.edu"
+    },
+    {
+      "name": "Alexander Martin",
+      "email": "alex@suitupalex.com"
+    },
+    {
+      "name": "Benjamin Daschel",
+      "email": "coffeemaxed@gmail.com"
+    },
+    {
+      "name": "Edy Segura",
+      "email": "edysegura@gmail.com"
+    },
+    {
+      "name": "Evgeny Samsonov",
+      "email": "frooeyzanny@gmail.com"
+    },
+    {
+      "name": "GQSM",
+      "email": "ms314006@hotmail.com"
+    },
+    {
+      "name": "Georgi Hristozov",
+      "email": "georgi@forkbomb.nl"
+    },
+    {
+      "name": "Greg Remiasz",
+      "email": "gremiasz@tribpub.com"
+    },
+    {
+      "name": "Hunter Dougless",
+      "email": "hunter.dougless@gmail.com"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Kikobeats/js-mythbusters.git"

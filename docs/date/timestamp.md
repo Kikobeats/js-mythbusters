@@ -40,7 +40,7 @@ The limitation of use `Date` is that the minimum quantity of time you are measur
 
 To safely measure elapsed time in a program, you need a clock that ticks out time continuously, without any jumps when a user sets the system time. This kind of clock is called a monotonic clock.
 
-The [High Resolution Timer](High Resolution Timer) was added by the [WebPerf Working Group](http://www.w3.org/2010/webperf/) to allow measurement in the Web Platform with more precision.
+The High Resolution Timer was added by the [WebPerf Working Group](http://www.w3.org/2010/webperf/) to allow measurement in the Web Platform with more precision.
 
 !> Perhaps less often considered is that `Date`, based on system time, isn't ideal for real user monitoring either. Most systems run a daemon which regularly synchronizes the time. It is common for the clock to be tweaked a few milliseconds every 15-20 minutes. At that rate about 1% of 10 second intervals measured would be inaccurate.
 

@@ -4,13 +4,15 @@ Just calculate the value of something once and reuse the value. This avoids the
 cost of recalculating the same value, caching successive calls:
 
 ```js
-var cache = Object.create(null)
+const memoize = fn =>
+  ((cache = Object.create(null)) => (...args) => {
+    return cache[args] || (cache[args] = fn(...args))
+  })()
 
-var cityOne = 'Murcia'
-var cityTwo = 'Madrid'
-var routeName = `${cityOne}${cityTwo}`
+const getDistanceMemo = memoize(getDistance)
 
-if (!cache[routeName]) cache[routeName] = getDistance(cityOne, cityTwo)
+getDistanceMemo('Murcia', 'Madrid') // => computed, slow
+getDistanceMemo('Murcia', 'Madrid') // => cached, fast!
 ```
 
 Notes the first line: `Object.create(null)`. This create an `Object` without

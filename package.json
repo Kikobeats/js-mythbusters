@@ -122,6 +122,7 @@
     "lint-staged": "latest",
     "npm-check-updates": "latest",
     "prettier-standard": "latest",
+    "sass": "latest",
     "simple-git-hooks": "latest",
     "standard": "latest",
     "standard-markdown": "latest",

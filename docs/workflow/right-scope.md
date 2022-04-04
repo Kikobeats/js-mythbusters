@@ -1,4 +1,4 @@
-# Scope
+# The right scope
 
 If you declare a global variable but you only use it in a small part of your code,
 then you are keeping the variable in memory all the time.
@@ -20,18 +20,18 @@ Since ES2015, you can use [`const`](https://developer.mozilla.org/en-US/docs/Web
 `const` means that the variable can’t be reassigned:
 
 ```js
-const objt = { foo: 'bar' }
+const obj = { foo: 'bar' }
 
-objt = {}
-console.log(objt) // => = { foo: 'bar' }
+obj = {}
+console.log(obj) // => = { foo: 'bar' }
 
-objt.foo = 'WAT'
-console.log(objt) // => = { foo: 'WAT' }
+obj.foo = 'WAT'
+console.log(obj) // => = { foo: 'WAT' }
 
-objt.wat = 'the hell'
-console.log(objt) // => = { foo: 'WAT', wat: 'the hell' }
+obj.wat = 'the hell'
+console.log(obj) // => = { foo: 'WAT', wat: 'the hell' }
 
-const objt = {}
+const obj = {}
 // => TypeError: Identifier 'objt' has already been declared
 ```
 

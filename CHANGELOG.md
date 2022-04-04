@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.6.1](https://github.com/Kikobeats/js-mythbusters/compare/v2.6.0...v2.6.1) (2022-04-04)
+
+
+### Bug Fixes
+
+* move spread syntax into workflow section ([603cbb7](https://github.com/Kikobeats/js-mythbusters/commit/603cbb722d60f5d7a0e5b842c0b0aca9c1efef3a))
+
 ## [2.6.0](https://github.com/Kikobeats/js-mythbusters/compare/v2.5.7...v2.6.0) (2022-04-04)
 
 

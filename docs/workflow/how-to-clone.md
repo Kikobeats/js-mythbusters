@@ -8,15 +8,15 @@ A primitive (primitive value, primitive data type) is data that is not an object
 
 In JavaScript, there are 7 primitive data types:
 
-- `null`
-- `undefined`
+- [`null`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null)
+- [`undefined`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined)
 - [`String`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
 - [`Number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
 - [`Boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
 - [`Symbol`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)
 - [`BigInt`](https://developers.google.com/web/updates/2018/05/bigint)
 
-All primitives are **immutable**.
+All the primitives are **immutables**.
 
 ## Non Primitives
 
@@ -32,11 +32,11 @@ This is why on **JavaScript all is an object**.
 
 ## Passing values
 
-When you pass a value through a function, two things can happen
+When you pass a value through a function, two situations can happen. Let's explore them.
 
 ### Passing by value
 
-If the value is a **Primitive**, then a copy of the value will be passed.
+If the value is a **primitive**, then a copy of the value will be passed.
 
 This means that the original value and the value passed through the function have a different memory space, so the second value is literally a copied from the first value.
 
@@ -57,7 +57,7 @@ Both values can be modified independently.
 
 ### Passing by reference
 
-If the value is a **non Primitive**, then a reference of the value will be passed
+If the value is a **non primitive**, then a reference of the value will be passed.
 
 ```js
 const names = ['Kiko', 'Carlos']
@@ -72,30 +72,26 @@ console.log(names)
 
 A copy of the value will be not created and changes will be persistent out of the function that modifies the value.
 
-## Generic clone
+## Cloning values
+If you want to clone something, you have to keep in mind how primitives and non primitives values behavior.
 
-As you read, clone a primitive value is immediate, but clone a non-primitive value will need a bit of work.
-
-Because passing a value by reference is not creating a different memory space, this is the thing that will be to do to guarantee that both copies are independents.
-
-This a an annotated version of the [clone-deep](https://github.com/jonschlinkert/clone-deep) dependency:
+Since non primitives values are just referenced, they should be iterated in order to clone them as a fresh value.
+This is a an annotated version of the [clone-deep](https://github.com/jonschlinkert/clone-deep) dependency:
 
 ```js
 const clone = require('shallow-clone')
 const typeOf = require('kind-of')
 
-/* these non primitives type are collection, they need to be iterated */
 const TYPES_COLLECTION = ['function', 'object', 'array']
 
-function cloneDeep (val) {
-  return TYPES_COLLECTION.includes(typeOf(val)) ? cloneCollection(val) : clone(val)
-}
-
-/* It iterates recursively over collections, creating a copy of non collection values */
 function cloneCollection (val) {
   const newCollection = new val.constructor()
   for (const key in val) newCollection[key] = cloneDeep(val[key])
   return newCollection
+}
+
+function cloneDeep (val) {
+  return TYPES_COLLECTION.includes(typeOf(val)) ? cloneCollection(val) : clone(val)
 }
 ```
 

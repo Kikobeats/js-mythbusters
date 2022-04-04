@@ -16,22 +16,28 @@
 
 * Function
 	* [new agnostic](function/new.md)
-	* [bind is slower](function/bind.md)
+	* [.bind is slower](function/bind.md)
 
 * RegExp
 	* [Use the correct method](regexp/correct-methods.md)
 	* [Focus on failing faster](regexp/fail-faster.md)
-	* [Mandatory Fields](regexp/flags.md)
+	* [Dot all flag](regexp/dot-all-flag.md)
+	* [Global flag](regexp/global-flag.md)
+	* [Unicode flag](regexp/unicode-flag.md)
+
+* Object
+	* [Empty prototype](object/empty-prototype.md)
 
 * V8
-	* [Hidden Class](v8-tips/hidden-class.md)
-	* [Sparse Arrays](v8-tips/sparse-arrays.md)
-	* [Properties Names](v8-tips/properties-names.md)
 	* [Float Number](v8-tips/float-number.md)
+	* [Freeing memory](v8-tips/freeing-memory.md)
+	* [Hidden classes](v8-tips/hidden-classes.md)
 	* [Inline initialization](v8-tips/inline-initialization.md)
 	* [Monomorphic](v8-tips/monomorphic.md)
+	* [Properties Names](v8-tips/properties-names.md)
+	* [Sparse Arrays](v8-tips/sparse-arrays.md)
 	* [Use strict](v8-tips/use-strict.md)
-	* [Freeing memory](v8-tips/freeing-memory.md)
+  * [Spread Syntax](v8-tips/spread-syntax.md)
 
 * Workflow
 	* [Deferring by a tick](workflow/defer.md)
@@ -42,4 +48,4 @@
 	* [Scope](workflow/scope.md)
 	* [Variable access](workflow/variable-access.md)
 	* [How to clone](workflow/how-to-clone.md)
-	* [null and undefined](workflow/null-and-undefined.md)
+	* [null or undefined](workflow/null-or-undefined.md)

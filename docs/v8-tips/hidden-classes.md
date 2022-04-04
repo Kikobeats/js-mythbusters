@@ -1,4 +1,4 @@
-# Hidden class
+# Hidden classes
 
 JavaScript has limited compile-time type information: types can be changed at
 runtime. This is why it is expensive to reason about JS types at compile time.
@@ -9,8 +9,8 @@ function Point (x, y) {
   this.y = y
 }
 
-var p1 = new Point(11, 22) // => hidden Point class created
-var p2 = new Point(33, 44) // => hidden Point class shared with p1
+const p1 = new Point(11, 22) // => hidden Point class created
+const p2 = new Point(33, 44) // => hidden Point class shared with p1
 // At this point, p1 and p2 have a shared hidden class
 
 p2.z = 55 // => another hidden class (Point) created, p1 !== p2

@@ -1,16 +1,16 @@
 # Freeing memory
 
-If you want to remove a property from an `Object`, probably you are considering use `delete`: 
+If you want to remove a property from an `Object`, probably you are considering use `delete`:
 
 ```js
-var foo = { bar: 'hello world' }
+const foo = { bar: 'hello world' }
 delete foo.bar // Inefficient way (bad)
 ```
 
 But this action have serious performance degradation. A most common technique with the same effect is assign `undefined`:
 
 ```js
-var foo = { bar: 'hello world' }
+const foo = { bar: 'hello world' }
 foo.bar = undefined // Efficient way (good)
 ```
 

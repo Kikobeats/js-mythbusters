@@ -3,7 +3,7 @@
 When you use a unquoted property names as `Object` keys, the [specification](http://es5.github.io/x8.html#x8.10) defines that it will be implicitly serialized as `String`:
 
 ```js
-var object = {
+const object = {
   // `abc` is a valid identifier; no quotes are needed
   abc: 1,
   // `123` is a numeric literal; no quotes are needed
@@ -26,7 +26,7 @@ When you use of numeric literals, the implicit coerced could be a bit confusing.
 For example, if you were to use the number `.12e3` as an (unquoted) property name, it would be coerced into a string first, and the actual object key would become `'120'`.
 
 ```js
-var object = {
+const object = {
   0.12e3: 'wut'
 }
 object[0.12e3] // 'wut'
@@ -39,7 +39,7 @@ object['120'] // 'wut'
 In this case, because the `String` representation of the `Number` is different, this is the correct way to acess using bracket notation:
 
 ```js
-var object = {
+const object = {
   12e34: 42
 }
 
@@ -57,5 +57,3 @@ This is a list of common object keys used as `String`:
 - `null` will be `'null'`.
 - `''` will be `''`.
 - `true`/`false` as `'true'`/`'false'`.
-
-Also, **reserverd words** cannot be used as object keys.

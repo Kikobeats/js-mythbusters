@@ -18,6 +18,10 @@
       "email": "marco@kerwitz.com"
     },
     {
+      "name": "Rico Sta. Cruz",
+      "email": "rstacruz@users.noreply.github.com"
+    },
+    {
       "name": "William Huang",
       "email": "william.w.huang@gmail.com"
     },
@@ -46,24 +50,48 @@
       "email": "juliannicholls29@gmail.com"
     },
     {
+      "name": "Kilometres",
+      "email": "39900063+Kilometres@users.noreply.github.com"
+    },
+    {
       "name": "Luis Adame Rodríguez",
       "email": "mrluissan@gmail.com"
+    },
+    {
+      "name": "M.K",
+      "email": "mk-pmb@users.noreply.github.com"
     },
     {
       "name": "Martin Muzatko",
       "email": "martin@happy-css.com"
     },
     {
+      "name": "Paul Melero",
+      "email": "gangsthub@users.noreply.github.com"
+    },
+    {
       "name": "Philip Terzic",
       "email": "pterzic@asu.edu"
+    },
+    {
+      "name": "Tom Byrer",
+      "email": "tomByrer@gmail.com"
     },
     {
       "name": "Alexander Martin",
       "email": "alex@suitupalex.com"
     },
     {
+      "name": "rohitanshu",
+      "email": "85547195+iamrohitanshu@users.noreply.github.com"
+    },
+    {
       "name": "Benjamin Daschel",
       "email": "coffeemaxed@gmail.com"
+    },
+    {
+      "name": "Davis Sorenson",
+      "email": "davissorenson@users.noreply.github.com"
     },
     {
       "name": "Edy Segura",
@@ -160,14 +188,14 @@
     ]
   },
   "nano-staged": {
-    "package.json": [
-      "finepack"
-    ],
     "*.js,!*.min.js,": [
       "prettier-standard"
     ],
     "*.md": [
       "standard-markdown"
+    ],
+    "package.json": [
+      "finepack"
     ]
   },
   "simple-git-hooks": {

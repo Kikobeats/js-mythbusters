@@ -1,4 +1,4 @@
-# pop over shift
+# .pop over .shift
 
 The `.shift` method removes the first element from an array and returns it.
 

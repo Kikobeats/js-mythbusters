@@ -1,6 +1,10 @@
 # Preallocation
 
-## Initialize value
+Preallocation is when you reserve memory space before using it.
+
+This is specially useful when you know much much space you need, or you want to avoid expanding repeatedly the size of a collection over time.
+
+## Initializing the values
 
 If you want to preallocate an array with a initial value, you can use [`Array.from()`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/from):
 
@@ -11,7 +15,7 @@ const n = 5
 [...Array(n).keys()] // [ 0, 1, 2, 3, 4 ]
 
 // more powerful
-Array.from({length: n}, (value, index) => index) // [ 0, 1, 2, 3, 4 ]
+Array.from({ length: n }, (value, index) => index) // [ 0, 1, 2, 3, 4 ]
 ```
 
 ## Reusing instances

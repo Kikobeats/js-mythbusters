@@ -4,7 +4,7 @@ All objects in JavaSCript are instance of `Object` and they inherit properties a
 
 There are situations in which you just want to use an `Object` instance as a container of values.
 
-For thoese cases, an `Object` maybe be deliberately created with an empty prototype, meaning it inherits nothing.
+For those cases, an `Object` maybe be deliberately created with an empty prototype, meaning it inherits nothing.
 
 ```js
 const cache = Object.create(null)

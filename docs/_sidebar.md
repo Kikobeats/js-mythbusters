@@ -45,7 +45,7 @@
 	* [Math methods](workflow/math.md)
 	* [Memoization](workflow/memoization.md)
 	* [null or undefined](workflow/null-or-undefined.md)
-	* [The right scope](workflow/scope.md)
+	* [The right scope](workflow/right-scope.md)
 	* [Spread syntax](workflow/spread-syntax.md)
 	* [Value vs. reference](workflow/passing-by-value.md)
 	* [Variable access](workflow/variable-access.md)

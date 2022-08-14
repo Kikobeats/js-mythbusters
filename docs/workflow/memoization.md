@@ -5,9 +5,9 @@ cost of recalculating the same value, caching successive calls:
 
 ```js
 const memoize = fn =>
-  ((cache = Object.create(null)) => (...args) => {
-    return cache[args] || (cache[args] = fn(...args))
-  })()
+  ((cache) => (...args) => 
+    cache[args] || (cache[args] = fn(...args))
+  )(Object.create(null))
 
 const getDistanceMemo = memoize(getDistance)
 

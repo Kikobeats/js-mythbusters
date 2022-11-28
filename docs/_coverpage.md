@@ -43,7 +43,7 @@
 
 # MythBusters JS
 
-> A JavaScript Handbook exploring perfomance & readibility.
+> A JavaScript Handbook exploring performance & readability.
 
 [GitHub](https://github.com/Kikobeats/js-mythbusters)
 [Get Started](#get-started)

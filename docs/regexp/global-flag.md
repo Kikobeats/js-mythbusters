@@ -44,12 +44,8 @@ As you can see, `lastIndex` will continue from the last matched result.
 That can be easily avoided just wrapping into a function that will be executed from the beginning every time:
 
 ```js
+const test = input => new RegExp('o', 'g').test(input)
 const greetings = 'Hello, how are you?'
-
-const test = (str) => {
-    const regex = new RegExp('o', 'g').text
-    return regex.test(str)
-}
 
 test(greetings) // => true
 test(greetings) // => true

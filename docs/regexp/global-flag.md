@@ -47,7 +47,7 @@ That can be easily avoided just wrapping into a function that will be executed f
 const greetings = 'Hello, how are you?'
 
 const test = (str) => {
-    const regex = new RegExp('o', 'g')
+    const regex = new RegExp('o', 'g').text
     return regex.test(str)
 }
 

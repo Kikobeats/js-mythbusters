@@ -134,12 +134,13 @@
   "devDependencies": {
     "@commitlint/cli": "latest",
     "@commitlint/config-conventional": "latest",
+    "@ksmithut/prettier-standard": "latest",
     "browser-sync": "latest",
     "concurrently": "latest",
-    "conventional-github-releaser": "latest",
     "docsify-cli": "latest",
     "finepack": "latest",
     "git-authors-cli": "latest",
+    "github-generate-release": "latest",
     "gulp": "latest",
     "gulp-autoprefixer": "latest",
     "gulp-concat": "latest",
@@ -149,7 +150,6 @@
     "gulp-uglify": "latest",
     "nano-staged": "latest",
     "npm-check-updates": "latest",
-    "prettier-standard": "latest",
     "sass": "latest",
     "simple-git-hooks": "latest",
     "standard": "latest",
@@ -172,7 +172,7 @@
     "prerelease": "npm run update:check",
     "pretest": "npm run lint",
     "release": "standard-version -a",
-    "release:github": "conventional-github-releaser -p angular",
+    "release:github": "github-generate-release",
     "release:tags": "git push --follow-tags origin HEAD:master",
     "server:dev": "cd docs && browser-sync start --server --files \"index.html, **/*.md, main.min.js, style.min.css\"",
     "start": "docsify start docs",
@@ -188,8 +188,9 @@
     ]
   },
   "nano-staged": {
-    "*.js,!*.min.js,": [
-      "prettier-standard"
+    "*.js": [
+      "prettier-standard",
+      "standard --fix"
     ],
     "*.md": [
       "standard-markdown"

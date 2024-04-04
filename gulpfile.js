@@ -1,9 +1,7 @@
 'use strict'
 
 const sass = require('gulp-sass')(require('sass'))
-const strip = require('gulp-strip-css-comments')
-const prefix = require('gulp-autoprefixer')
-const cssnano = require('gulp-cssnano')
+const postcss = require('gulp-postcss')
 const uglify = require('gulp-uglify')
 const concat = require('gulp-concat')
 const gulp = require('gulp')
@@ -26,9 +24,14 @@ const css = () =>
     .src(src.css)
     .pipe(sass().on('error', sass.logError))
     .pipe(concat(`${dist.name.css}.min.css`))
-    .pipe(prefix())
-    .pipe(strip({ all: true }))
-    .pipe(cssnano())
+    .pipe(
+      postcss([
+        require('postcss-focus'),
+        require('cssnano')({
+          preset: require('cssnano-preset-advanced')
+        })
+      ])
+    )
     .pipe(gulp.dest(dist.path))
 
 const js = () =>

@@ -232,7 +232,7 @@ main {
   bottom: 0;
   left: 0;
   position: absolute;
-  transition: transform 0.25s ease-out;
+  transition: transform 0.3s ease-out;
   width: 300px;
   z-index: 3;
 }
@@ -312,22 +312,16 @@ main {
 }
 
 .sidebar-toggle {
-  background-color: transparent;
   border: 0;
   outline: none;
   padding: 10px;
-  bottom: 0;
   left: 0;
-  position: absolute;
   text-align: center;
   transition: opacity 0.3s;
-  width: 300px;
   background-color: #081020;
   z-index: 4;
-}
-
-.sidebar-toggle .sidebar-toggle-button:hover {
-  opacity: 0.4;
+  height: 62px;
+  margin-left: 4px;
 }
 
 .sidebar-toggle span {
@@ -351,7 +345,7 @@ body.sticky .sidebar-toggle {
   bottom: 0;
   left: 300px;
   position: absolute;
-  transition: left 0.25s ease;
+  transition: left 0.3s ease;
 }
 
 .markdown-section {
@@ -494,25 +488,19 @@ body.close .content {
 
   .sidebar {
     left: -300px;
-    transition: -webkit-transform 0.25s ease-out;
-    transition: transform 0.25s ease-out;
-    transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+    transition: transform 0.3s ease-out;
   }
 
   .content {
     left: 0;
     max-width: 100vw;
     position: static;
-    transition: -webkit-transform 0.25s ease;
-    transition: transform 0.25s ease;
-    transition: transform 0.25s ease, -webkit-transform 0.25s ease;
+    transition: transform 0.3s ease;
   }
 
   .app-nav,
   .github-corner {
-    transition: -webkit-transform 0.25s ease-out;
-    transition: transform 0.25s ease-out;
-    transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+    transition: transform 0.3s ease-out;
   }
 
   .sidebar-toggle {

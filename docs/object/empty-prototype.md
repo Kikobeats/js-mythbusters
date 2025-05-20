@@ -17,3 +17,5 @@ Since it doesn't inherit from other object, you can't typechecking using `instan
 ```js
 Object.create(null) instanceof Object // false
 ```
+
+Check [null-prototype-object](https://github.com/Kikobeats/null-prototype-object) to see the most extreme optimization for this.

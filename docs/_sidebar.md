@@ -27,6 +27,7 @@
 
 * Object
 	* [Empty prototype](object/empty-prototype.md)
+	* [WeakMap](object/weak-map.md)
 
 * V8
 	* [Float number](v8-tips/float-number.md)
